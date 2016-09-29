@@ -7,7 +7,7 @@ toc: true
 ---
 
 Broadcast包括两个概念，广播发送者和广播接收者(Receiver)，这里的广播实际就是指 Intent，程序可以自己发送广播自己接收，也可以接受系统或其他应用的广播或是发送广播给其他应用程序。
-发送者可以通过类似[Context.sendBroadcast()](http://developer.android.com/reference/android/content/Context.html#sendBroadcast(android.content.Intent)接口发送广播，接收者通过[Context.registerReceiver()](http://developer.android.com/reference/android/content/Context.html#registerReceiver(android.content.BroadcastReceiver,%20android.content.IntentFilter))动态注册或在 AndroidManifest.xml 文件中通过 <receiver> 标签静态注册。注册完成后，当发送者发送某个广播时系统会将发送的广播(Intent)与系统中所有注册的符合条件的接收者(Receiver)的 IntentFilter 进行匹配，若匹配成功则执行相应接收者的 onReceive 函数。
+发送者可以通过类似 [Context.sendBroadcast()](http://developer.android.com/reference/android/content/Context.html#sendBroadcast(android.content.Intent)接口发送广播，接收者通过  [Context.registerReceiver()](http://developer.android.com/reference/android/content/Context.html#registerReceiver(android.content.BroadcastReceiver,%20android.content.IntentFilter))动态注册或在 AndroidManifest.xml 文件中通过 <receiver> 标签静态注册。注册完成后，当发送者发送某个广播时系统会将发送的广播(Intent)与系统中所有注册的符合条件的接收者(Receiver)的 IntentFilter 进行匹配，若匹配成功则执行相应接收者的 onReceive 函数。
 
 <!--more-->
 
