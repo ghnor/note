@@ -1,4 +1,13 @@
+---
+title: 解决ListView和GridView嵌套于其他滑动组件引起的滑动冲突
+date: 2016-07-24 10:00:27
+categories: Android
+tags:
+toc: true
+---
 当我们将ListView和GridView相互嵌套，或者嵌套于其他滑动组件时，会造成不能滑动、数据显示不全等问题。
+
+<!--more-->
 
 解决方案不止一个。个人觉得比较方便的就是重写`onMeasure()`方法：
 ```java
