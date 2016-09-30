@@ -1,17 +1,7 @@
----
-title: 'HandlerThread, Handler, Thread, Runnable'
-date: 2016-06-05 14:53:52
-categories: Android
-tags:
-toc: true
----
-
 Handler会关联一个单独的线程和消息队列。
 Handler默认关联主线程，虽然要提供Runnable参数 ，但默认是直接调用Runnable中的run()方法。也就是默认下会在主线程执行，如果在这里面的操作会有阻塞，界面也会卡住。
 如果要在其他线程执行，可以使用HandlerThread。
 HandlerThread继承于Thread，所以它本质就是个Thread。与普通Thread的差别就在于，主要的作用是建立了一个线程，并且创立了消息队列，有来自己的looper,可以让我们在自己的线程中分发和处理消息。
-
-<!--more-->
 
 # 1. HandlerThread的使用
 

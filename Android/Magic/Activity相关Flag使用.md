@@ -1,15 +1,3 @@
----
-title: Activity相关Flag使用
-date: 2016-07-28 07:38:12
-categories: Android
-tags:
-toc: true
----
-
-&nbsp;
-
-<!--more-->
-
 # FLAG_ACTIVITY_NEW_TASK
 等同于"singleTask"启动模式
 

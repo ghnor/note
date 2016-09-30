@@ -1,12 +1,4 @@
----
-title: Material Design标准样式
-date: 2016-06-19 19:48:50
-tags:
-categories: Android
----
 TextView官方标准字体;Button Material Design标准样式;Ripple水波纹效果
-
-<!--more-->
 
 # TextView官方标准字体
 

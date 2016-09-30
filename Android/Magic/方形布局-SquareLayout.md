@@ -1,14 +1,4 @@
----
-title: 方形布局 SquareLayout
-date: 2016-08-20 22:32:29
-categories: Android
-tags:
-toc: true
----
-
 有时候需要显示方形的布局，但又懒得每次获取手机屏幕的尺寸。就可以直接把布局的宽高直接设成一致。
-
-<!--more-->
 
 ```java
 import android.content.Context;

@@ -1,13 +1,4 @@
----
-title: 'DatePickerDialog, TimePickerDialog在某些机型上会连续返回两次结果'
-date: 2016-06-10 16:46:55
-categories: Android
-tags:
----
-
 继承系统的dialog，重写onStop方法
-
-<!--more-->
 
 ```java
 class CustomTimePicker extends TimePickerDialog {
