@@ -6,7 +6,7 @@
 `Behavior`就是`CoordinatorLayout`传递事件的媒介，`Behavior` 定义了 `CoordinatorLayout` 中**直接子 View?**的行为规范，决定了当收到不同事件时，应该做怎样的处理。
 总结来说，`Behavior`代理以下四种事件，其大致传递流程如下图：
 
-![](http://upload-images.jianshu.io/upload_images/1310426-d0181a0c2c12d539.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://github.com/ghnor/TechNote/assets/images/behavior-flux.png)
 
 事件流好像很高深莫测的样子...，再简化一点的说法：`CoordinatorLayout`中的某个或某几个方法被其他类调用，之后`CoordinatorLayout`再调用`Behavior`中的某个或某几个方法（=。=好像更抽象了）。总之，让这四类事件现在脑子里有个印象就可以了。
 
