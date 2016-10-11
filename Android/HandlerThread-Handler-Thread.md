@@ -1,6 +1,6 @@
-Handler会关联一个单独的线程和消息队列。
-Handler默认关联主线程，虽然要提供Runnable参数 ，但默认是直接调用Runnable中的run()方法。也就是默认下会在主线程执行，如果在这里面的操作会有阻塞，界面也会卡住。
-如果要在其他线程执行，可以使用HandlerThread。
+Handler会关联一个单独的线程和消息队列。  
+Handler默认关联主线程，虽然要提供Runnable参数 ，但默认是直接调用Runnable中的run()方法。也就是默认下会在主线程执行，如果在这里面的操作会有阻塞，界面也会卡住。  
+如果要在其他线程执行，可以使用HandlerThread。  
 HandlerThread继承于Thread，所以它本质就是个Thread。与普通Thread的差别就在于，主要的作用是建立了一个线程，并且创立了消息队列，有来自己的looper,可以让我们在自己的线程中分发和处理消息。
 
 # 1. HandlerThread的使用
@@ -35,7 +35,7 @@ if (uIhandlerThread != null) {
 # 2. Handler的应用
 
 ## 2.1. 定义handler
-在主线程使用handler只需要实例化即可。
+在主线程使用handler只需要实例化即可。  
 在非主线程中使用时，需要先实例化一个子线程的Looper对象。
 
 ### 2.1.1. 在主线程定义Handler
@@ -119,8 +119,8 @@ if(myHandler != null) {
 
 ## 3.1. 关于Thread和Runnable的区别
 
-Thread和Runnable是实现java多线程的两种方式，Thread是类，Runnable为接口，建议使用Runnable来实现多线程。
-如果让一个线程实现Runnable接口，那么当调用这个线程的对象开启多个线程时，可以让这些线程调用同一个变量；
+Thread和Runnable是实现java多线程的两种方式，Thread是类，Runnable为接口，建议使用Runnable来实现多线程。  
+如果让一个线程实现Runnable接口，那么当调用这个线程的对象开启多个线程时，可以让这些线程调用同一个变量；  
 若这个线程是由继承Thread类而来，则要通过内部类来实现上述的功能，利用的就是内部类可任意访问外部类变量这个特性。
 
 ## 3.2. 实现Runnable接口
@@ -220,6 +220,6 @@ new Thread(r).start();
 ```
 
 # 4. 扩展阅读
-[Android异步消息处理机制完全解析，带你从源码的角度彻底理解](http://blog.csdn.net/guolin_blog/article/details/9991569)
-[Android 异步消息处理机制 让你深入理解 Looper、Handler、Message三者关系](http://blog.csdn.net/lmj623565791/article/details/38377229)
-[Android HandlerThread 完全解析](http://blog.csdn.net/lmj623565791/article/details/47079737)
+[Android异步消息处理机制完全解析，带你从源码的角度彻底理解](http://blog.csdn.net/guolin_blog/article/details/9991569)  
+[Android 异步消息处理机制 让你深入理解 Looper、Handler、Message三者关系](http://blog.csdn.net/lmj623565791/article/details/38377229)  
+[Android HandlerThread 完全解析](http://blog.csdn.net/lmj623565791/article/details/47079737)  
