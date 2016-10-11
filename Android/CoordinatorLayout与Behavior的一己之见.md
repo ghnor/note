@@ -1,18 +1,21 @@
-# Ç°ÑÔ
+# å‰è¨€
 
-Ğí¶àÎÄÕÂ¶¼ÊÇ½«`CoordinatorLayout`¡¢`AppbarLayout`¡¢`CollapsingToolbarLayout`¡¢`Toolbar`µÈ·ÅÔÚÒ»Æğ½éÉÜ£¬ÈİÒ×Îó½âÎªÕâ¼¸¸ö²¼¾ÖÒ»¶¨Òª»¥Ïà´îÅä£¬ÇÒ½ö½öÊÊÓÃÓÚÕâĞ©³¡¾°ÖĞ¡£
-ÆäÊµ²»È»£¬ÆäÖĞ×îÖØÒªµÄÊÇ`CoordinatorLayout`£¬ÎÒ°ÑËü³ÆÎªĞ­µ÷²¼¾Ö¡£Ğ­µ÷Ê²Ã´²¼¾ÖÄØ£¿×ÔÈ»ÊÇÇ¶Ì×ÔÚÆäÄÚ²¿µÄ Child View¡£
-`CoordinatorLayout`³äµ±ÁËÒ»¸öÖĞ¼ä²ãµÄ½ÇÉ«£¬Ò»±ß½ÓÊÕÆäËû×é¼şµÄÊÂ¼ş£¬Ò»±ß½«½ÓÊÕµ½µÄÊÂ¼şÍ¨Öª¸øÄÚ²¿µÄÆäËû×é¼ş¡£
-`Behavior`¾ÍÊÇ`CoordinatorLayout`´«µİÊÂ¼şµÄÃ½½é£¬`Behavior` ¶¨ÒåÁË `CoordinatorLayout` ÖĞ**Ö±½Ó×Ó View?**µÄĞĞÎª¹æ·¶£¬¾ö¶¨ÁËµ±ÊÕµ½²»Í¬ÊÂ¼şÊ±£¬Ó¦¸Ã×öÔõÑùµÄ´¦Àí¡£
-×Ü½áÀ´Ëµ£¬`Behavior`´úÀíÒÔÏÂËÄÖÖÊÂ¼ş£¬Æä´óÖÂ´«µİÁ÷³ÌÈçÏÂÍ¼£º
-
+è®¸å¤šæ–‡ç« éƒ½æ˜¯å°†`CoordinatorLayout`ã€`AppbarLayout`ã€`CollapsingToolbarLayout`ã€`Toolbar`ç­‰æ”¾åœ¨ä¸€èµ·ä»‹ç»ï¼Œå®¹æ˜“è¯¯è§£ä¸ºè¿™å‡ ä¸ªå¸ƒå±€ä¸€å®šè¦äº’ç›¸æ­é…ï¼Œä¸”ä»…ä»…é€‚ç”¨äºè¿™äº›åœºæ™¯ä¸­ã€‚  
+å…¶å®ä¸ç„¶ï¼Œå…¶ä¸­æœ€é‡è¦çš„æ˜¯`CoordinatorLayout`ï¼Œæˆ‘æŠŠå®ƒç§°ä¸ºåè°ƒå¸ƒå±€ã€‚åè°ƒä»€ä¹ˆå¸ƒå±€å‘¢ï¼Ÿè‡ªç„¶æ˜¯åµŒå¥—åœ¨å…¶å†…éƒ¨çš„Child Viewã€‚  
+`CoordinatorLayout`å……å½“äº†ä¸€ä¸ªä¸­é—´å±‚çš„è§’è‰²ï¼Œä¸€è¾¹æ¥æ”¶å…¶ä»–ç»„ä»¶çš„äº‹ä»¶ï¼Œä¸€è¾¹å°†æ¥æ”¶åˆ°çš„äº‹ä»¶é€šçŸ¥ç»™å†…éƒ¨çš„å…¶ä»–ç»„ä»¶ã€‚  
+`Behavior`å°±æ˜¯`CoordinatorLayout`ä¼ é€’äº‹ä»¶çš„åª’ä»‹ï¼Œ`Behavior` å®šä¹‰äº† `CoordinatorLayout` ä¸­**ç›´æ¥å­ View**çš„è¡Œä¸ºè§„èŒƒï¼Œå†³å®šäº†å½“æ”¶åˆ°ä¸åŒäº‹ä»¶æ—¶ï¼Œåº”è¯¥åšæ€æ ·çš„å¤„ç†ã€‚  
+æ€»ç»“æ¥è¯´ï¼Œ`Behavior`ä»£ç†ä»¥ä¸‹å››ç§äº‹ä»¶ï¼Œå…¶å¤§è‡´ä¼ é€’æµç¨‹å¦‚ä¸‹å›¾ï¼š
+  
 ![](https://github.com/ghnor/TechNote/blob/master/assets/images/behavior-flux.png)
+  
+äº‹ä»¶æµå¥½åƒå¾ˆé«˜æ·±è«æµ‹çš„æ ·å­...ï¼Œå†ç®€åŒ–ä¸€ç‚¹çš„è¯´æ³•ï¼š`CoordinatorLayout`ä¸­çš„æŸä¸ªæˆ–æŸå‡ ä¸ªæ–¹æ³•è¢«å…¶ä»–ç±»è°ƒç”¨ï¼Œä¹‹å`CoordinatorLayout`å†è°ƒç”¨`Behavior`ä¸­çš„æŸä¸ªæˆ–æŸå‡ ä¸ªæ–¹æ³•ï¼ˆ=ã€‚=å¥½åƒæ›´æŠ½è±¡äº†ï¼‰ã€‚  
+æ€»ä¹‹ï¼Œè®©è¿™å››ç±»äº‹ä»¶ç°åœ¨è„‘å­é‡Œæœ‰ä¸ªå°è±¡å°±å¯ä»¥äº†ã€‚
 
-ÊÂ¼şÁ÷ºÃÏñºÜ¸ßÉîÄª²âµÄÑù×Ó...£¬ÔÙ¼ò»¯Ò»µãµÄËµ·¨£º`CoordinatorLayout`ÖĞµÄÄ³¸ö»òÄ³¼¸¸ö·½·¨±»ÆäËûÀàµ÷ÓÃ£¬Ö®ºó`CoordinatorLayout`ÔÙµ÷ÓÃ`Behavior`ÖĞµÄÄ³¸ö»òÄ³¼¸¸ö·½·¨£¨=¡£=ºÃÏñ¸ü³éÏóÁË£©¡£×ÜÖ®£¬ÈÃÕâËÄÀàÊÂ¼şÏÖÔÚÄÔ×ÓÀïÓĞ¸öÓ¡Ïó¾Í¿ÉÒÔÁË¡£
+æ¥ç€å…ˆä»‹ç»ä¸€ä¸‹è‡ªå®šä¹‰Behaviorçš„é€šç”¨æµç¨‹ã€‚ä¸ºä»€ä¹ˆæ˜¯é€šç”¨æµç¨‹å‘¢ï¼Ÿå› ä¸ºä¸Šé¢æåˆ°äº†æœ‰å››ç§äº‹ä»¶æµï¼Œæ ¹æ®ä¸åŒçš„äº‹ä»¶æµï¼Œæ˜¯è¦é‡å†™ä¸åŒçš„æ–¹æ³•çš„ï¼Œä¼šåœ¨ä¸‹é¢ä¸€ä¸€è¯´æ˜ã€‚
 
-½Ó×ÅÏÈ½éÉÜÒ»ÏÂ×Ô¶¨ÒåBehaviorµÄÍ¨ÓÃÁ÷³Ì¡£ÎªÊ²Ã´ÊÇÍ¨ÓÃÁ÷³ÌÄØ£¿ÒòÎªÉÏÃæÌáµ½ÁËÓĞËÄÖÖÊÂ¼şÁ÷£¬¸ù¾İ²»Í¬µÄÊÂ¼şÁ÷£¬ÊÇÒªÖØĞ´²»Í¬µÄ·½·¨µÄ£¬»áÔÚÏÂÃæÒ»Ò»ËµÃ÷¡£
-# ×Ô¶¨ÒåBehaviorµÄÍ¨ÓÃÁ÷³Ì
-**1. ÖØĞ´¹¹Ôì·½·¨**
+# è‡ªå®šä¹‰Behaviorçš„é€šç”¨æµç¨‹
+
+**1. é‡å†™æ„é€ æ–¹æ³•**
 ```java
 public class CustomBehavior extends CoordinatorLayout.Behavior {
 
@@ -21,54 +24,54 @@ public class CustomBehavior extends CoordinatorLayout.Behavior {
     }
 }
 ```
-Ò»¶¨ÒªÖØĞ´Õâ¸ö¹¹Ôì·½·¨£¬ÒòÎªµ±ÄãÔÚXMLÖĞÉèÖÃ¸Ã`Behavior`Ê±£¬ÔÚ `CoordinatorLayout` ÖĞ»á·´Éäµ÷ÓÃ¸Ã·½·¨£¬²¢Éú³É¸Ã `Behavior` ÊµÀı¡£
-**2. °ó¶¨µ½View**
-°ó¶¨µÄ·½·¨ÓĞÈıÖÖ£º
-ÔÚ XML ÎÄ¼şÖĞ£¬ÉèÖÃÈÎÒâ View µÄÊôĞÔ
+ä¸€å®šè¦é‡å†™è¿™ä¸ªæ„é€ æ–¹æ³•ï¼Œå› ä¸ºå½“ä½ åœ¨XMLä¸­è®¾ç½®è¯¥`Behavior`æ—¶ï¼Œåœ¨ `CoordinatorLayout` ä¸­ä¼šåå°„è°ƒç”¨è¯¥æ–¹æ³•ï¼Œå¹¶ç”Ÿæˆè¯¥ `Behavior` å®ä¾‹ã€‚  
+**2. ç»‘å®šåˆ°View**  
+ç»‘å®šçš„æ–¹æ³•æœ‰ä¸‰ç§ï¼š  
+åœ¨ XML æ–‡ä»¶ä¸­ï¼Œè®¾ç½®ä»»æ„ View çš„å±æ€§
 ```java
-app:layout_behavior="ÄãµÄBehaviorµÄ°üÂ·¾¶ºÍÀàÃû"
+app:layout_behavior="ä½ çš„Behaviorçš„åŒ…è·¯å¾„å’Œç±»å"
 ```
-»òÕßÔÚ´úÂëÖĞ£º
+æˆ–è€…åœ¨ä»£ç ä¸­ï¼š
 ```java
 (CoordinatorLayout.LayoutParams)child.getLayoutParams().setBehavior();
 ```
-ÔÙ»òÕßµ±ÄãµÄViewÊÇ×Ô¶¨ÒåµÄViewÊ±¡£
-ÔÚÄãµÄ×Ô¶¨ÒåViewÀàÉÏÌí¼Ó@DefaultBehavior(ÄãµÄBehavior.class)¡£
+å†æˆ–è€…å½“ä½ çš„Viewæ˜¯è‡ªå®šä¹‰çš„Viewæ—¶ã€‚  
+åœ¨ä½ çš„è‡ªå®šä¹‰Viewç±»ä¸Šæ·»åŠ @DefaultBehavior(ä½ çš„Behavior.class)ã€‚
 ```java
 @DefaultBehavior(CustomBehavior.class)
 public class CustomView extends View {}
 ```
 
-**3. ÅĞ¶ÏÒÀÀµ¶ÔÏó**
-µ± `CoordinatorLayout` ÊÕµ½Ä³¸ö view µÄ±ä»¯»òÕßÇ¶Ì×»¬¶¯ÊÂ¼şÊ±£¬`CoordinatorLayout`¾Í»á³¢ÊÔ°ÑÊÂ¼şÏÂ·¢¸ø`Behavior`£¬°ó¶¨ÁË¸Ã `Behavior` µÄ view ¾Í»á¶ÔÊÂ¼ş×ö³öÏìÓ¦¡£
+**3. åˆ¤æ–­ä¾èµ–å¯¹è±¡**  
+å½“ `CoordinatorLayout` æ”¶åˆ°æŸä¸ª view çš„å˜åŒ–æˆ–è€…åµŒå¥—æ»‘åŠ¨äº‹ä»¶æ—¶ï¼Œ`CoordinatorLayout`å°±ä¼šå°è¯•æŠŠäº‹ä»¶ä¸‹å‘ç»™`Behavior`ï¼Œç»‘å®šäº†è¯¥ `Behavior` çš„ view å°±ä¼šå¯¹äº‹ä»¶åšå‡ºå“åº”ã€‚  
 
-ÏÂÃæÊÇÕâÁ½¸ö¾ßÓĞÒÀÀµµÄ¹ØÏµµÄviewÔÚ`Behavior`·½·¨ÖĞµÄĞÎ²ÎÃû£¬·½±ã¶ÁÕß·Ö±æ£º
-±»¶¯±ä»¯£¬Ò²¾ÍÊÇ°ó¶¨ÁË`Behavior`µÄview³ÆÎª`child`
-Ö÷¶¯±ä»¯µÄviewÔÚ¡¸±ä»¯ÊÂ¼ş¡¹ÖĞ³ÆÎª`dependency`£»ÔÚ¡¸Ç¶Ì×»¬¶¯ÊÂ¼ş¡¹ÖĞ³ÆÎª`target`¡£
+ä¸‹é¢æ˜¯è¿™ä¸¤ä¸ªå…·æœ‰ä¾èµ–çš„å…³ç³»çš„viewåœ¨`Behavior`æ–¹æ³•ä¸­çš„å½¢å‚åï¼Œæ–¹ä¾¿è¯»è€…åˆ†è¾¨ï¼š  
+è¢«åŠ¨å˜åŒ–ï¼Œä¹Ÿå°±æ˜¯ç»‘å®šäº†`Behavior`çš„viewç§°ä¸º`child`  
+ä¸»åŠ¨å˜åŒ–çš„viewåœ¨ã€Œå˜åŒ–äº‹ä»¶ã€ä¸­ç§°ä¸º`dependency`ï¼›åœ¨ã€ŒåµŒå¥—æ»‘åŠ¨äº‹ä»¶ã€ä¸­ç§°ä¸º`target`ã€‚  
 
-ÒòÎª¿ÉÄÜ»á´æÔÚºÜ¶àµÄChild View¿ÉÒÔÏò`CoordinatorLayout`·¢³öÏûÏ¢£¬Ò²Í¬Ê±´æÔÚºÜ¶àµÄChild ViewÓµÓĞ×Å²»Í¬µÄ`Behavior`£¬ÄÇÃ´ÔÚ`CoordinatorLayout`½«ÕæÕıµÄÊÂ¼ş´«µİ½øÕâ¸ö`Behavior`Ö®Ç°£¬¿Ï¶¨ĞèÒªÒ»¸ö·½·¨£¬¸æÖª`CoordinatorLayout`ÕâÁ½ÕßµÄÒÀÀµ¹ØÏµÊÇ·ñ³ÉÁ¢¡£Èç¹û¹ØÏµ³ÉÁ¢£¬ÄÇÃ´¾Í°ÑÊÂ¼şÏÂ·¢¸øÄã£¬Èç¹û¹ØÏµ²»³ÉÁ¢£¬ÄÇÔÛ¾Íµ½´Ëover¡£
-ÏÂÃæÒÔ¡¸±ä»¯ÊÂ¼ş¡¹µÄ`layoutDependsOn`Ëµ¼¸¸öÀı×Ó£¬¡¸Ç¶Ì×»¬¶¯ÊÂ¼ş¡¹¾ÍÔÚ`onStartNestedScroll`ÖĞ×öÍ¬ÑùµÄÅĞ¶Ï¡£ÁíÍâµÄÁ½ÖÖ¡¸²¼¾ÖÊÂ¼ş¡¹¡¸´¥ÃşÊÂ¼ş¡¹¾ÍÃ»ÓĞÕâÒ»²½ÁË¡£
-**a.¸ù¾İid**
+å› ä¸ºå¯èƒ½ä¼šå­˜åœ¨å¾ˆå¤šçš„Child Viewå¯ä»¥å‘`CoordinatorLayout`å‘å‡ºæ¶ˆæ¯ï¼Œä¹ŸåŒæ—¶å­˜åœ¨å¾ˆå¤šçš„Child Viewæ‹¥æœ‰ç€ä¸åŒçš„`Behavior`ï¼Œé‚£ä¹ˆåœ¨`CoordinatorLayout`å°†çœŸæ­£çš„äº‹ä»¶ä¼ é€’è¿›è¿™ä¸ª`Behavior`ä¹‹å‰ï¼Œè‚¯å®šéœ€è¦ä¸€ä¸ªæ–¹æ³•ï¼Œå‘ŠçŸ¥`CoordinatorLayout`è¿™ä¸¤è€…çš„ä¾èµ–å…³ç³»æ˜¯å¦æˆç«‹ã€‚å¦‚æœå…³ç³»æˆç«‹ï¼Œé‚£ä¹ˆå°±æŠŠäº‹ä»¶ä¸‹å‘ç»™ä½ ï¼Œå¦‚æœå…³ç³»ä¸æˆç«‹ï¼Œé‚£å’±å°±åˆ°æ­¤overã€‚  
+ä¸‹é¢ä»¥ã€Œå˜åŒ–äº‹ä»¶ã€çš„`layoutDependsOn`è¯´å‡ ä¸ªä¾‹å­ï¼Œã€ŒåµŒå¥—æ»‘åŠ¨äº‹ä»¶ã€å°±åœ¨`onStartNestedScroll`ä¸­åšåŒæ ·çš„åˆ¤æ–­ã€‚å¦å¤–çš„ä¸¤ç§ã€Œå¸ƒå±€äº‹ä»¶ã€ã€Œè§¦æ‘¸äº‹ä»¶ã€å°±æ²¡æœ‰è¿™ä¸€æ­¥äº†ã€‚  
+**a.æ ¹æ®id**
 ```java
 @Override
 public boolean layoutDependsOn(CoordinatorLayout parent, View child, View dependency) {
     return dependency.getId() == R.id.xxx;
 }
-```
-**b.¸ù¾İÀàĞÍ**
+```  
+**b.æ ¹æ®ç±»å‹**
 ```java
 @Override
 public boolean layoutDependsOn(CoordinatorLayout parent, View child, View dependency) {
 	return dependency instanceof CustomView;
 }
-```
-**c.¸ù¾İidµÄÁíÒ»ÖÖĞ´·¨**
+```  
+**c.æ ¹æ®idçš„å¦ä¸€ç§å†™æ³•**
 ```java
 <declare-styleable name="Follow">
 	<attr name="target" format="reference"/>
 </declare-styleable>
 ```
-ÏÈ×Ô¶¨ÒåtargetÕâ¸öÊôĞÔ¡£
+å…ˆè‡ªå®šä¹‰targetè¿™ä¸ªå±æ€§ã€‚
 ```java
 <android.support.design.widget.CoordinatorLayout    
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -125,23 +128,23 @@ public class FollowBehavior extends CoordinatorLayout.Behavior {
 }
 ```
 
-# ËÄÖÖ²»Í¬µÄÊÂ¼şÁ÷
+# å››ç§ä¸åŒçš„äº‹ä»¶æµ
 
-## 1. ´¥ÃşÊÂ¼ş
-TouchEvent ×îÖ÷ÒªµÄ·½·¨¾ÍÊÇÁ½¸ö£º
+## 1. è§¦æ‘¸äº‹ä»¶
+TouchEvent æœ€ä¸»è¦çš„æ–¹æ³•å°±æ˜¯ä¸¤ä¸ªï¼š
 ```java
 public boolean onInterceptTouchEvent(MotionEvent ev)
 public boolean onTouchEvent(MotionEvent ev)
 ```
-ÔÚ `CoordinatorLayout` µÄ `onInterceptTouchEvent` ºÍ `onTouchEvent` ·½·¨ÖĞ£¬»á³¢ÊÔµ÷ÓÃÆä Child View ÓµÓĞµÄ `Behavior` ÖĞµÄÍ¬Ãû·½·¨¡£
+åœ¨ `CoordinatorLayout` çš„ `onInterceptTouchEvent` å’Œ `onTouchEvent` æ–¹æ³•ä¸­ï¼Œä¼šå°è¯•è°ƒç”¨å…¶ Child View æ‹¥æœ‰çš„ `Behavior` ä¸­çš„åŒåæ–¹æ³•ã€‚
 ```java
 public boolean onInterceptTouchEvent(CoordinatorLayout parent, View child, MotionEvent ev)
 public boolean onTouchEvent(CoordinatorLayout parent, View child, MotionEvent ev)
 ```
-Èç¹û `Behavior` ¶Ô´¥ÃşÊÂ¼ş½øĞĞÁËÀ¹½Ø£¬¾Í²»»áÔÙ·Ö·¢µ½ Child View ×ÔÉíÓµÓĞµÄ´¥ÃşÊÂ¼şÖĞ¡£
-Õâ¾ÍÒâÎ¶×Å£º**ÔÚ²»ÖªµÀ¾ßÌåViewµÄÇé¿öÏÂ£¬¾Í¿ÉÒÔÖØĞ´ËüµÄ´¥ÃşÊÂ¼ş¡£**
-È»¶øÓĞÒ»µãÎÒÃÇĞèÒª×¢Òâµ½µÄÊÇ£º**onTouchÊÂ¼şÊÇCoordinatorLayout·Ö·¢ÏÂÀ´µÄ£¬ËùÒÔÕâÀïµÄonTouchEvent²¢²»ÊÇÎÒÃÇ¿Ø¼ş×Ô¼ºµÄonTouchÊÂ¼ş**£¬Ò²¾ÍÊÇËµ£¬Äã¼ÙÈçÊÖÖ¸²»ÔÚÎÒÃÇµÄ¿Ø¼şÉÏ»¬¶¯£¬Ò²»á´¥·¢onTouchEvent¡£
-ĞèÒªÔÚ`onTouchEvent`·½·¨ÖĞµÄ`MotionEvent.ACTION_DOWN`ÏÂÌí¼Ó£º
+å¦‚æœ `Behavior` å¯¹è§¦æ‘¸äº‹ä»¶è¿›è¡Œäº†æ‹¦æˆªï¼Œå°±ä¸ä¼šå†åˆ†å‘åˆ° Child View è‡ªèº«æ‹¥æœ‰çš„è§¦æ‘¸äº‹ä»¶ä¸­ã€‚  
+è¿™å°±æ„å‘³ç€ï¼š**åœ¨ä¸çŸ¥é“å…·ä½“Viewçš„æƒ…å†µä¸‹ï¼Œå°±å¯ä»¥é‡å†™å®ƒçš„è§¦æ‘¸äº‹ä»¶ã€‚**  
+ç„¶è€Œæœ‰ä¸€ç‚¹æˆ‘ä»¬éœ€è¦æ³¨æ„åˆ°çš„æ˜¯ï¼š**onTouchäº‹ä»¶æ˜¯CoordinatorLayoutåˆ†å‘ä¸‹æ¥çš„ï¼Œæ‰€ä»¥è¿™é‡Œçš„onTouchEventå¹¶ä¸æ˜¯æˆ‘ä»¬æ§ä»¶è‡ªå·±çš„onTouchäº‹ä»¶**ï¼Œä¹Ÿå°±æ˜¯è¯´ï¼Œä½ å‡å¦‚æ‰‹æŒ‡ä¸åœ¨æˆ‘ä»¬çš„æ§ä»¶ä¸Šæ»‘åŠ¨ï¼Œä¹Ÿä¼šè§¦å‘onTouchEventã€‚  
+éœ€è¦åœ¨`onTouchEvent`æ–¹æ³•ä¸­çš„`MotionEvent.ACTION_DOWN`ä¸‹æ·»åŠ ï¼š
 ```java
 ox = ev.getX();
 oy = ev.getY();
@@ -149,34 +152,35 @@ if (oy < child.getTop() || oy > child.getBottom() || ox < child.getLeft() || ox 
 	return true;
 }
 ```
-¶ÔÊÖÊÆµÄÎ»ÖÃ½øĞĞ¹ıÂË£¬²»ÊÇÎÒÃÇ¿Ø¼ş·¶Î§ÄÚµÄ£¬ÉáÆúµô¡£
-## 2. ²¼¾ÖÊÂ¼ş
-ÊÓÍ¼²¼¾ÖÎŞ·Ç¾ÍÊÇÕâÁ½¸ö·½·¨£º
+å¯¹æ‰‹åŠ¿çš„ä½ç½®è¿›è¡Œè¿‡æ»¤ï¼Œä¸æ˜¯æˆ‘ä»¬æ§ä»¶èŒƒå›´å†…çš„ï¼Œèˆå¼ƒæ‰ã€‚
+
+## 2. å¸ƒå±€äº‹ä»¶
+è§†å›¾å¸ƒå±€æ— éå°±æ˜¯è¿™ä¸¤ä¸ªæ–¹æ³•ï¼š
 ```java
 protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)
 protected void onLayout(boolean changed, int l, int t, int r, int b)
 ```
-ÔÚ `CoordinatorLayout` µÄ `onMeasure ` ºÍ `onLayout` ·½·¨ÖĞ£¬Ò²»á³¢ÊÔµ÷ÓÃÆä Child View ÓµÓĞµÄ `Behavior` ÖĞ¶ÔÓ¦µÄ·½·¨£¬·Ö±ğÊÇ£º
+åœ¨ `CoordinatorLayout` çš„ `onMeasure ` å’Œ `onLayout` æ–¹æ³•ä¸­ï¼Œä¹Ÿä¼šå°è¯•è°ƒç”¨å…¶ Child View æ‹¥æœ‰çš„ `Behavior` ä¸­å¯¹åº”çš„æ–¹æ³•ï¼Œåˆ†åˆ«æ˜¯ï¼š
 ```java
 public boolean onMeasureChild(CoordinatorLayout parent, V child, int parentWidthMeasureSpec, int widthUsed,
 								int parentHeightMeasureSpec, int heightUsed)
 public boolean onLayoutChild(CoordinatorLayout parent, V child, int layoutDirection)
 ```
-Í¬ÑùµØ£¬`CoordinatorLayout` »áÓÅÏÈ´¦Àí `Behavior` ÖĞËùÖØĞ´µÄ²¼¾ÖÊÂ¼ş¡£
+åŒæ ·åœ°ï¼Œ`CoordinatorLayout` ä¼šä¼˜å…ˆå¤„ç† `Behavior` ä¸­æ‰€é‡å†™çš„å¸ƒå±€äº‹ä»¶ã€‚
 
-## 3. ±ä»¯ÊÂ¼ş
-Õâ¸ö±ä»¯ÊÇÖ¸ View µÄÎ»ÖÃ¡¢³ß´ç·¢ÉúÁË±ä»¯¡£
-ÔÚ `CoordinatorLayout` µÄ `onDraw` ·½·¨ÖĞ£¬»á±éÀúÈ«²¿µÄ Child View ³¢ÊÔÑ°ÕÒÊÇ·ñÓĞÏà»¥¹ØÁªµÄ¶ÔÏó¡£
-È·¶¨ÊÇ·ñ¹ØÁªµÄ·½Ê½ÓĞÁ½ÖÖ£º
-**1. BehaviorÖĞ¶¨Òå**
-Í¨¹ı `Behavior` µÄ `layoutDependsOn` ·½·¨À´ÅĞ¶ÏÊÇ·ñÓĞÒÀÀµ¹ØÏµ£¬Èç¹ûÓĞ¾Í¼ÌĞøµ÷ÓÃ `onDependentViewChanged`¡£FloatActionButton ¿ÉÒÔÔÚ Snackbar µ¯³öÊ±Ö÷¶¯ÉÏÒÆ¾ÍÍ¨¹ı¸Ã·½Ê½ÊµÏÖ¡£
+## 3. å˜åŒ–äº‹ä»¶
+è¿™ä¸ªå˜åŒ–æ˜¯æŒ‡ View çš„ä½ç½®ã€å°ºå¯¸å‘ç”Ÿäº†å˜åŒ–ã€‚  
+åœ¨ `CoordinatorLayout` çš„ `onDraw` æ–¹æ³•ä¸­ï¼Œä¼šéå†å…¨éƒ¨çš„ Child View å°è¯•å¯»æ‰¾æ˜¯å¦æœ‰ç›¸äº’å…³è”çš„å¯¹è±¡ã€‚  
+ç¡®å®šæ˜¯å¦å…³è”çš„æ–¹å¼æœ‰ä¸¤ç§ï¼š  
+**1. Behaviorä¸­å®šä¹‰**  
+é€šè¿‡ `Behavior` çš„ `layoutDependsOn` æ–¹æ³•æ¥åˆ¤æ–­æ˜¯å¦æœ‰ä¾èµ–å…³ç³»ï¼Œå¦‚æœæœ‰å°±ç»§ç»­è°ƒç”¨ `onDependentViewChanged`ã€‚FloatActionButton å¯ä»¥åœ¨ Snackbar å¼¹å‡ºæ—¶ä¸»åŠ¨ä¸Šç§»å°±é€šè¿‡è¯¥æ–¹å¼å®ç°ã€‚
 ```java
 /**
- * ÅĞ¶ÏÊÇdependencyÊÇ·ñÊÇµ±Ç°behaviorĞèÒªµÄ¶ÔÏó
+ * åˆ¤æ–­æ˜¯dependencyæ˜¯å¦æ˜¯å½“å‰behavioréœ€è¦çš„å¯¹è±¡
  * @param parent CoordinatorLayout
- * @param child ¸ÃBehavior¶ÔÓ¦µÄÄÇ¸öView
- * @param dependency dependency Òª¼ì²éµÄView(childÊÇ·ñÒªÒÀÀµÕâ¸ödependency)
- * @return true ÒÀÀµ, false ²»ÒÀÀµ
+ * @param child è¯¥Behaviorå¯¹åº”çš„é‚£ä¸ªView
+ * @param dependency dependency è¦æ£€æŸ¥çš„View(childæ˜¯å¦è¦ä¾èµ–è¿™ä¸ªdependency)
+ * @return true ä¾èµ–, false ä¸ä¾èµ–
  */
 @Override
 public boolean layoutDependsOn(CoordinatorLayout parent, Button child, View dependency) {
@@ -184,11 +188,11 @@ public boolean layoutDependsOn(CoordinatorLayout parent, Button child, View depe
 }
 
 /**
- * µ±¸Ä±ädependencyµÄ³ß´ç»òÕßÎ»ÖÃÊ±±»µ÷ÓÃ
+ * å½“æ”¹å˜dependencyçš„å°ºå¯¸æˆ–è€…ä½ç½®æ—¶è¢«è°ƒç”¨
  * @param parent CoordinatorLayout
- * @param child  ¸ÃBehavior¶ÔÓ¦µÄÄÇ¸öView
- * @param dependency childÒÀÀµdependency
- * @return true ´¦ÀíÁË, false Ã»´¦Àí
+ * @param child  è¯¥Behaviorå¯¹åº”çš„é‚£ä¸ªView
+ * @param dependency childä¾èµ–dependency
+ * @return true å¤„ç†äº†, false æ²¡å¤„ç†
  */
 @Override
 public boolean onDependentViewChanged(CoordinatorLayout parent, Button child, View dependency) {
@@ -196,34 +200,34 @@ public boolean onDependentViewChanged(CoordinatorLayout parent, Button child, Vi
 }
 
 /**
- * ÔÚlayoutDependsOn·µ»ØtrueµÄ»ù´¡ÉÏÖ®ºó£¬Í¨Öªdependency±»ÒÆ³ıÁË
+ * åœ¨layoutDependsOnè¿”å›trueçš„åŸºç¡€ä¸Šä¹‹åï¼Œé€šçŸ¥dependencyè¢«ç§»é™¤äº†
  * @param parent CoordinatorLayout
- * @param child ¸ÃBehavior¶ÔÓ¦µÄÄÇ¸öView
- * @param dependency childÒÀÀµdependency
+ * @param child è¯¥Behaviorå¯¹åº”çš„é‚£ä¸ªView
+ * @param dependency childä¾èµ–dependency
  */
 @Override
 public void onDependentViewRemoved(CoordinatorLayout parent, Button child, View dependency) {
 	
 }
 ```
-**2. XMLÖĞÉèÖÃÊôĞÔ**
-Í¨¹ı XML ÖĞÉèÖÃµÄ `layout_anchor`£¬¹ØÁªÉèÖÃÁË `layout_anchor` µÄ Child View Óë `layout_anchor` ¶ÔÓ¦µÄÄ¿±ê dependency View¡£Ëæºóµ÷ÓÃ `offsetChildToAnchor(child, layoutDirection);`£¬ÆäÊµ¾ÍÊÇµ÷ÕûÁ½ÕßµÄÎ»ÖÃ£¬ÈÃËüÃÇ¿ÉÒÔÒ»Æğ±ä»¯¡£FloatActionButton ¿ÉÒÔ¸úËæ Toolbar ÉÏÏÂÒÆ¶¯¾ÍÊÇ¸Ã·½Ê½ÊµÏÖ¡£
+**2. XMLä¸­è®¾ç½®å±æ€§**  
+é€šè¿‡ XML ä¸­è®¾ç½®çš„ `layout_anchor`ï¼Œå…³è”è®¾ç½®äº† `layout_anchor` çš„ Child View ä¸ `layout_anchor` å¯¹åº”çš„ç›®æ ‡ dependency Viewã€‚éšåè°ƒç”¨ `offsetChildToAnchor(child, layoutDirection);`ï¼Œå…¶å®å°±æ˜¯è°ƒæ•´ä¸¤è€…çš„ä½ç½®ï¼Œè®©å®ƒä»¬å¯ä»¥ä¸€èµ·å˜åŒ–ã€‚FloatActionButton å¯ä»¥è·Ÿéš Toolbar ä¸Šä¸‹ç§»åŠ¨å°±æ˜¯è¯¥æ–¹å¼å®ç°ã€‚
 ```java
 app:layout_anchor="@id/dependencyView.id"
 ```
 
-## 4. Ç¶Ì×»¬¶¯ÊÂ¼ş 
-**ÊµÏÖNestedScrollingChild**
-Èç¹ûÒ»¸öViewÏëÏòÍâ½ç´«µİ»¬¶¯ÊÂ¼ş£¬¼´Í¨Öª NestedScrollingParent?£¬¾Í±ØĞëÊµÏÖ´Ë½Ó¿Ú¡£
-¶ø Child Óë Parent µÄ¾ßÌå½»»¥Âß¼­£¬?[NestedScrollingChildHelper](https://developer.android.com/reference/android/support/v4/view/NestedScrollingChildHelper.html) ¸¨ÖúÀà»ù±¾ÒÑ¾­°ïÎÒÃÇ·â×°ºÃÁË£¬ËùÒÔÎÒÃÇÖ»ĞèÒªµ÷ÓÃ¶ÔÓ¦µÄ·½·¨¼´¿É¡£
-NestedScrollingChild½Ó¿ÚµÄÒ»°ãÊµÏÖ£º
+## 4. åµŒå¥—æ»‘åŠ¨äº‹ä»¶ 
+**å®ç°NestedScrollingChild**  
+å¦‚æœä¸€ä¸ªViewæƒ³å‘å¤–ç•Œä¼ é€’æ»‘åŠ¨äº‹ä»¶ï¼Œå³é€šçŸ¥ NestedScrollingParentï¼Œå°±å¿…é¡»å®ç°æ­¤æ¥å£ã€‚  
+è€Œ Child ä¸ Parent çš„å…·ä½“äº¤äº’é€»è¾‘ï¼Œ[NestedScrollingChildHelper](https://developer.android.com/reference/android/support/v4/view/NestedScrollingChildHelper.html) è¾…åŠ©ç±»åŸºæœ¬å·²ç»å¸®æˆ‘ä»¬å°è£…å¥½äº†ï¼Œæ‰€ä»¥æˆ‘ä»¬åªéœ€è¦è°ƒç”¨å¯¹åº”çš„æ–¹æ³•å³å¯ã€‚  
+NestedScrollingChildæ¥å£çš„ä¸€èˆ¬å®ç°ï¼š
 ```java
 public class CustomNestedScrollingChildView extends View implements NestedScrollingChild {
 
     private NestedScrollingChildHelper mChildHelper = new NestedScrollingChildHelper(this);
 
     /**
-     * ÉèÖÃµ±Ç°ViewÄÜ·ñ»¬¶¯
+     * è®¾ç½®å½“å‰Viewèƒ½å¦æ»‘åŠ¨
      * @param enabled
      */
     @Override
@@ -232,7 +236,7 @@ public class CustomNestedScrollingChildView extends View implements NestedScroll
     }
 
     /**
-     * ÅĞ¶Ïµ±Ç°ViewÄÜ·ñ»¬¶¯
+     * åˆ¤æ–­å½“å‰Viewèƒ½å¦æ»‘åŠ¨
      * @return
      */
     @Override
@@ -241,9 +245,9 @@ public class CustomNestedScrollingChildView extends View implements NestedScroll
     }
 
     /**
-     * Æô¶¯Ç¶Ì×»¬¶¯ÊÂ¼şÁ÷
-     * 1. Ñ°ÕÒ¿ÉÒÔ½ÓÊÕ NestedScroll ÊÂ¼şµÄ parent view£¬¼´ÊµÏÖÁË NestedScrollingParent ½Ó¿ÚµÄ ViewGroup
-     * 2. Í¨Öª¸Ã parent view£¬ÏÖÔÚÎÒÒª°Ñ»¬¶¯µÄ²ÎÊı´«µİ¸øÄã
+     * å¯åŠ¨åµŒå¥—æ»‘åŠ¨äº‹ä»¶æµ
+     * 1. å¯»æ‰¾å¯ä»¥æ¥æ”¶ NestedScroll äº‹ä»¶çš„ parent viewï¼Œå³å®ç°äº† NestedScrollingParent æ¥å£çš„ ViewGroup
+     * 2. é€šçŸ¥è¯¥ parent viewï¼Œç°åœ¨æˆ‘è¦æŠŠæ»‘åŠ¨çš„å‚æ•°ä¼ é€’ç»™ä½ 
      * @param axes
      * @return
      */
@@ -253,7 +257,7 @@ public class CustomNestedScrollingChildView extends View implements NestedScroll
     }
 
     /**
-     * Í£Ö¹Ç¶Ì×»¬¶¯ÊÂ¼şÁ÷
+     * åœæ­¢åµŒå¥—æ»‘åŠ¨äº‹ä»¶æµ
      */
     @Override
     public void stopNestedScroll() {
@@ -261,7 +265,7 @@ public class CustomNestedScrollingChildView extends View implements NestedScroll
     }
 
     /**
-     * ÊÇ·ñ´æÔÚ½ÓÊÕ NestedScroll ÊÂ¼şµÄ parent view
+     * æ˜¯å¦å­˜åœ¨æ¥æ”¶ NestedScroll äº‹ä»¶çš„ parent view
      * @return
      */
     @Override
@@ -270,16 +274,16 @@ public class CustomNestedScrollingChildView extends View implements NestedScroll
     }
 
     /**
-     * ÔÚ»¬¶¯Ö®ºó£¬Ïò¸¸view»ã±¨¹ö¶¯Çé¿ö£¬°üÀ¨child viewÏû·ÑµÄ²¿·ÖºÍchild viewÃ»ÓĞÏû·ÑµÄ²¿·Ö¡£
-     * @param dxConsumed x·½ÏòÒÑÏû·ÑµÄ»¬¶¯¾àÀë
-     * @param dyConsumed y·½ÏòÒÑÏû·ÑµÄ»¬¶¯¾àÀë
-     * @param dxUnconsumed x·½ÏòÎ´Ïû·ÑµÄ»¬¶¯¾àÀë
-     * @param dyUnconsumed y·½ÏòÎ´Ïû·ÑµÄ»¬¶¯¾àÀë
-     * @param offsetInWindow Èç¹ûparent view»¬¶¯µ¼ÖÂchild viewµÄ´°¿Ú·¢ÉúÁË±ä»¯£¨child ViewµÄÎ»ÖÃ·¢ÉúÁË±ä»¯£©
-     *                       ¸Ã²ÎÊı·µ»Øx(offsetInWindow[0]) y(offsetInWindow[1])·½ÏòµÄ±ä»¯
-     *                       Èç¹ûÄã¼ÇÂ¼ÁËÊÖÖ¸×îºóµÄÎ»ÖÃ£¬ĞèÒª¸ù¾İ²ÎÊıoffsetInWindow¼ÆËãÆ«ÒÆÁ¿£¬
-     *                       ²ÅÄÜ±£Ö¤ÏÂÒ»´ÎµÄtouchÊÂ¼şµÄ¼ÆËãÊÇÕıÈ·µÄ¡£
-     * @return Èç¹ûparent view½ÓÊÜÁËËüµÄ¹ö¶¯²ÎÊı£¬½øĞĞÁË²¿·ÖÏû·Ñ£¬ÔòÕâ¸öº¯Êı·µ»Øtrue£¬·ñÔòÎªfalse¡£
+     * åœ¨æ»‘åŠ¨ä¹‹åï¼Œå‘çˆ¶viewæ±‡æŠ¥æ»šåŠ¨æƒ…å†µï¼ŒåŒ…æ‹¬child viewæ¶ˆè´¹çš„éƒ¨åˆ†å’Œchild viewæ²¡æœ‰æ¶ˆè´¹çš„éƒ¨åˆ†ã€‚
+     * @param dxConsumed xæ–¹å‘å·²æ¶ˆè´¹çš„æ»‘åŠ¨è·ç¦»
+     * @param dyConsumed yæ–¹å‘å·²æ¶ˆè´¹çš„æ»‘åŠ¨è·ç¦»
+     * @param dxUnconsumed xæ–¹å‘æœªæ¶ˆè´¹çš„æ»‘åŠ¨è·ç¦»
+     * @param dyUnconsumed yæ–¹å‘æœªæ¶ˆè´¹çš„æ»‘åŠ¨è·ç¦»
+     * @param offsetInWindow å¦‚æœparent viewæ»‘åŠ¨å¯¼è‡´child viewçš„çª—å£å‘ç”Ÿäº†å˜åŒ–ï¼ˆchild Viewçš„ä½ç½®å‘ç”Ÿäº†å˜åŒ–ï¼‰
+     *                       è¯¥å‚æ•°è¿”å›x(offsetInWindow[0]) y(offsetInWindow[1])æ–¹å‘çš„å˜åŒ–
+     *                       å¦‚æœä½ è®°å½•äº†æ‰‹æŒ‡æœ€åçš„ä½ç½®ï¼Œéœ€è¦æ ¹æ®å‚æ•°offsetInWindowè®¡ç®—åç§»é‡ï¼Œ
+     *                       æ‰èƒ½ä¿è¯ä¸‹ä¸€æ¬¡çš„touchäº‹ä»¶çš„è®¡ç®—æ˜¯æ­£ç¡®çš„ã€‚
+     * @return å¦‚æœparent viewæ¥å—äº†å®ƒçš„æ»šåŠ¨å‚æ•°ï¼Œè¿›è¡Œäº†éƒ¨åˆ†æ¶ˆè´¹ï¼Œåˆ™è¿™ä¸ªå‡½æ•°è¿”å›trueï¼Œå¦åˆ™ä¸ºfalseã€‚
      */
     @Override
     public boolean dispatchNestedScroll(int dxConsumed, int dyConsumed, int dxUnconsumed,
@@ -289,24 +293,24 @@ public class CustomNestedScrollingChildView extends View implements NestedScroll
     }
 
     /**
-     * ÔÚ»¬¶¯Ö®Ç°£¬ÏÈÎÊÒ»ÏÂ parent view ÊÇ·ñĞèÒª»¬¶¯£¬
-     * ¼´child viewµÄonInterceptTouchEvent»òonTouchEvent·½·¨ÖĞµ÷ÓÃ¡£
-     * 1. Èç¹ûparent view»¬¶¯ÁËÒ»¶¨¾àÀë£¬ÄãĞèÒªÖØĞÂ¼ÆËãÒ»ÏÂparent view»¬¶¯ºóÊ£ÏÂ¸øÄãµÄ»¬¶¯¾àÀëÊ£ÓàÁ¿£¬
-     *      È»ºó×Ô¼º½øĞĞÊ£ÓàµÄ»¬¶¯¡£
-     * 2. ¸Ã·½·¨µÄµÚÈıµÚËÄ¸ö²ÎÊı·µ»Øparent viewÏû·ÑµôµÄ»¬¶¯¾àÀëºÍchild viewµÄ´°¿ÚÆ«ÒÆÁ¿£¬
-     *      Èç¹ûÄã¼ÇÂ¼ÁËÊÖÖ¸×îºóµÄÎ»ÖÃ£¬ĞèÒª¸ù¾İµÚËÄ¸ö²ÎÊıoffsetInWindow¼ÆËãÆ«ÒÆÁ¿£¬
-     *      ²ÅÄÜ±£Ö¤ÏÂÒ»´ÎµÄtouchÊÂ¼şµÄ¼ÆËãÊÇÕıÈ·µÄ¡£
-     * @param dx x·½ÏòµÄ»¬¶¯¾àÀë
-     * @param dy y·½ÏòµÄ»¬¶¯¾àÀë
-     * @param consumed Èç¹û²»ÊÇnull, Ôò¸æËßchild viewÏÖÔÚparent view»¬¶¯µÄÇé¿ö£¬
-     *                 consumed[0]parent view¸æËßchild viewË®Æ½·½Ïò»¬¶¯µÄ¾àÀë(dx)
-     *                 consumed[1]parent view¸æËßchild view´¹Ö±·½Ïò»¬¶¯µÄ¾àÀë(dy)
-     * @param offsetInWindow ¿ÉÑ¡ length=2 µÄÊı×é£¬
-     *                       Èç¹ûparent view»¬¶¯µ¼ÖÂchild ViewµÄ´°¿Ú·¢ÉúÁË±ä»¯£¨×ÓViewµÄÎ»ÖÃ·¢ÉúÁË±ä»¯£©
-     *                       ¸Ã²ÎÊı·µ»Øx(offsetInWindow[0]) y(offsetInWindow[1])·½ÏòµÄ±ä»¯
-     *                       Èç¹ûÄã¼ÇÂ¼ÁËÊÖÖ¸×îºóµÄÎ»ÖÃ£¬ĞèÒª¸ù¾İ²ÎÊıoffsetInWindow¼ÆËãÆ«ÒÆÁ¿£¬
-     *                       ²ÅÄÜ±£Ö¤ÏÂÒ»´ÎµÄtouchÊÂ¼şµÄ¼ÆËãÊÇÕıÈ·µÄ¡£
-     * @return Èç¹ûparent view¶Ô»¬¶¯¾àÀë½øĞĞÁË²¿·ÖÏû·Ñ£¬ÔòÕâ¸öº¯Êı·µ»Øtrue£¬·ñÔòÎªfalse¡£
+     * åœ¨æ»‘åŠ¨ä¹‹å‰ï¼Œå…ˆé—®ä¸€ä¸‹ parent view æ˜¯å¦éœ€è¦æ»‘åŠ¨ï¼Œ
+     * å³child viewçš„onInterceptTouchEventæˆ–onTouchEventæ–¹æ³•ä¸­è°ƒç”¨ã€‚
+     * 1. å¦‚æœparent viewæ»‘åŠ¨äº†ä¸€å®šè·ç¦»ï¼Œä½ éœ€è¦é‡æ–°è®¡ç®—ä¸€ä¸‹parent viewæ»‘åŠ¨åå‰©ä¸‹ç»™ä½ çš„æ»‘åŠ¨è·ç¦»å‰©ä½™é‡ï¼Œ
+     *      ç„¶åè‡ªå·±è¿›è¡Œå‰©ä½™çš„æ»‘åŠ¨ã€‚
+     * 2. è¯¥æ–¹æ³•çš„ç¬¬ä¸‰ç¬¬å››ä¸ªå‚æ•°è¿”å›parent viewæ¶ˆè´¹æ‰çš„æ»‘åŠ¨è·ç¦»å’Œchild viewçš„çª—å£åç§»é‡ï¼Œ
+     *      å¦‚æœä½ è®°å½•äº†æ‰‹æŒ‡æœ€åçš„ä½ç½®ï¼Œéœ€è¦æ ¹æ®ç¬¬å››ä¸ªå‚æ•°offsetInWindowè®¡ç®—åç§»é‡ï¼Œ
+     *      æ‰èƒ½ä¿è¯ä¸‹ä¸€æ¬¡çš„touchäº‹ä»¶çš„è®¡ç®—æ˜¯æ­£ç¡®çš„ã€‚
+     * @param dx xæ–¹å‘çš„æ»‘åŠ¨è·ç¦»
+     * @param dy yæ–¹å‘çš„æ»‘åŠ¨è·ç¦»
+     * @param consumed å¦‚æœä¸æ˜¯null, åˆ™å‘Šè¯‰child viewç°åœ¨parent viewæ»‘åŠ¨çš„æƒ…å†µï¼Œ
+     *                 consumed[0]parent viewå‘Šè¯‰child viewæ°´å¹³æ–¹å‘æ»‘åŠ¨çš„è·ç¦»(dx)
+     *                 consumed[1]parent viewå‘Šè¯‰child viewå‚ç›´æ–¹å‘æ»‘åŠ¨çš„è·ç¦»(dy)
+     * @param offsetInWindow å¯é€‰ length=2 çš„æ•°ç»„ï¼Œ
+     *                       å¦‚æœparent viewæ»‘åŠ¨å¯¼è‡´child Viewçš„çª—å£å‘ç”Ÿäº†å˜åŒ–ï¼ˆå­Viewçš„ä½ç½®å‘ç”Ÿäº†å˜åŒ–ï¼‰
+     *                       è¯¥å‚æ•°è¿”å›x(offsetInWindow[0]) y(offsetInWindow[1])æ–¹å‘çš„å˜åŒ–
+     *                       å¦‚æœä½ è®°å½•äº†æ‰‹æŒ‡æœ€åçš„ä½ç½®ï¼Œéœ€è¦æ ¹æ®å‚æ•°offsetInWindowè®¡ç®—åç§»é‡ï¼Œ
+     *                       æ‰èƒ½ä¿è¯ä¸‹ä¸€æ¬¡çš„touchäº‹ä»¶çš„è®¡ç®—æ˜¯æ­£ç¡®çš„ã€‚
+     * @return å¦‚æœparent viewå¯¹æ»‘åŠ¨è·ç¦»è¿›è¡Œäº†éƒ¨åˆ†æ¶ˆè´¹ï¼Œåˆ™è¿™ä¸ªå‡½æ•°è¿”å›trueï¼Œå¦åˆ™ä¸ºfalseã€‚
      */
     @Override
     public boolean dispatchNestedPreScroll(int dx, int dy, int[] consumed, int[] offsetInWindow) {
@@ -314,11 +318,11 @@ public class CustomNestedScrollingChildView extends View implements NestedScroll
     }
 
     /**
-     * ÔÚÇ¶Ì×»¬¶¯µÄchild view¿ìËÙ»¬¶¯Ö®ºóÔÙµ÷ÓÃ¸Ãº¯ÊıÏòparent view»ã±¨¿ìËÙ»¬¶¯Çé¿ö¡£
-     * @param velocityX Ë®Æ½·½ÏòµÄËÙ¶È
-     * @param velocityY ´¹Ö±·½ÏòµÄËÙ¶È
-     * @param consumed true ±íÊ¾child view¿ìËÙ»¬¶¯ÁË, false ±íÊ¾child viewÃ»ÓĞ¿ìËÙ»¬¶¯
-     * @return true ±íÊ¾parent view¿ìËÙ»¬¶¯ÁË, false ±íÊ¾parent viewÃ»ÓĞ¿ìËÙ»¬¶¯
+     * åœ¨åµŒå¥—æ»‘åŠ¨çš„child viewå¿«é€Ÿæ»‘åŠ¨ä¹‹åå†è°ƒç”¨è¯¥å‡½æ•°å‘parent viewæ±‡æŠ¥å¿«é€Ÿæ»‘åŠ¨æƒ…å†µã€‚
+     * @param velocityX æ°´å¹³æ–¹å‘çš„é€Ÿåº¦
+     * @param velocityY å‚ç›´æ–¹å‘çš„é€Ÿåº¦
+     * @param consumed true è¡¨ç¤ºchild viewå¿«é€Ÿæ»‘åŠ¨äº†, false è¡¨ç¤ºchild viewæ²¡æœ‰å¿«é€Ÿæ»‘åŠ¨
+     * @return true è¡¨ç¤ºparent viewå¿«é€Ÿæ»‘åŠ¨äº†, false è¡¨ç¤ºparent viewæ²¡æœ‰å¿«é€Ÿæ»‘åŠ¨
      */
     @Override
     public boolean dispatchNestedFling(float velocityX, float velocityY, boolean consumed) {
@@ -326,43 +330,43 @@ public class CustomNestedScrollingChildView extends View implements NestedScroll
     }
 
     /**
-     * ÔÚÇ¶Ì×»¬¶¯µÄchild view¿ìËÙ»¬¶¯Ö®Ç°¸æËßparent view¿ìËÙ»¬¶¯µÄÇé¿ö¡£
-     * @param velocityX Ë®Æ½·½ÏòµÄËÙ¶È
-     * @param velocityY ´¹Ö±·½ÏòµÄËÙ¶È
-     * @return true ±íÊ¾parent view¿ìËÙ»¬¶¯ÁË, false ±íÊ¾parent viewÃ»ÓĞ¿ìËÙ»¬¶¯
+     * åœ¨åµŒå¥—æ»‘åŠ¨çš„child viewå¿«é€Ÿæ»‘åŠ¨ä¹‹å‰å‘Šè¯‰parent viewå¿«é€Ÿæ»‘åŠ¨çš„æƒ…å†µã€‚
+     * @param velocityX æ°´å¹³æ–¹å‘çš„é€Ÿåº¦
+     * @param velocityY å‚ç›´æ–¹å‘çš„é€Ÿåº¦
+     * @return true è¡¨ç¤ºparent viewå¿«é€Ÿæ»‘åŠ¨äº†, false è¡¨ç¤ºparent viewæ²¡æœ‰å¿«é€Ÿæ»‘åŠ¨
      */
     @Override
     public boolean dispatchNestedPreFling(float velocityX, float velocityY) {
         return mChildHelper.dispatchNestedPreFling(velocityX, velocityY);
     }
 ```
-**ÊµÏÖNestedScrollingParent**
-Èç¹ûÒ»¸öView GroupÏë½ÓÊÕÀ´×Ô NestedScrollingChild µÄ»¬¶¯ÊÂ¼ş£¬¾ÍĞèÒªÊµÏÖ¸Ã½Ó¿Ú¡£
-Í¬ÑùÓĞÒ»¸ö?[NestedScrollingParentHelper
-](https://developer.android.com/reference/android/support/v4/view/NestedScrollingParentHelper.html) ¸¨ÖúÀà£¬°ïÎÒÃÇ·â×°ºÃÁË parent view Óë child viewÖ®¼äµÄ¾ßÌå½»»¥Âß¼­¡£
-ÓÉ NestedScrollingChild Ö÷¶¯·¢³ö»¬¶¯ÊÂ¼ş´«µİ¸ø NestedScrollingParent£¬NestedScrollingParent ×ö³öÏìÓ¦¡£ 
-Ö®¼äµÄµ÷ÓÃ¹ØÏµÈçÏÂ±íËùÊ¾£º
+**å®ç°NestedScrollingParent**  
+å¦‚æœä¸€ä¸ªView Groupæƒ³æ¥æ”¶æ¥è‡ª NestedScrollingChild çš„æ»‘åŠ¨äº‹ä»¶ï¼Œå°±éœ€è¦å®ç°è¯¥æ¥å£ã€‚  
+åŒæ ·æœ‰ä¸€ä¸ª[NestedScrollingParentHelper
+](https://developer.android.com/reference/android/support/v4/view/NestedScrollingParentHelper.html) è¾…åŠ©ç±»ï¼Œå¸®æˆ‘ä»¬å°è£…å¥½äº† parent view ä¸ child viewä¹‹é—´çš„å…·ä½“äº¤äº’é€»è¾‘ã€‚  
+ç”± NestedScrollingChild ä¸»åŠ¨å‘å‡ºæ»‘åŠ¨äº‹ä»¶ä¼ é€’ç»™ NestedScrollingParentï¼ŒNestedScrollingParent åšå‡ºå“åº”ã€‚   
+ä¹‹é—´çš„è°ƒç”¨å…³ç³»å¦‚ä¸‹è¡¨æ‰€ç¤ºï¼š
 
 |Child View|Parent View|
 |---------|---------|
-|  startNestedScroll  |  onStartNestedScroll¡¢onNestedScrollAccepted  |
+|  startNestedScroll  |  onStartNestedScrollã€onNestedScrollAccepted  |
 |  dispatchNestedPreScroll  |  onNestedPreScroll  |
 |  dispatchNestedScroll  |  onNestedScroll  |
 |  stopNestedScroll  |  onStopNestedScroll  |
 |  dispatchNestedFling  |  onNestedFling  |
 |  dispatchNestedPreFling  |  onNestedPreFling  |
 
-**¼Ì³ĞBehavior**
-ÔÚÉÏÃæµÄËµÃ÷ÖĞÌáµ½ Parent View »áÏû·ÑÒ»²¿·Ö»òÈ«²¿µÄ»¬¶¯¾àÀë£¬µ«ÆäÊµ´ó²¿·ÖÇé¿öÏÂ£¬ÎÒÃÇµÄ Parent View ×ÔÉí²¢²»»áÏû·Ñ»¬¶¯¾àÀë£¬¶¼ÊÇ´«µİ¸ø `Behavior`£¬Ò²¾ÍÊÇÓµÓĞÕâ¸ö `Behavior` µÄ Child View ²ÅÊÇÕæÕıÏû·Ñ»¬¶¯¾àÀëµÄÊµÀı¡£
-`Behavior` ÓµÓĞÓë `NestedScrollingParent?` ½Ó¿ÚÍêÈ«Í¬ÃûµÄ·½·¨¡£ÔÚÃ¿Ò»¸ö `NestedScrollingParent?` µÄ·½·¨ÖĞ¶¼»áµ÷ÓÃ `Behavior` ÖĞµÄÍ¬Ãû·½·¨¡£
-ÓĞÕâÃ´¼¸¸ö·½·¨×öÏÂÌØ±ğËµÃ÷£º
+**ç»§æ‰¿Behavior**  
+åœ¨ä¸Šé¢çš„è¯´æ˜ä¸­æåˆ° Parent View ä¼šæ¶ˆè´¹ä¸€éƒ¨åˆ†æˆ–å…¨éƒ¨çš„æ»‘åŠ¨è·ç¦»ï¼Œä½†å…¶å®å¤§éƒ¨åˆ†æƒ…å†µä¸‹ï¼Œæˆ‘ä»¬çš„ Parent View è‡ªèº«å¹¶ä¸ä¼šæ¶ˆè´¹æ»‘åŠ¨è·ç¦»ï¼Œéƒ½æ˜¯ä¼ é€’ç»™ `Behavior`ï¼Œä¹Ÿå°±æ˜¯æ‹¥æœ‰è¿™ä¸ª `Behavior` çš„ Child View æ‰æ˜¯çœŸæ­£æ¶ˆè´¹æ»‘åŠ¨è·ç¦»çš„å®ä¾‹ã€‚  
+`Behavior` æ‹¥æœ‰ä¸ `NestedScrollingParent` æ¥å£å®Œå…¨åŒåçš„æ–¹æ³•ã€‚åœ¨æ¯ä¸€ä¸ª `NestedScrollingParent` çš„æ–¹æ³•ä¸­éƒ½ä¼šè°ƒç”¨ `Behavior` ä¸­çš„åŒåæ–¹æ³•ã€‚  
+æœ‰è¿™ä¹ˆå‡ ä¸ªæ–¹æ³•åšä¸‹ç‰¹åˆ«è¯´æ˜ï¼š
 ```java
 /**
- * ¿ªÊ¼Ç¶Ì×»¬¶¯µÄÊ±ºò±»µ÷ÓÃ
- * 1. ĞèÒªÅĞ¶Ï»¬¶¯µÄ·½ÏòÊÇ·ñÊÇÎÒÃÇĞèÒªµÄ¡£
- *      nestedScrollAxes == ViewCompat.SCROLL_AXIS_HORIZONTAL ±íÊ¾ÊÇË®Æ½·½ÏòµÄ»¬¶¯
- *      nestedScrollAxes == ViewCompat.SCROLL_AXIS_VERTICAL ±íÊ¾ÊÇÊúÖ±·½ÏòµÄ»¬¶¯
- * 2. ·µ»Ø true ±íÊ¾¼ÌĞø½ÓÊÕºóĞøµÄ»¬¶¯ÊÂ¼ş£¬·µ»Ø false ±íÊ¾²»ÔÙ½ÓÊÕºóĞø»¬¶¯ÊÂ¼ş
+ * å¼€å§‹åµŒå¥—æ»‘åŠ¨çš„æ—¶å€™è¢«è°ƒç”¨
+ * 1. éœ€è¦åˆ¤æ–­æ»‘åŠ¨çš„æ–¹å‘æ˜¯å¦æ˜¯æˆ‘ä»¬éœ€è¦çš„ã€‚
+ *      nestedScrollAxes == ViewCompat.SCROLL_AXIS_HORIZONTAL è¡¨ç¤ºæ˜¯æ°´å¹³æ–¹å‘çš„æ»‘åŠ¨
+ *      nestedScrollAxes == ViewCompat.SCROLL_AXIS_VERTICAL è¡¨ç¤ºæ˜¯ç«–ç›´æ–¹å‘çš„æ»‘åŠ¨
+ * 2. è¿”å› true è¡¨ç¤ºç»§ç»­æ¥æ”¶åç»­çš„æ»‘åŠ¨äº‹ä»¶ï¼Œè¿”å› false è¡¨ç¤ºä¸å†æ¥æ”¶åç»­æ»‘åŠ¨äº‹ä»¶
  */
 @Override
 public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, View child,
@@ -370,11 +374,11 @@ public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, View chi
 }
 
 /**
- * »¬¶¯ÖĞµ÷ÓÃ
- * 1. ÕıÔÚÉÏ»¬£ºdyConsumed > 0 && dyUnconsumed == 0
- * 2. ÒÑ¾­µ½¶¥²¿ÁË»¹ÔÚÉÏ»¬£ºdyConsumed == 0 && dyUnconsumed > 0
- * 3. ÕıÔÚÏÂ»¬£ºdyConsumed < 0 && dyUnconsumed == 0
- * 4. ÒÑ¾­´òµ×²¿ÁË»¹ÔÚÏÂ»¬£ºdyConsumed == 0 && dyUnconsumed < 0
+ * æ»‘åŠ¨ä¸­è°ƒç”¨
+ * 1. æ­£åœ¨ä¸Šæ»‘ï¼šdyConsumed > 0 && dyUnconsumed == 0
+ * 2. å·²ç»åˆ°é¡¶éƒ¨äº†è¿˜åœ¨ä¸Šæ»‘ï¼šdyConsumed == 0 && dyUnconsumed > 0
+ * 3. æ­£åœ¨ä¸‹æ»‘ï¼šdyConsumed < 0 && dyUnconsumed == 0
+ * 4. å·²ç»æ‰“åº•éƒ¨äº†è¿˜åœ¨ä¸‹æ»‘ï¼šdyConsumed == 0 && dyUnconsumed < 0
  */
 @Override
 public void onNestedScroll(CoordinatorLayout coordinatorLayout, View child, View target,
@@ -382,7 +386,7 @@ public void onNestedScroll(CoordinatorLayout coordinatorLayout, View child, View
 }
 
 /**
- * ¿ìËÙ»¬¶¯ÖĞµ÷ÓÃ
+ * å¿«é€Ÿæ»‘åŠ¨ä¸­è°ƒç”¨
  */
 @Override
 public boolean onNestedFling(CoordinatorLayout coordinatorLayout, View child, View target,
@@ -390,24 +394,23 @@ public boolean onNestedFling(CoordinatorLayout coordinatorLayout, View child, Vi
 }
 ```
 
-# ×Ü½á
-×Ü½áÒ»ÏÂÕâËÄÖÖÊÂ¼şÁ÷£¬ºÍ¸÷×ÔĞèÒªÊµÏÖµÄ·½·¨¡£
-¸ù¾İÔÚ`×Ô¶¨ÒåBehavior`Ê±ÊÇ·ñĞèÒªÅĞ¶ÏÒÀÀµ¹ØÏµ£¬°Ñ`Behavior`´úÀíµÄËÄÖÖÇé¿ö·Ö³ÉÁ½Àà£º
-ÊÂ¼şÀ´×ÔÍâ²¿¸¸view£º
-1.²¼¾ÖÊÂ¼ş£º`Behavior`µÄ `onMeasureChild`+`onLayoutChild`
-2.´¥ÃşÊÂ¼ş£º`Behavior`µÄ`onInterceptTouchEvent`+`onTouchEvent`
-ÊÂ¼şÀ´×ÔÄÚ²¿×Óview£º
-3.view±ä»¯ÊÂ¼ş£º`Behavior`µÄ`layoutDependsOn`+`onDependentViewChanged`+`onDependentViewRemoved`
-4.Ç¶Ì×»¬¶¯ÊÂ¼ş£º`Behavior`µÄ`onStartNestedScroll`+`onNestedScrollAccepted`+`onStopNestedScroll`+`onNestedScroll`+
-`onNestedPreScroll`+`onNestedFling`+`onNestedPreFling`
+# æ€»ç»“
+æ€»ç»“ä¸€ä¸‹è¿™å››ç§äº‹ä»¶æµï¼Œå’Œå„è‡ªéœ€è¦å®ç°çš„æ–¹æ³•ã€‚  
+æ ¹æ®åœ¨`è‡ªå®šä¹‰Behavior`æ—¶æ˜¯å¦éœ€è¦åˆ¤æ–­ä¾èµ–å…³ç³»ï¼ŒæŠŠ`Behavior`ä»£ç†çš„å››ç§æƒ…å†µåˆ†æˆä¸¤ç±»ï¼š  
+äº‹ä»¶æ¥è‡ªå¤–éƒ¨çˆ¶viewï¼š  
+1.å¸ƒå±€äº‹ä»¶ï¼š`Behavior`çš„ `onMeasureChild`+`onLayoutChild`  
+2.è§¦æ‘¸äº‹ä»¶ï¼š`Behavior`çš„`onInterceptTouchEvent`+`onTouchEvent`  
+äº‹ä»¶æ¥è‡ªå†…éƒ¨å­viewï¼š  
+3.viewå˜åŒ–äº‹ä»¶ï¼š`Behavior`çš„`layoutDependsOn`+`onDependentViewChanged`+`onDependentViewRemoved`  
+4.åµŒå¥—æ»‘åŠ¨äº‹ä»¶ï¼š`Behavior`çš„`onStartNestedScroll`+`onNestedScrollAccepted`+`onStopNestedScroll`+`onNestedScroll`+`onNestedPreScroll`+`onNestedFling`+`onNestedPreFling`  
 
-# ºó¼Ç
-Ö®Ç°ÔÚGoogle¡¢°Ù¶È`×Ô¶¨ÒåBehavior`ÔìÂÖ×ÓµÄÊ±ºò£¬¸Õ¿ªÊ¼¿´Ò»Æª£¬¾õµÃ²»¹ıÈç´Ë£¬¾ÍÕâÃ´µã¶«Î÷¡£ÔÙ¿´Ò»Æª£¬ß×~ÊµÏÖÔõÃ´ÓÖ²»Ò»ÑùÁË£¬ÔÙÀ´Ò»ÆªÓÖ²»Ò»ÑùÁË¡£
-±¾ÎÄ¾ÍÊÇÏëÆğÒ»¸ö´ó¸ÙµÄ×÷ÓÃ£¬ÂÖ×ÓÔÙÔõÃ´Ôì£¬»¹ÊÇÕâÃ´Ğ©¸ö·½·¨¡£ÒÔºóÔÙ¿´±ğÈËµÄÂÖ×Ó»òÕß×Ô¼ºÔìÂÖ×ÓµÄÊ±ºò£¬¿ÉÒÔÇåÎúÒ»Ğ©¡£
+# åè®°
+ä¹‹å‰åœ¨Googleã€ç™¾åº¦`è‡ªå®šä¹‰Behavior`é€ è½®å­çš„æ—¶å€™ï¼Œåˆšå¼€å§‹çœ‹ä¸€ç¯‡ï¼Œè§‰å¾—ä¸è¿‡å¦‚æ­¤ï¼Œå°±è¿™ä¹ˆç‚¹ä¸œè¥¿ã€‚å†çœ‹ä¸€ç¯‡ï¼Œå’¦~å®ç°æ€ä¹ˆåˆä¸ä¸€æ ·äº†ï¼Œå†æ¥ä¸€ç¯‡åˆä¸ä¸€æ ·äº†ã€‚
+æœ¬æ–‡å°±æ˜¯æƒ³èµ·ä¸€ä¸ªå¤§çº²çš„ä½œç”¨ï¼Œè½®å­å†æ€ä¹ˆé€ ï¼Œè¿˜æ˜¯è¿™ä¹ˆäº›ä¸ªæ–¹æ³•ã€‚ä»¥åå†çœ‹åˆ«äººçš„è½®å­æˆ–è€…è‡ªå·±é€ è½®å­çš„æ—¶å€™ï¼Œå¯ä»¥æ¸…æ™°ä¸€äº›ã€‚
 
-# À©Õ¹
-[sidhuÑÛÖĞµÄCoordinatorLayout.Behavior£¨Ò»£©](https://segmentfault.com/a/1190000006657044)
-[sidhuÑÛÖĞµÄCoordinatorLayout.Behavior£¨¶ş£©](https://segmentfault.com/a/1190000006665225)
-[sidhuÑÛÖĞµÄCoordinatorLayout.Behavior£¨Èı£©](https://segmentfault.com/a/1190000006666005)
-[Material DesignÏµÁĞ£¬×Ô¶¨ÒåBehaviorÖ§³ÖËùÓĞView](http://blog.csdn.net/yanzhenjie1003/article/details/52205665)
-[CoordinatorLayoutµÄÊ¹ÓÃÈç´Ë¼òµ¥](http://blog.csdn.net/huachao1001/article/details/51554608)
+# æ‰©å±•
+[sidhuçœ¼ä¸­çš„CoordinatorLayout.Behaviorï¼ˆä¸€ï¼‰](https://segmentfault.com/a/1190000006657044)  
+[sidhuçœ¼ä¸­çš„CoordinatorLayout.Behaviorï¼ˆäºŒï¼‰](https://segmentfault.com/a/1190000006665225)  
+[sidhuçœ¼ä¸­çš„CoordinatorLayout.Behaviorï¼ˆä¸‰ï¼‰](https://segmentfault.com/a/1190000006666005)  
+[Material Designç³»åˆ—ï¼Œè‡ªå®šä¹‰Behavioræ”¯æŒæ‰€æœ‰View](http://blog.csdn.net/yanzhenjie1003/article/details/52205665)  
+[CoordinatorLayoutçš„ä½¿ç”¨å¦‚æ­¤ç®€å•](http://blog.csdn.net/huachao1001/article/details/51554608)  
