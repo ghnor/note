@@ -1,5 +1,3 @@
-# 横竖屏切换时Activity的生命周期
-
 * 不设置`Activity`的`android:configChanges`  
 切横屏或者切竖屏，重新创建Activity  
 
