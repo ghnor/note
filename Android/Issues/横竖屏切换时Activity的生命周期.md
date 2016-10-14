@@ -13,9 +13,3 @@
 * 设置`Activity`的`android:configChanges="orientation|keyboardHidden|screenSize"`  
 真正可以保证在任何版本下，不重新创建`Activity`  
 只调用`onConfigurationChanged`  
-
-
-
-
-
-
