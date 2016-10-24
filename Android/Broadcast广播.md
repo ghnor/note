@@ -4,7 +4,7 @@ Broadcast包括两个概念，广播发送者和广播接收者(Receiver)，这�
 # 1. 广播的接收
 自定义广播接收器需要继承基类`BroadcastReceiver`或`WakefulBroadcastReceiver`，并实现抽象方法`onReceive(Context context, Intent intent)`。广播接收器接收到相应广播后，会自动回到onReceive(..)方法。默认情况下，广播接收器也是运行在 UI 线程，因此，`onReceive()`方法中不能执行太耗时的操作。否则将因此 ANR。
 > **BroadcastReceiver**：不会保证CPU的持续工作。当你执行长时间的操作时，CPU可能会在中途陷入休眠。
-> **WakefulBroadcastReceiver**：保证CPU持续工作直到操作完成。
+> **WakefulBroadcastReceiver**：保证CPU持续工作直到操作完成。  
 [BroadcastReceiver Vs WakefulBroadcastReceiver](http://stackoverflow.com/questions/26380534/broadcastreceiver-vs-wakefulbroadcastreceiver)
 
 ## 1.1. 继承 BroadcastReceiver
