@@ -4,6 +4,9 @@
 
 [哈佛大学公开课：计算机科学cs50](http://open.163.com/special/opencourse/cs50.html)
 
+# 综合
+[程序员面试、算法研究、编程艺术、红黑树、数据挖掘5大系列集锦](http://blog.csdn.net/v_july_v/article/details/6543438)
+
 # 数据结构
 
 [数据结构与算法分析:C语言描述](https://book.douban.com/subject/1139426/)
