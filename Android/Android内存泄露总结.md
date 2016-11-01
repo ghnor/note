@@ -1,3 +1,8 @@
+> [Android内存泄漏总结](http://blog.xuanzhangjiong.xyz/2016/03/01/Android%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E6%80%BB%E7%BB%93/)  
+> [内存泄露从入门到精通三部曲之基础知识篇](http://bugly.qq.com/bbs/forum.php?mod=viewthread&tid=21&highlight=%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E4%B8%89%E9%83%A8%E6%9B%B2%E4%B9%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%AF%87)  
+> [内存泄露从入门到精通三部曲之排查方法篇](http://bugly.qq.com/bbs/forum.php?mod=viewthread&tid=62&highlight=%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E4%B8%89%E9%83%A8%E6%9B%B2%E4%B9%8B%E6%8E%92%E6%9F%A5%E6%96%B9%E6%B3%95%E7%AF%87)  
+> [内存泄露从入门到精通三部曲之常见原因与用户实践](http://bugly.qq.com/bbs/forum.php?mod=viewthread&tid=125&highlight=%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E4%B8%89%E9%83%A8%E6%9B%B2%E4%B9%8B%E5%B8%B8%E8%A7%81%E5%8E%9F%E5%9B%A0%E4%B8%8E%E7%94%A8%E6%88%B7%E5%AE%9E%E8%B7%B5)
+
 # 什么是内存泄露
 当一个对象已经不需要再使用了，本该被回收时，而有另外一个正在使用的对象持有它的引用从而导致它不能被回收，这导致本该被回收的对象不能被回收而停留在堆内存中，这种情况就称为内存泄漏(Memory Leak)。
 
