@@ -1,4 +1,19 @@
+ANR:Application Not Responding，即应用无响应。
+
 可以通过/data/anr/traces.txt文件查看ANR信息。
+
+### ANR一般有三种类型
+
+1. KeyDispatchTimeout(5 seconds)  
+按键或触摸事件在特定时间内无响应
+
+2. BroadcastTimeout(10 seconds)  
+BroadcastReceiver在特定时间内无法处理完成
+
+3. ServiceTimeout(20 seconds)  
+Service在特定的时间内无法处理完成
+
+### 可能的原因
 
 * 主线程被IO操作（从4.0之后网络IO不允许在主线程中）阻塞。
 * 主线程中存在耗时的计算
@@ -11,3 +26,11 @@
 * 使用Handler处理工作线程结果，而不是使用Thread.wait()或者Thread.sleep()来阻塞主线程。
 * Activity的onCreate和onResume回调中尽量避免耗时的代码
 * BroadcastReceiver中onReceive代码也要尽量减少耗时，建议使用IntentService处理。
+
+### 主要的UI线程
+
+* Activity：onCreate()、onResume()、onDestroy()、onKeyDown()、onClick()
+
+* AsyncTask：onPreExecute()、onProgressUpdate()、onPostExecute()、onCancel()
+
+* Mainthread handler：handleMessage()、post(runnable r)
