@@ -60,6 +60,9 @@ intent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
 sendBroadcast(intent);
 ```
 
+补充：  
+有些广播只能通过动态方式注册，比如时间变化事件、屏幕亮灭事件、电量变更事件，因为这些事件触发频率通常很高，如果允许后台监听，会导致进程频繁创建和销毁，从而影响系统整体性能。
+
 ## 2.1. 动态注册
 代码中调用 Context.registerReceiver() 方法动态注册 BroadcastReceiver。  
 在 Context 的实例被销毁时，调用 Context.unregisterReceiver() 解除注册的 BroadcastReceiver。
