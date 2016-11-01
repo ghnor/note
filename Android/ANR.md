@@ -1,6 +1,6 @@
-ANR:Application Not Responding，即应用无响应。
+ANR：Application Not Responding，即应用无响应。
 
-可以通过/data/anr/traces.txt文件查看ANR信息。
+可以通过 /data/anr/traces.txt 文件查看ANR信息。
 
 ### ANR一般有三种类型
 
@@ -27,9 +27,23 @@ Service在特定的时间内无法处理完成
 * Activity的onCreate和onResume回调中尽量避免耗时的代码
 * BroadcastReceiver中onReceive代码也要尽量减少耗时，建议使用IntentService处理。
 
+### 如何避免
+
+* UI线程尽量只做跟UI相关的工作，但一些复杂的UI操作，还是需要一些技巧来处理，不如你让一个Button去setText一个10M的文本，UI肯定崩掉了，不过对于此类问题，分段加载貌似是最好的方法了。
+
+* 让耗时的工作（比如数据库操作，I/O，连接网络或者别的有可能阻碍UI线程的操作）把它放入单独的线程处理。
+
+* 尽量用Handler来处理UIthread和别的thread之间的交互。
+
 ### 主要的UI线程
 
 * Activity：onCreate()、onResume()、onDestroy()、onKeyDown()、onClick()
+
+* Service：onCreate(), onStart()、onDestroy()
+
+* BroadcastReceiver：onReceiver()
+
+* Application：onCreate()、onTerminate()
 
 * AsyncTask：onPreExecute()、onProgressUpdate()、onPostExecute()、onCancel()
 
