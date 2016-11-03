@@ -79,3 +79,6 @@ webView.evaluateJavascript("getGreetings()", new ValueCallback<String>() {
 ```
 上面限定了结果返回结果为String，对于简单的类型会尝试转换成字符串返回，对于复杂的数据类型，建议以字符串形式的json返回。  
 evaluateJavascript方法必须在UI线程（主线程）调用，因此onReceiveValue也执行在主线程。  
+
+## 其他
+[为WebView中的Java与JavaScript提供【安全可靠】的多样互通方案](https://github.com/pedant/safe-java-js-webview-bridge)
