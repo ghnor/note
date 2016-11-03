@@ -1,3 +1,5 @@
+FC：Force Close
+
 ## 出现的原因：
 * StackOverFlowError
 * RuntimeException
