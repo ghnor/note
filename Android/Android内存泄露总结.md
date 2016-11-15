@@ -1,4 +1,3 @@
-> [Android内存泄漏总结](http://blog.xuanzhangjiong.xyz/2016/03/01/Android%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E6%80%BB%E7%BB%93/)  
 > [内存泄露从入门到精通三部曲之基础知识篇](http://bugly.qq.com/bbs/forum.php?mod=viewthread&tid=21&highlight=%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E4%B8%89%E9%83%A8%E6%9B%B2%E4%B9%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%AF%87)  
 > [内存泄露从入门到精通三部曲之排查方法篇](http://bugly.qq.com/bbs/forum.php?mod=viewthread&tid=62&highlight=%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E4%B8%89%E9%83%A8%E6%9B%B2%E4%B9%8B%E6%8E%92%E6%9F%A5%E6%96%B9%E6%B3%95%E7%AF%87)  
 > [内存泄露从入门到精通三部曲之常见原因与用户实践](http://bugly.qq.com/bbs/forum.php?mod=viewthread&tid=125&highlight=%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E4%B8%89%E9%83%A8%E6%9B%B2%E4%B9%8B%E5%B8%B8%E8%A7%81%E5%8E%9F%E5%9B%A0%E4%B8%8E%E7%94%A8%E6%88%B7%E5%AE%9E%E8%B7%B5)
@@ -7,6 +6,29 @@
 当一个对象已经不需要再使用了，本该被回收时，而有另外一个正在使用的对象持有它的引用从而导致它不能被回收，这导致本该被回收的对象不能被回收而停留在堆内存中，这种情况就称为内存泄漏(Memory Leak)。
 
 # 常见的内存泄露及解决
+
+## 谨慎使用getSystemService
+比如：  
+```java
+static PowerManager powerManager = (PowerManager)getSystemService(Context.POWER_SERVICE);
+```
+一般认为，powerManager持有的应该是Application的Context的引用。  
+事实上，是根据调用者来决定是Activity还是Application的Context引用。
+
+**解决：**  
+* 不使用静态变量持有PowerManager
+```java
+PowerManager powerManager = (PowerManager)getSystemService(Context.POWER_SERVICE);
+```
+* 改为由Application调用
+```java
+PowerManager powerManager = (PowerManager)getApplicationContext().getSystemService(Context.POWER_SERVICE);
+```
+
+**建议**  
+* 如果服务和UI相关，则用Activity
+* 如果是类似ALARM_SERVICE,CONNECTIVITY_SERVICE建议有限选用Application Context
+* 如果出现出现了内存泄漏，排除问题，可以考虑使用Application Context
 
 ## 单例造成的内存泄露
 由于单例的静态特性使得单例的生命周期和应用的生命周期一样长，这就说明了如果一个对象已经不需要使用了，而单例对象还持有该对象的引用，那么这个对象将不能被正常回收，这就导致了内存泄漏。
@@ -208,13 +230,10 @@ protected void onCreate(Bundle state) {
 
 # 总结
 
-我们不难发现，大多数问题都是 static 造成的！
-
-* 在使用 static 时一定要小心，关注该 static 变量持有的引用情况。在必要情况下使用弱引用的方式来持有一些引用。
-* 在使用非静态内部类时也要注意，毕竟它们持有外部类的引用。（高端一点的使用 RxJava 的同学在 subscribe 时也要注意 unSubscribe 哦）。
-* 保持对对象生命周期的敏感，特别注意单例、静态对象、全局性集合等的生命周期，注意在生命周期结束时释放资源。
-* 使用属性动画时，不用的时候请停止(尤其是循环播放的动画)，不然会产生内存泄露（Activity 无法释放）（View 动画不会）。
-* 在涉及到Context时先考虑ApplicationContext，当然它并不是万能的，对于有些地方则必须使用Activity的Context。
+* 不要让生命周期长于Activity的对象持有到Activity的引用  
+* 尽量使用Application的Context而不是Activity的Context  
+* 尽量不要在Activity中使用非静态内部类，因为非静态内部类会隐式持有外部类实例的引用。如果使用静态内部类，将外部实例引用作为弱引用持有  
+* 垃圾回收不能解决内存泄露
 
 # 几种内存检测工具的介绍
 
