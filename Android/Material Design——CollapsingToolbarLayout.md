@@ -1,4 +1,4 @@
-CollapsingToolbarLayout用来给Toolbar添加一些滚动效果。
+[](https://github.com/ghnor/TechNote/blob/master/assets/images/CollapsingToolbarLayout.gif)
 
 ## layout中定义
 ```xml
