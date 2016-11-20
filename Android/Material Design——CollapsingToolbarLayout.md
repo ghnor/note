@@ -107,16 +107,21 @@
 ```
 
 ## CollapsingToolbarLayout属性说明
+* `app:title`ToolBar的标题，当CollapsingToolbarLayout展开时，title显示的是大字体，在折叠的过程中，title不断变小到一定大小的效果。调用方法setTitle()。  
+* `app:contentScrim`ToolBar被折叠到顶部固定时候的背景，调用方法setContentScrim()。  
+* `app:statusBarScrim`折叠后状态栏的背景，调用方法setStatusBarScrim()。
+* `app:scrimVisibleHeightTrigger`设置收起多少高度时，显示ContentScrim的内容。
+* `app:scrimAnimationDuration`展开状态和折叠状态之间，内容转换的动画时间。
+
+## CollapsingToolbarLayout子View属性说明
+这两个属性是作为CollapsingToolbarLayout的子View才能设置并生效的。
 * `app:layout_collapseMode`折叠模式  
 `none`跟随滚动的手势进行折叠。  
 `parallax`视差滚动，搭配layout_collapseParallaxMultiplier（视差因子）使用。  
 `pin`固定不动。  
 * `app:layout_collapseParallaxMultiplier`视差因子，范围：0-1，默认0.5。
-* `app:title`ToolBar的标题，当CollapsingToolbarLayout展开时，title显示的是大字体，在折叠的过程中，title不断变小到一定大小的效果。调用方法setTitle()。  
-* `app:contentScrim`ToolBar被折叠到顶部固定时候的背景，调用方法setContentScrim()。  
-* `app:statusBarScrim`折叠后状态栏的背景，调用方法setStatusBarScrim()。
-* `app:scrimVisibleHeightTrigger`设置收起多少高度时，显示ContentScrim的内容。
-* `scrimAnimationDuration`展开状态和折叠状态之间，内容转换的动画时间。
 
 ## 注意
+* 最顶层的布局必须是CoordinatorLayout。  
+* CoordinatorLayout的直接子View必须是一个可滑动的控件，并且内部有内容可以滑动。同时需要设置`app:layout_behavior`。
 * Toolbar的高度必须固定，不能设置为"wrap_content"，否则Toolbar不会滑动，也没有折叠效果。
