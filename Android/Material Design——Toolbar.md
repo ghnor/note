@@ -1,7 +1,45 @@
 ## 基本使用
 
 ### 属性说明
+设置导航图标（NavigationIcon/HomeAsUpIndicator）；  
+设置Logo（Logo）；  
+设置标题（Title）；  
+设置副标题（Subtitle）。
 
+方式一：
+```xml
+app:navigationIcon=""
+app:logo=""
+app:title=""
+app:subtitle=""
+```
+方式二：
+```java
+Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+toolbar.setNavigationIcon();
+toolbar.setLogo();
+toolbar.setTitle();
+toolbar.setSubtitle();
+```
+方式三：
+```java
+setSupportActionBar(toolbar);
+getSupportActionBar().setHomeAsUpIndicator();
+getSupportActionBar().setLogo();
+getSupportActionBar().setTitle();
+getSupportActionBar().setSubtitle();
+```
+
+如果想要系统默认的返回图标：
+
+方式一：
+```xml
+app:navigationIcon="?attr/homeAsUpIndicator"
+```
+方式二：
+```java
+getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+```
 
 ### layout布局：activity_toolbar.xml
 下面两种方式，在表现形式上有一点点区别，作为AppBarLayout的子View时，在Toolbar的下方会有一条阴影。
