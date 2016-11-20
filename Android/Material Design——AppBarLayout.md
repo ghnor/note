@@ -49,6 +49,6 @@
 必须作为AppBarLayout的子View才能设置和生效。  
 * `app:layout_scrollFlags`设置是否需要滚动，以及滚动的模式。  
 `scroll`所有想滚动出屏幕的view都需要设置这个flag，没有设置这个flag的view将被固定在屏幕顶部。  
-`enterAlways`任意向下的滚动都会导致该view变为可见，启用快速“返回模式”。
-`enterAlwaysCollapsed`同时设置minHeight属性，那么在初始化只显示设置的最小高度值，在手动向下滚动时，才扩大到完整高度。
+`enterAlways`任意向下的滚动都会导致该view变为可见，启用快速“返回模式”。  
+`enterAlwaysCollapsed`同时设置minHeight属性，那么在初始化只显示设置的最小高度值，在手动向下滚动时，才扩大到完整高度。  
 `exitUntilCollapsed`一直保持view在可滑动控件的顶部，跟enterAlways相反，这个是懒返回模式。
