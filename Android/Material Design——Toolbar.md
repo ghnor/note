@@ -94,3 +94,40 @@ protected void onCreate(@Nullable Bundle savedInstanceState) {
 }
 ```
 
+## Options Menu
+在res下创建menu目录，再创建toolbar.xml：
+```xml
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".toolbar.ToolbarActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+</menu>
+```
+
+创建Toolbar的Options Menu，以及监听Options Menu的点击事件。  
+如果调用过`setSupportActionBar(toolbar);`，那就只需要重写下面的方法：
+```java
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
+	getMenuInflater().inflate(R.menu.toolbar, menu);
+	return true;
+}
+
+@Override
+public boolean onOptionsItemSelected(MenuItem item) {
+
+	switch (item.getItemId()) {
+		case android.R.id.home:
+		return true;
+		default:
+		break;
+	}
+
+	return super.onOptionsItemSelected(item);
+}
+```
+设置导航图标（NavigationIcon/HomeAsUpIndicator），其默认id就是android.R.id.home。
