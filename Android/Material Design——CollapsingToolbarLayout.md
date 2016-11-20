@@ -1,4 +1,4 @@
-[](https://github.com/ghnor/TechNote/blob/master/assets/images/CollapsingToolbarLayout.gif)
+![](https://github.com/ghnor/TechNote/blob/master/assets/images/CollapsingToolbarLayout.gif)
 
 ## layout中定义
 ```xml
