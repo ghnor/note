@@ -125,3 +125,4 @@
 * 最顶层的布局必须是CoordinatorLayout。  
 * CoordinatorLayout的直接子View必须是一个可滑动的控件，并且内部有内容可以滑动。同时需要设置`app:layout_behavior`。
 * Toolbar的高度必须固定，不能设置为"wrap_content"，否则Toolbar不会滑动，也没有折叠效果。
+* 需要注意的是这里几次设置`android:fitsSystemWindows="true"`，分别在`CoordinatorLayout`、`AppBarLayout`、`ImageView`。这样之后达到的效果就是这张图片的内容可以延伸到状态栏。
