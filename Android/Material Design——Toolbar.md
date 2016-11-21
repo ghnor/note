@@ -30,7 +30,7 @@ getSupportActionBar().setTitle();
 getSupportActionBar().setSubtitle();
 ```
 
-如果想要系统默认的返回图标：
+**如果想要系统默认的返回图标：**
 
 方式一：
 ```xml
@@ -70,7 +70,7 @@ getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 	android:id="@+id/toolbar">
 </android.support.v7.widget.Toolbar>
 ```
-有几点特别说明：  
+**有几点特别说明：**  
 * `app:theme`设置Toolbar的样式。  
 * `app:popupTheme`设置Toolbar的菜单弹窗的样式。  
 
@@ -83,7 +83,7 @@ getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 ```
 提供Toolbar黑底白字的样式，Toolbar菜单弹窗白底黑字的样式。
 
-## Java代码：ToolbarActivity
+## 在Activity中使用：ToolbarActivity
 ```java
 @Override
 protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -91,6 +91,20 @@ protected void onCreate(@Nullable Bundle savedInstanceState) {
 	setContentView(R.layout.activity_toolbar);
 	Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 	setSupportActionBar(toolbar);
+}
+```
+
+## 在Fragment中使用：ToolbarFragment
+```java
+@Nullable
+@Override
+public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+	View rootView = inflater.inflate(R.layout.activity_toolbar, container, false);
+
+	Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
+	((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+
+	return rootView;
 }
 ```
 
@@ -108,6 +122,7 @@ protected void onCreate(@Nullable Bundle savedInstanceState) {
 </menu>
 ```
 
+## 在Activity中创建Options Menu
 创建Toolbar的Options Menu，以及监听Options Menu的点击事件。  
 如果调用过`setSupportActionBar(toolbar);`，那就只需要重写下面的方法：
 ```java
@@ -130,4 +145,4 @@ public boolean onOptionsItemSelected(MenuItem item) {
 	return super.onOptionsItemSelected(item);
 }
 ```
-设置导航图标（NavigationIcon/HomeAsUpIndicator），其默认id就是android.R.id.home。
+**设置导航图标（NavigationIcon/HomeAsUpIndicator），其默认id就是android.R.id.home。**
