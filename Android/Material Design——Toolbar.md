@@ -1,6 +1,6 @@
-## 基本使用
+# 基本使用
 
-### 属性说明
+## 属性说明
 设置导航图标（NavigationIcon/HomeAsUpIndicator）；  
 设置Logo（Logo）；  
 设置标题（Title）；  
@@ -41,7 +41,7 @@ app:navigationIcon="?attr/homeAsUpIndicator"
 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 ```
 
-### layout布局：activity_toolbar.xml
+## layout布局：activity_toolbar.xml
 下面两种方式，在表现形式上有一点点区别，作为AppBarLayout的子View时，在Toolbar的下方会有一条阴影。
 
 方式一：
@@ -83,7 +83,7 @@ getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 ```
 提供Toolbar黑底白字的样式，Toolbar菜单弹窗白底黑字的样式。
 
-### Java代码：ToolbarActivity
+## Java代码：ToolbarActivity
 ```java
 @Override
 protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -94,7 +94,7 @@ protected void onCreate(@Nullable Bundle savedInstanceState) {
 }
 ```
 
-## Options Menu
+# Options Menu
 在res下创建menu目录，再创建toolbar.xml：
 ```xml
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
