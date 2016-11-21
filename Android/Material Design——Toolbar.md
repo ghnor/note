@@ -137,12 +137,84 @@ public boolean onOptionsItemSelected(MenuItem item) {
 
 	switch (item.getItemId()) {
 		case android.R.id.home:
-		return true;
+			finish();
+			return true;
 		default:
-		break;
+			break;
 	}
 
 	return super.onOptionsItemSelected(item);
 }
 ```
-**设置导航图标（NavigationIcon/HomeAsUpIndicator），其默认id就是android.R.id.home。**
+
+## 在Fragment中创建Options Menu
+
+如果想让Fragment中的onCreateOptionsMenu生效必须先调用setHasOptionsMenu方法。
+```java
+@Override
+public void onCreate(@Nullable Bundle savedInstanceState) {
+	super.onCreate(savedInstanceState);
+	setHasOptionsMenu(true);
+}
+```
+
+同样，已经设置过`setSupportActionBar(toolbar);`，重写如下方法：
+```java
+@Override
+public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+	super.onCreateOptionsMenu(menu, inflater);
+	inflater.inflate(R.menu.toolbar, menu);
+}
+
+@Override
+public boolean onOptionsItemSelected(MenuItem item) {
+	switch (item.getItemId()) {
+		case android.R.id.home:
+			getActivity().finish();
+			return true;
+		default:
+			break;
+	}
+
+	return super.onOptionsItemSelected(item);
+}
+```
+
+## 注意
+* 导航按钮的id
+
+设置导航图标（NavigationIcon/HomeAsUpIndicator），其默认id就是android.R.id.home。
+
+* menu重复显示
+
+系统会先执行Activity中的onCreateOptionsMenu，再执行Fragment中的onCreateOptionsMenu。
+
+如果Fragment和Activity都同时inflate了一个menu资源文件，那么menu资源所包含的菜单会出现两次。
+
+一开始，在activity中menu是空的，当调用了getMenuInflater().inflate(R.menu.main, menu)，menu中便有了菜单项。
+
+而在执行到Fragment的(Menu menu, MenuInflater inflater)时，activity的menu就传递下来，作为第一个参数。
+
+activity和Fragment中的menu其实是一个对象。
+
+那么当存在一个Activity和多个Fragment，但又想显示不同的Options Menu时，可以在Fragment的onCreateOptionsMenu中调用`menu.clear();`。
+```java
+@Override
+public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+	super.onCreateOptionsMenu(menu, inflater);
+	menu.clear();
+	inflater.inflate(R.menu.toolbar, menu);
+}
+```
+
+* menu事件重复响应
+
+用`menu.clear()`可以解决inflate同一个menu资源文件时，重复显示的问题。
+
+但是如果Activity和Fragment都对该menu响应的话，就会执行两次响应事件。
+
+事件的执行顺序同样是显示执行Activity的onOptionsItemSelected，再执行Fragment的onOptionsItemSelected。
+
+所以，如果业务上Activity具有更高的优先级，可以通过`return true;`，拦截试图传递到Fragment的事件。
+
+但是如果Fragment具有更高的优先级的，就无解了。
