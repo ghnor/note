@@ -82,6 +82,8 @@
 </android.support.design.widget.CoordinatorLayout>
 ```
 
+与`AppBarLayout`和`CollapsingToolbarLayout`组合使用，将自身锚定在上面。`Toolbar`完全折叠时，FAB也会消失。
+
 # Snackbar
 
 类似于Toast的提示控件。
