@@ -22,6 +22,8 @@
 
 [android-common-lib](https://github.com/Trinea/android-common)
 
+[Android Tips - 填坑手册](https://github.com/tangqi92/Android-Tips)
+
 ## 设计模式
 [Android源码设计模式分析](https://github.com/simple-android-framework/android_design_patterns_analysis)
 
