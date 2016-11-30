@@ -1,3 +1,9 @@
+AppBarLayout其实内部是一个垂直方向的LinearLayout，可以实现Material Design中标题栏的滚动效果。  
+AppBarLayout的子View通过app:layout_scrollFlags属性或LayoutParams.setScrollFlags()方法来声明自身“滚动行为”。  
+AppBarLayout只有作为CoordinatorLayout的直接子View时才能正常工作，为了让AppBarLayout能够知道何时滚动其子View，我们还应该在CoordinatorLayout布局中提供一个可滚动的scrolling view，如：NestedScrollView、RecyclerView...
+
+说一点，普通的ScrollView也是可以的滚动的，却不能响应AppbarLayout的滚动行为。其中关键在于CoordiantorLayout和Behavior，可以看我之前的文章【CoordinatorLayout与Behavior的一己之见】，里面大致介绍了其中的原理，可以让你初窥门径。
+
 ## layout布局
 ```xml
 <android.support.design.widget.CoordinatorLayout
@@ -46,9 +52,12 @@
 ```
 
 ## AppBarLayout子View属性说明
-必须作为AppBarLayout的子View才能设置和生效。  
-* `app:layout_scrollFlags`设置是否需要滚动，以及滚动的模式。  
-`scroll`所有想滚动出屏幕的view都需要设置这个flag，没有设置这个flag的view将被固定在屏幕顶部。  
-`enterAlways`任意向下的滚动都会导致该view变为可见，启用快速“返回模式”。  
-`enterAlwaysCollapsed`同时设置minHeight属性，那么在初始化只显示设置的最小高度值，在手动向下滚动时，才扩大到完整高度。  
-`exitUntilCollapsed`一直保持view在可滑动控件的顶部，跟enterAlways相反，这个是懒返回模式。
+必须作为AppBarLayout的子View才能生效，通过app:layout_scrollFlags属性或LayoutParams.setScrollFlags()设置。  
+
+* `scroll`所有想获得滚动行为的view都需要设置，并同时设置具体的滚动行为，比如：`app:layout_scrollFlags="scroll|enterAlways"`。  
+
+* `enterAlways`任意向下的滚动都会导致该view变为可见，启用快速“返回模式”。  
+
+* `enterAlwaysCollapsed`同时设置minHeight属性，那么在初始化只显示设置的最小高度值，在手动向下滚动时，才扩大到完整高度。  
+
+* `exitUntilCollapsed`一直保持view在可滑动控件的顶部，跟enterAlways相反，这个是懒返回模式。
