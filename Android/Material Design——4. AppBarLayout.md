@@ -1,4 +1,4 @@
-AppBarLayout其实内部是一个垂直方向的LinearLayout，可以实现Material Design中标题栏的滚动效果。  
+AppBarLayout其实就是一个垂直方向的LinearLayout，可以实现Material Design中标题栏的滚动效果。  
 AppBarLayout的子View通过app:layout_scrollFlags属性或LayoutParams.setScrollFlags()方法来声明自身“滚动行为”。  
 AppBarLayout只有作为CoordinatorLayout的直接子View时才能正常工作，为了让AppBarLayout能够知道何时滚动其子View，我们还应该在CoordinatorLayout布局中提供一个可滚动的scrolling view，如：NestedScrollView、RecyclerView...
 
@@ -24,12 +24,7 @@ AppBarLayout只有作为CoordinatorLayout的直接子View时才能正常工作�
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="Toolbar"
             app:layout_scrollFlags="scroll">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="真正的Toolbar区域"/>
         </android.support.v7.widget.Toolbar>
         <TextView
             android:layout_width="wrap_content"
@@ -51,7 +46,7 @@ AppBarLayout只有作为CoordinatorLayout的直接子View时才能正常工作�
 </android.support.design.widget.CoordinatorLayout>
 ```
 
-## AppBarLayout子View属性说明
+## ScrollFlags
 必须作为AppBarLayout的子View才能生效，通过app:layout_scrollFlags属性或LayoutParams.setScrollFlags()设置。  
 
 * `scroll`所有想获得滚动行为的view都需要设置，并同时设置具体的滚动行为，比如：`app:layout_scrollFlags="scroll|enterAlways"`。  
