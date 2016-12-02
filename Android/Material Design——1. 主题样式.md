@@ -1,4 +1,9 @@
-从5.0 API-21开始支持Material Desigh主题，如果要直接使用，那么需要设置应用的minSdkVersion = 15
+在build.grade中添加：
+```
+compile 'com.android.support:appcompat-v7:version'
+compile 'com.android.support:design:version'
+```
+从5.0 API-21开始支持Material Desigh主题，如果要直接使用，那么需要设置应用的minSdkVersion = 21
 ```java
 android:Theme.Material
 android:Theme.Material.Light
@@ -52,7 +57,8 @@ Theme.AppCompat.Light.DarkActionBar
 	android:label="@string/app_name"
 	android:supportsRtl="true"
 	android:theme="@style/AppTheme.NoActionBar">
-	<activity android:name=".MainActivity"
+	<activity 
+		android:name=".MainActivity"
 		android:theme="@style/AppTheme">
 		<intent-filter>
 			<action android:name="android.intent.action.MAIN" />
