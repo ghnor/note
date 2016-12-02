@@ -1,42 +1,61 @@
-# 基本使用
+# 介绍
+在Material Design中，推荐使用Toolbar代替之前3.0中的Actionbar，以提供更灵活的视图展现。  
+使用`AppCompatActivity.setSupportActionBar(Toolbar)`之后，Toolbar就可以接管Actionbar的功能，例如option menu。  
+实质上继承于ViewGroup，可以在标题栏上显示任意内容，宽高也可以任意设置。  
+同时也预先提供了一些设置项：
 
 ## 属性说明
-设置导航图标（NavigationIcon/HomeAsUpIndicator）；  
-设置Logo（Logo）；  
-设置标题（Title）；  
-设置副标题（Subtitle）。
-
-方式一：
-```xml
+设置导航按钮（navigation button）：
+```
 app:navigationIcon=""
+```
+```
+toolbar.setNavigationIcon();
+```
+```
+getSupportActionBar().setHomeAsUpIndicator();
+```
+
+设置Logo（Logo）：
+```
 app:logo=""
+```
+```
+toolbar.setLogo();
+```
+```
+getSupportActionBar().setLogo();
+```
+
+设置标题（Title）：
+```
 app:title=""
+```
+```
+toolbar.setTitle();
+```
+```
+getSupportActionBar().setTitle();
+```
+
+设置副标题（Subtitle）：
+```
 app:subtitle=""
 ```
-方式二：
-```java
-Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-toolbar.setNavigationIcon();
-toolbar.setLogo();
-toolbar.setTitle();
+```
 toolbar.setSubtitle();
 ```
-方式三：
-```java
-setSupportActionBar(toolbar);
-getSupportActionBar().setHomeAsUpIndicator();
-getSupportActionBar().setLogo();
-getSupportActionBar().setTitle();
+```
 getSupportActionBar().setSubtitle();
 ```
 
 **如果想要系统默认的返回图标：**
 
-方式一：
+XML：
 ```xml
 app:navigationIcon="?attr/homeAsUpIndicator"
 ```
-方式二：
+Java：
 ```java
 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 ```
@@ -183,38 +202,38 @@ public boolean onOptionsItemSelected(MenuItem item) {
 ## 注意
 * 导航按钮的id
 
-设置导航图标（NavigationIcon/HomeAsUpIndicator），其默认id就是android.R.id.home。
+	设置导航图标（NavigationIcon/HomeAsUpIndicator），其默认id就是android.R.id.home。
 
 * menu重复显示
 
-系统会先执行Activity中的onCreateOptionsMenu，再执行Fragment中的onCreateOptionsMenu。
+	系统会先执行Activity中的onCreateOptionsMenu，再执行Fragment中的onCreateOptionsMenu。
 
-如果Fragment和Activity都同时inflate了一个menu资源文件，那么menu资源所包含的菜单会出现两次。
+	如果Fragment和Activity都同时inflate了一个menu资源文件，那么menu资源所包含的菜单会出现两次。
 
-一开始，在activity中menu是空的，当调用了getMenuInflater().inflate(R.menu.main, menu)，menu中便有了菜单项。
+	一开始，在activity中menu是空的，当调用了getMenuInflater().inflate(R.menu.main, menu)，menu中便有了菜单项。
 
-而在执行到Fragment的(Menu menu, MenuInflater inflater)时，activity的menu就传递下来，作为第一个参数。
+	而在执行到Fragment的(Menu menu, MenuInflater inflater)时，activity的menu就传递下来，作为第一个参数。
 
-activity和Fragment中的menu其实是一个对象。
+	activity和Fragment中的menu其实是一个对象。
 
-那么当存在一个Activity和多个Fragment，但又想显示不同的Options Menu时，可以在Fragment的onCreateOptionsMenu中调用`menu.clear();`。
-```java
-@Override
-public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-	super.onCreateOptionsMenu(menu, inflater);
-	menu.clear();
-	inflater.inflate(R.menu.toolbar, menu);
-}
-```
+	那么当存在一个Activity和多个Fragment，但又想显示不同的Options Menu时，可以在Fragment的onCreateOptionsMenu中调用`menu.clear();`。
+	```java
+	@Override
+	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+		super.onCreateOptionsMenu(menu, inflater);
+		menu.clear();
+		inflater.inflate(R.menu.toolbar, menu);
+	}
+	```
 
 * menu事件重复响应
 
-用`menu.clear()`可以解决inflate同一个menu资源文件时，重复显示的问题。
+	用`menu.clear()`可以解决inflate同一个menu资源文件时，重复显示的问题。
 
-但是如果Activity和Fragment都对该menu响应的话，就会执行两次响应事件。
+	但是如果Activity和Fragment都对该menu响应的话，就会执行两次响应事件。
 
-事件的执行顺序同样是显示执行Activity的onOptionsItemSelected，再执行Fragment的onOptionsItemSelected。
+	事件的执行顺序同样是显示执行Activity的onOptionsItemSelected，再执行Fragment的onOptionsItemSelected。
 
-所以，如果业务上Activity具有更高的优先级，可以通过`return true;`，拦截试图传递到Fragment的事件。
+	所以，如果业务上Activity具有更高的优先级，可以通过`return true;`，拦截试图传递到Fragment的事件。
 
-但是如果Fragment具有更高的优先级的，就无解了。
+	但是如果Fragment具有更高的优先级的，就无解了。
