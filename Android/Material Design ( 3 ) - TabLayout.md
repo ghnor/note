@@ -1,24 +1,55 @@
+TabLayout用以实现Android上常见的页面切换效果。
+
 ## 属性说明
-* app:tabIndicatorColor / setSelectedTabIndicatorColor  
-下方滚动的下划线颜色  
+* 下方滚动的下划线颜色
+```
+app:tabIndicatorColor
+```
+```
+setSelectedTabIndicatorColor 
+```
 
-* app:tabSelectedTextColor / setTabTextColors  
-tab被选中后，文字的颜色
+* tab被选中后，文字的颜色
+```
+app:tabSelectedTextColor
+```
+```
+setTabTextColors  
+```
 
-* app:tabTextColor / setTabTextColors  
-tab默认的文字颜色  
+* tab默认的文字颜色
+```
+app:tabTextColor
+```
+```
+setTabTextColors  
+```
 
-* app:tabBackground / android:background  
-tab的背景
+* tab的背景
+```
+app:tabBackground
+```
+```
+android:background 
+```
 
-* app:tabMode / setTabMode  
-排列模式，可选：[ fixed | scrollable ]
+* 排列模式，可选：[ fixed | scrollable ]
+```
+app:tabMode
+```
+```
+setTabMode
+```
 
-* app:tabGravity / setTabGravity  
-对齐方式，可选：[ fill | center ]
+* 对齐方式，可选：[ fill | center ]
+```
+app:tabGravity
+```
+```
+setTabGravity
+```
 
-
-## layout布局：activity_toolbar.xml
+## XML布局：activity_toolbar.xml
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -39,7 +70,7 @@ tab的背景
 </LinearLayout>
 ```
 
-## java：TabLayoutActivity
+## Java：TabLayoutActivity
 ```java
 @Override
 protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -121,6 +152,10 @@ public static class TabFragment extends Fragment {
 	}
 }
 ```
+
+* 在继承FragmentPagerAdapter时，会重写getPageTitle()方法，返回当前页面的标题。
+
+* TabLayout.setupWithViewPager()绑定ViewPager和TabLayout。
 
 ## 另外
 大多数时候，这个应该都会跟AppBarLayout配合一起使用：
