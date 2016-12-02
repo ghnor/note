@@ -1,8 +1,16 @@
->[源码：AndroidDemo/material-design/](https://github.com/ghnor/AndroidDemo/tree/master/material-design)
+用以实现Android中的抽屉样式，在Google自己推出BottomNavigation之前，抽屉样式的交互可谓Material Design的标杆。
+
+添加内容布局作为DrawerLayout的首个子view，并设置宽高为`match_parent`，不能设置`layout_gravity`。
+
+在内容布局之下添加抽屉布局，设置`layout_gravity`，控制其在屏幕的左或右出现。一般设置高度`match_parent`，宽度`wrap_content`。不能设置多个抽屉布局，会报错。
+
+抽屉布局呢，其实任意view都可以，但是Material Design中推荐使用NavigationView。
 
 # 定义Style
 
-在《Material Design——1. 主题样式》的基础上，再添加如下：  
+首先修改下我们之前的styles.xml文件，设置状态栏为透明。
+
+在《Material Design ( 1 ) - 主题样式》的基础上，再添加如下：  
 在res/values/styles.xml中添加：
 ```xml
 <style name="AppTheme.Fit" parent="AppTheme.NoActionBar"/>
@@ -13,8 +21,13 @@
 	<item name="android:statusBarColor">@android:color/transparent</item>
 </style>
 ```
+# NavigationView
 
-# 定义NavigationView头部布局
+完整的NavigationView由头部自定义布局，下部分的menu布局组成。  
+`app:headerLayout`设置头部布局。  
+`app:menu`设置menu布局。  
+
+## 定义NavigationView头部布局
 在res/layout下创建 nav_header_main.xml：
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -50,7 +63,7 @@
 </LinearLayout>
 ```
 
-# 定义NavigationView的menu内容
+## 定义NavigationView的menu内容
 在res/menu下创建 drawer_layout.xml：
 ```xml
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
@@ -89,8 +102,11 @@
 
 </menu>
 ```
+# DrawerLayout
 
-# layout布局
+DrawerLayout需要注意的地方前面说过了，直接看XML。
+
+## XML布局
 ```xml
 <android.support.v4.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -146,7 +162,7 @@
 `app:itemBackground` menu背景颜色  
 `app:itemTextColor` menu字体的颜色
 
-# Java代码：DrawerLayoutActivity
+## Java代码：DrawerLayoutActivity
 ```java
 public class DrawerLayoutActivity extends AppCompatActivity {
 
