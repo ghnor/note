@@ -1,6 +1,8 @@
-AppBarLayout其实就是一个垂直方向的LinearLayout，可以实现Material Design中标题栏的滚动效果。  
-AppBarLayout的子View通过app:layout_scrollFlags属性或LayoutParams.setScrollFlags()方法来声明自身“滚动行为”。  
-AppBarLayout只有作为CoordinatorLayout的直接子View时才能正常工作，为了让AppBarLayout能够知道何时滚动其子View，我们还应该在CoordinatorLayout布局中提供一个可滚动的scrolling view，如：NestedScrollView、RecyclerView...
+AppBarLayout其实就是一个垂直方向的LinearLayout，可以实现Material Design中标题栏的滚动效果。
+
+AppBarLayout的子View通过app:layout_scrollFlags属性或LayoutParams.setScrollFlags()方法来声明自身“滚动行为”。
+
+AppBarLayout只有作为CoordinatorLayout的直接子View时，并同时在CoordinatorLayout中添加一个可滚动的scrolling view（如：NestedScrollView、RecyclerView...）才能响应滚动行为。
 
 说一点，普通的ScrollView也是可以的滚动的，却不能响应AppbarLayout的滚动行为。其中关键在于CoordiantorLayout和Behavior，可以看我之前的文章【CoordinatorLayout与Behavior的一己之见】，里面大致介绍了其中的原理，可以让你初窥门径。
 
@@ -47,15 +49,18 @@ AppBarLayout只有作为CoordinatorLayout的直接子View时才能正常工作�
 ```
 
 ## ScrollFlags
-必须作为AppBarLayout的子View才能生效，通过app:layout_scrollFlags属性或LayoutParams.setScrollFlags()设置。  
+必须作为AppBarLayout的子View才能生效，通过app:layout_scrollFlags属性或LayoutParams.setScrollFlags()设置：  
 
-* `scroll`  
-所有想获得滚动行为的view都需要设置。  
+* `scroll`
 
-* `enterAlways`  
-从滚动开始，该view就会跟着向下滚动。
+	所有想获得滚动行为的view都需要设置。  
 
-* `enterAlwaysCollapsed`  
+* `enterAlways`
+
+	从滚动开始，该view就会跟着向下滚动。
+
+* `enterAlwaysCollapsed`
+
 	单独设置时，效果就是在scrolling view滚动到顶部后，才会下滚动。
 	```java
 	app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
@@ -68,7 +73,8 @@ AppBarLayout只有作为CoordinatorLayout的直接子View时才能正常工作�
 	app:layout_scrollFlags="scroll|enterAlwaysCollapsed|enterAlways"
 	```
 
-* `exitUntilCollapsed`  
+* `exitUntilCollapsed`
+
 	向上滚动时，会折叠到其最小高度。向下滚动时，在scrolling view滚动到顶部后，才会向下滚动，扩展到原先的高度。  
 	我们将Toolbar的height设置为150dp，并设置其minHeight。  
 	```java
@@ -76,6 +82,7 @@ AppBarLayout只有作为CoordinatorLayout的直接子View时才能正常工作�
 	android:minHeight="?attr/actionBarSize"
 	```
 
-* `snap`  
-在滚动的过程中，一次滚动的距离不一定足够Toolbar完全地隐藏或显示。  
-设置snap之后，就会给view添加一个弹性滚动的效果，会自动地根据滚动的距离，完成完整的隐藏、折叠或者显示的效果。
+* `snap`
+
+	在滚动的过程中，一次滚动的距离不一定足够Toolbar完全地隐藏或显示。  
+	设置snap之后，就会给view添加一个弹性滚动的效果，会自动地根据滚动的距离，完成完整的隐藏、折叠或者显示的效果。
