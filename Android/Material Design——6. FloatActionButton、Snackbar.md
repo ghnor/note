@@ -22,7 +22,7 @@
 
 * app:useCompatPadding 设置内边距
 
-## layout布局
+## XML布局
 ```xml
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
