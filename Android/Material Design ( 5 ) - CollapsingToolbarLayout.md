@@ -1,6 +1,6 @@
 CollapsingToolbarLayout通常用来在布局中包裹一个Toolbar，同时作为AppBarLayout的直接子View，才可以实现“折叠效果”的标题栏。
 
-![](https://github.com/ghnor/TechNote/blob/master/assets/images/CollapsingToolbarLayout.gif)
+![](http://ohle0c848.bkt.clouddn.com/android/CollapsingToolbarLayout.gif)
 
 ## CollapsingToolbarLayout属性说明
 * `app:title` / `setTitle()`  
