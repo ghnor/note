@@ -4,6 +4,7 @@
 其实不然，其中最重要的是`CoordinatorLayout`，我把它称为协调布局。协调什么布局呢？自然是嵌套在其内部的Child View。  
 `CoordinatorLayout`充当了一个中间层的角色，一边接收其他组件的事件，一边将接收到的事件通知给内部的其他组件。  
 `Behavior`就是`CoordinatorLayout`传递事件的媒介，`Behavior` 定义了 `CoordinatorLayout` 中**直接子 View**的行为规范，决定了当收到不同事件时，应该做怎样的处理。  
+
 总结来说，`Behavior`代理以下四种事件，其大致传递流程如下图：
   
 ![](http://ohle0c848.bkt.clouddn.com/android/behavior-flux.png)

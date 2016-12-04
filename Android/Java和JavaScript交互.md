@@ -1,14 +1,14 @@
-## 步骤：
+# 步骤：
 1. WebView开启JavaScript脚本执行  
 2. WebView设置供JavaScript调用的交互接口  
 3. 客户端和网页端编写调用对方的代码。
 
-## JavaScript调用Java
+# JavaScript调用Java
 
 调用格式：`window.jsInterfaceName.methodName(parameterValues)`  
 本例中，jsInterfaceName 是 control；methodName 是 toastMessage。
 
-### Java代码
+## Java代码
 ```java
 mWebView.addJavascriptInterface(new JsInteration(), "control");
 ```
@@ -22,7 +22,7 @@ public class JsInteration {
 }
 ```
 
-### JavaScript代码
+## JavaScript代码
 ```html
 <script type="text/javascript">
     function toastMessage(message) {
@@ -31,9 +31,9 @@ public class JsInteration {
 </script>
 ```
 
-## Java调用JavaScript
+# Java调用JavaScript
 调用格式：`webView.loadUrl("javascript:methodName(parameterValues)")`
-### JavaScript代码
+## JavaScript代码
 ```html
 <script type="text/javascript">
     function sayHello() {
@@ -50,7 +50,7 @@ public class JsInteration {
 </script>
 ```
 
-### Java代码
+## Java代码
 * 调用js无参无返回值函数
 ```java
 String call = "javascript:sayHello()";
@@ -80,7 +80,7 @@ webView.evaluateJavascript("getGreetings()", new ValueCallback<String>() {
 上面限定了结果返回结果为String，对于简单的类型会尝试转换成字符串返回，对于复杂的数据类型，建议以字符串形式的json返回。  
 evaluateJavascript方法必须在UI线程（主线程）调用，因此onReceiveValue也执行在主线程。  
 
-## 安全问题
+# 安全问题
 在Android API Level 17（Android 4.2），addjavascriptInterface接口引起的漏洞，可能导致恶意网页通过Js方法遍历刚刚通过addjavascriptInterface注入进来的类的所有方法从中获取到getClass方法，然后通过反射获取到Runtime对象，进而调用Runtime对象的exec方法执行一些操作，恶意的Js代码如下：
 ```html
 function execute(args) {
@@ -161,5 +161,5 @@ function onAlert()
 ```
 实现原理就是在页面中触发的方法被webView中设置的WebChromeClient给拦截了，从而执行了WebChromeClient中重写的onXxx()方法，没有执行页面中相应的onXxx()方法，这是方式相对简单，而且安全。
 
-## 其他
+# 其他
 [为WebView中的Java与JavaScript提供【安全可靠】的多样互通方案](https://github.com/pedant/safe-java-js-webview-bridge)
