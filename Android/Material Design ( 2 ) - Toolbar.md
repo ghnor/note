@@ -1,11 +1,10 @@
-# 介绍
 在Material Design中，推荐使用Toolbar代替之前3.0中的Actionbar，以提供更灵活的视图展现。  
 使用`AppCompatActivity.setSupportActionBar(Toolbar)`之后，Toolbar就可以接管Actionbar的功能，例如option menu。  
-实质上继承于ViewGroup，可以在标题栏上显示任意内容，宽高也可以任意设置。  
+实质上继承于ViewGroup，可以在标题栏上显示任意内容，宽高也可以任意设置。
+
 同时也预先提供了一些设置项：
 
-## 属性说明
-设置导航按钮（navigation button）：
+#### 设置导航按钮（Navigation Button）：
 ```
 app:navigationIcon=""
 ```
@@ -16,7 +15,7 @@ toolbar.setNavigationIcon();
 getSupportActionBar().setHomeAsUpIndicator();
 ```
 
-设置Logo（Logo）：
+#### 设置Logo（Logo）：
 ```
 app:logo=""
 ```
@@ -27,7 +26,7 @@ toolbar.setLogo();
 getSupportActionBar().setLogo();
 ```
 
-设置标题（Title）：
+#### 设置标题（Title）：
 ```
 app:title=""
 ```
@@ -38,7 +37,7 @@ toolbar.setTitle();
 getSupportActionBar().setTitle();
 ```
 
-设置副标题（Subtitle）：
+#### 设置副标题（Subtitle）：
 ```
 app:subtitle=""
 ```
@@ -60,7 +59,7 @@ Java：
 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 ```
 
-## layout布局：activity_toolbar.xml
+## XML布局：activity_toolbar.xml
 下面两种方式，在表现形式上有一点点区别，作为AppBarLayout的子View时，在Toolbar的下方会有一条阴影。
 
 方式一：
