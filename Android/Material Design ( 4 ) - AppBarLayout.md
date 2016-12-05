@@ -53,15 +53,20 @@ AppBarLayout只有作为CoordinatorLayout的直接子View时，并同时在Coord
 
 * `scroll`
 
-	所有想获得滚动行为的view都需要设置。  
+	所有想获得滚动行为的view都需要设置。
+	
+	![](http://ohle0c848.bkt.clouddn.com/android/appbarlayout-1.gif)
 
 * `enterAlways`
 
 	从滚动开始，该view就会跟着向下滚动。
+	
+	![](http://ohle0c848.bkt.clouddn.com/android/appbarlayout-2.gif)
 
 * `enterAlwaysCollapsed`
 
-	单独设置时，效果就是在scrolling view滚动到顶部后，才会下滚动。
+	单独设置时，效果就是在scrolling view滚动到顶部后，才会下滚动。  
+	跟只设置`scroll`的效果是一样的。
 	```java
 	app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
 	```
@@ -72,6 +77,8 @@ AppBarLayout只有作为CoordinatorLayout的直接子View时，并同时在Coord
 	android:minHeight="?attr/actionBarSize"
 	app:layout_scrollFlags="scroll|enterAlwaysCollapsed|enterAlways"
 	```
+	
+	![](http://ohle0c848.bkt.clouddn.com/android/appbarlayout-3.gif)
 
 * `exitUntilCollapsed`
 
@@ -81,6 +88,8 @@ AppBarLayout只有作为CoordinatorLayout的直接子View时，并同时在Coord
 	android:layout_height="150dp"
 	android:minHeight="?attr/actionBarSize"
 	```
+	
+	![](http://ohle0c848.bkt.clouddn.com/android/appbarlayout-4.gif)
 
 * `snap`
 
