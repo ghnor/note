@@ -51,47 +51,47 @@ AppBarLayout只有作为CoordinatorLayout的直接子View时，并同时在Coord
 ## ScrollFlags
 必须作为AppBarLayout的子View才能生效，通过app:layout_scrollFlags属性或LayoutParams.setScrollFlags()设置：  
 
-* `scroll`
+### scroll
 
-	所有想获得滚动行为的view都需要设置。
-	
-	![](http://ohle0c848.bkt.clouddn.com/android/appbarlayout-1.gif)
+所有想获得滚动行为的view都需要设置。
 
-* `enterAlways`
+![](http://ohle0c848.bkt.clouddn.com/android/appbarlayout-1.gif)
 
-	从滚动开始，该view就会跟着向下滚动。
-	
-	![](http://ohle0c848.bkt.clouddn.com/android/appbarlayout-2.gif)
+### enterAlways
 
-* `enterAlwaysCollapsed`
+从滚动开始，该view就会跟着向下滚动。
 
-	单独设置时，效果就是在scrolling view滚动到顶部后，才会下滚动。  
-	跟只设置`scroll`的效果是一样的。
-	```java
-	app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
-	```
-	但是如果设置了Toolbar的height和minHeight，并设置layout_scrollFlags为"scroll|enterAlways|enterAlwaysCollapsed"。  
-	效果就是，在向下滚动时，会首先滚动到最小高度，知道scrolling view滚动到顶部后，才扩展到原始高度。
-	```java
-	android:layout_height="150dp"
-	android:minHeight="?attr/actionBarSize"
-	app:layout_scrollFlags="scroll|enterAlwaysCollapsed|enterAlways"
-	```
-	
-	![](http://ohle0c848.bkt.clouddn.com/android/appbarlayout-3.gif)
+![](http://ohle0c848.bkt.clouddn.com/android/appbarlayout-2.gif)
 
-* `exitUntilCollapsed`
+### enterAlwaysCollapsed
 
-	向上滚动时，会折叠到其最小高度。向下滚动时，在scrolling view滚动到顶部后，才会向下滚动，扩展到原先的高度。  
-	我们将Toolbar的height设置为150dp，并设置其minHeight。  
-	```java
-	android:layout_height="150dp"
-	android:minHeight="?attr/actionBarSize"
-	```
-	
-	![](http://ohle0c848.bkt.clouddn.com/android/appbarlayout-4.gif)
+单独设置时，效果就是在scrolling view滚动到顶部后，才会下滚动。  
+跟只设置`scroll`的效果是一样的。
+```java
+app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+```
+但是如果设置了Toolbar的height和minHeight，并设置layout_scrollFlags为"scroll|enterAlways|enterAlwaysCollapsed"。  
+效果就是，在向下滚动时，会首先滚动到最小高度，知道scrolling view滚动到顶部后，才扩展到原始高度。
+```java
+android:layout_height="150dp"
+android:minHeight="?attr/actionBarSize"
+app:layout_scrollFlags="scroll|enterAlwaysCollapsed|enterAlways"
+```
 
-* `snap`
+![](http://ohle0c848.bkt.clouddn.com/android/appbarlayout-3.gif)
 
-	在滚动的过程中，一次滚动的距离不一定足够Toolbar完全地隐藏或显示。  
-	设置snap之后，就会给view添加一个弹性滚动的效果，会自动地根据滚动的距离，完成完整的隐藏、折叠或者显示的效果。
+### exitUntilCollapsed
+
+向上滚动时，会折叠到其最小高度。向下滚动时，在scrolling view滚动到顶部后，才会向下滚动，扩展到原先的高度。  
+我们将Toolbar的height设置为150dp，并设置其minHeight。  
+```java
+android:layout_height="150dp"
+android:minHeight="?attr/actionBarSize"
+```
+
+![](http://ohle0c848.bkt.clouddn.com/android/appbarlayout-4.gif)
+
+### snap
+
+在滚动的过程中，一次滚动的距离不一定足够Toolbar完全地隐藏或显示。  
+设置snap之后，就会给view添加一个弹性滚动的效果，会自动地根据滚动的距离，完成完整的隐藏、折叠或者显示的效果。
