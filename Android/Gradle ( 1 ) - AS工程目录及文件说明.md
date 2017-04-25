@@ -112,6 +112,15 @@ include ':app'
 
 在google开源的[iosched][1]项目中，可以看到他们利用了该文件配置了一些builde.gradle中需要用到的常（变）量， 如com.android.support. 的版本号以及签名信息相关的配置。
 
-* **gradle.wrapper (Gradle Wrapper)**
+* **gradle/wrapper/gradle-wrapper.properties**
 
 它允许你的机器在不需要安装运行的情况下就能运行Gradle脚本（我们在下载AS后可以直接开始使用gradle、开发项目，而无需另外下载及安装gradle，主要归功于这一特性），而且更重要的是它确保了build脚本运行在指定版本的Gradle。它会从中央仓库中自动下载Gradle，解压到你的文件系统，然后用来build。
+
+```gradle
+#Mon Dec 28 10:00:20 PST 2015
+distributionBase=GRADLE_USER_HOME  // 在环境变量中配置，默认：C:\Users\Administrator\
+distributionPath=wrapper/dists // 如果上面的环境变量已配置，下载目录：GRADLE_USER_HOME\.gradle\wrapper\dists\
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-3.3-all.zip // 使用的gradle版本，及其仓库地址。我们也可以指定本地目录。
+```
