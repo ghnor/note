@@ -10,12 +10,13 @@ res/raw不可以有目录结构。
 
 * 读取assets：
 ```java
-InputStream is = getResources().openRawResource(R.raw.filename);
-```
-* 读取res/raw：
-```java
 AssetManager am = getAssets();
 InputStream is = am.open("filename");
+```
+
+* 读取res/raw：
+```java
+InputStream is = getResources().openRawResource(R.raw.filename);
 ```
 
 ## res/xml
