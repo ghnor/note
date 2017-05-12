@@ -176,4 +176,4 @@ compile "com.android.support:appcompat-v7:${supportVersion}"
 ...
 ```
 
-这种方法有一个问题就是，比如说build.gradle中compileSdkVersion的数值本身应该是int类型的，但是如果从gradle.properties中读取的话，默认是string类型，所以build.gradle文件中原先值类型为int的参数都不能用这种方法去设置。
+这种方法有一个问题就是，比如说build.gradle中compileSdkVersion的数值本身应该是int类型的，但是如果从gradle.properties中读取的话，默认是string类型，所以build.gradle文件中原先值类型为int的参数需要在后面加上`as int`。
