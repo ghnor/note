@@ -209,3 +209,9 @@ buildTypes {
 ```
 
 另外，还用一种常见的情况是：当我们的服务器有debug和release环境时，我们可能也需要在App对应的版本中配置对应的信息。如在debug版本中配置服务端debug环境对应的url。这样我们在开发的过程中将减少很多麻烦的工作。具体做法就不再细说了。
+
+### 动态配置 Android resValue
+
+在你的 gradle 内容 buildTypes 或者 productFlavors 下面，如 release 体内写上类似：
+resValue “string”, “AppName”, “Tel4Drakeet”
+意为把名为 AppName 的 string value 值改为 Tel4Drakeet
