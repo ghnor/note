@@ -175,3 +175,37 @@ android {
 ```
 
 通过以上例子，我们可以发现，AndroidManifest中的一些属性值也是可以动态改变的，这样在对特定包进行特定处理也将变得十分方便，更多的用法依次类推即可。
+
+### 自定义你的BuildConfig
+
+BuildConfig.Java是Android Gradle自动生成的一个java类文件，无法手动编译，但是可以通过Gradle控制，也就是说他是动态可配置的。比如在build.gradle中配置buildConfigField “boolean”, “LOG_DEBUG”, “false”后，我们点击“Sync now”后，即可在代码中使用BuildConfig.java新加的LOG_DEBUG属性，如：
+
+```
+public final class BuildConfig {
+  //...
+  // Fields from build type: debug
+  public static final boolean LOG_DEBUG = true;
+}
+```
+
+buildConfigField 一共有3个参数，第一个是数据类型，即新增成员变量的类型（与Java的类型是对等）；第二个参数是成员变量名，如：LOG_DEBUG；第三个参数是常量值。
+
+以下我们介绍一种常见的用法，场景：我们需要在debug版本包中输出log，而不希望在release版本中输出log，那么就可以通过以下方法进行配置（当然，我们代码中的log开关是使用BuildConfig中相关属性进行设置的）：
+
+```
+buildTypes {
+     debug {
+        // 显示Log
+        buildConfigField "boolean", "LOG_DEBUG", "true"
+        //...
+     }
+
+     release {
+        // 不显示Log
+        buildConfigField "boolean", "LOG_DEBUG", "false"
+        //...
+     }
+}
+```
+
+另外，还用一种常见的情况是：当我们的服务器有debug和release环境时，我们可能也需要在App对应的版本中配置对应的信息。如在debug版本中配置服务端debug环境对应的url。这样我们在开发的过程中将减少很多麻烦的工作。具体做法就不再细说了。
