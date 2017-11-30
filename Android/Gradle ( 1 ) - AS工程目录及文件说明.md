@@ -1,29 +1,34 @@
 ## Gradle 和 Android Studio 工程目录：
 
-├── app·····················#Android App目录  
+|  |  |  |
+| :--- | :--- | :--- |
+| app |  | Android App目录 |
+|  |  |  |
+
+├── app·····················\#Android App目录  
 │ ├── app.iml···············AS识别项目的配置文件  
-│ ├── build·················#模块构建输出目录（代码编译后生成的文件存放的位置、生成的Apk文件等）  
-│ ├── build.gradle··········#module构建脚本  
+│ ├── build·················\#模块构建输出目录（代码编译后生成的文件存放的位置、生成的Apk文件等）  
+│ ├── build.gradle··········\#module构建脚本  
 │ ├── libs··················相关库文件目录  
 │ ├── proguard-rules.pro····proguard混淆配置  
 │ └── src···················源代码，资源等  
 │  
-├── build···················#构建输出目录  
+├── build···················\#构建输出目录  
 │ ├── generated  
 │ └── intermediates  
 │  
-├── build.gradle············#工程构建文件  
+├── build.gradle············\#工程构建文件  
 │  
 ├── gradle  
 │ └── wrapper  
 │  
-├── gradle.properties·······#gradle相关的全局属性设置  
-├── gradlew·················#Linux下的gradle wrapper可执行文件  
-├── gradlew.bat·············#windows下的gradle wrapper可执行文件  
+├── gradle.properties·······\#gradle相关的全局属性设置  
+├── gradlew·················\#Linux下的gradle wrapper可执行文件  
+├── gradlew.bat·············\#windows下的gradle wrapper可执行文件  
 ├── local.properties········配置Androod SDK位置文件  
-└── settings.gradle·········#工程配置  
+└── settings.gradle·········\#工程配置
 
-* **build.gradle #工程构建文件**
+* **build.gradle \#工程构建文件**
 
 顶级构建文件，可以为所有子项目/模块添加常用的配置选项。
 
@@ -50,7 +55,7 @@ allprojects {
 }
 ```
 
-* **app/build.gradle #module构建文件**
+* **app/build.gradle \#module构建文件**
 
 模块（module）中的构建文件，对当前模块生效。开发过程中最需要注重的一个文件，应用的相关特性都在这里进行配置。
 
@@ -99,7 +104,7 @@ dependencies {
 }
 ```
 
-* **settings.gradle #工程配置**
+* **settings.gradle \#工程配置**
 
 这个文件是全局的项目配置文件，里面主要声明一些需要加入 gradle 的 module，即告诉gradle项目中有哪些模块（module）需要处理，文件内容：
 
@@ -108,9 +113,9 @@ dependencies {
 include ':app'
 ```
 
-* **gradle.properties #gradle相关的全局属性设置**
+* **gradle.properties \#gradle相关的全局属性设置**
 
-在google开源的[iosched][1]项目中，可以看到他们利用了该文件配置了一些builde.gradle中需要用到的常（变）量， 如com.android.support. 的版本号以及签名信息相关的配置。
+在google开源的\[iosched\]\[1\]项目中，可以看到他们利用了该文件配置了一些builde.gradle中需要用到的常（变）量， 如com.android.support. 的版本号以及签名信息相关的配置。
 
 * **gradle/wrapper/gradle-wrapper.properties**
 
@@ -118,9 +123,12 @@ include ':app'
 
 ```gradle
 #Mon Dec 28 10:00:20 PST 2015
-distributionBase=GRADLE_USER_HOME  // 在环境变量中配置，默认：C:\Users\Administrator\
+distributionBase=GRADLE_USER_HOME  // 在环境变量中配置，默认：C:\Users\Administrator\
 distributionPath=wrapper/dists // 如果上面的环境变量已配置，下载目录：GRADLE_USER_HOME\.gradle\wrapper\dists\
 zipStoreBase=GRADLE_USER_HOME
 zipStorePath=wrapper/dists
 distributionUrl=https\://services.gradle.org/distributions/gradle-3.3-all.zip // 使用的gradle版本，及其仓库地址。我们也可以指定本地目录。
 ```
+
+
+
