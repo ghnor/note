@@ -3,32 +3,25 @@
 |  |  |  |
 | :--- | :--- | :--- |
 | app |  | Android App目录 |
-|  |  |  |
+|  | app.iml | AS识别项目的配置文件 |
+|  | build | 模块构建输出目录（代码编译后生成的文件存放的位置、生成的Apk文件等） |
+|  | build.gradle | module构建脚本 |
+|  | libs | 相关库文件目录 |
+|  | proguard-rules.pro | proguard混淆配置 |
+|  | src | 源代码，资源等 |
+| build |  | 构建输出目录 |
+|  | generated |  |
+|  | intermediates |  |
+| build.gradle |  | 工程构建文件 |
+| gradle |  |  |
+|  | wrapper |  |
+| gradle.properties |  | gradle相关的全局属性设置 |
+| gradlew |  | Linux下的gradle wrapper可执行文件 |
+| gradlew.bat |  | windows下的gradle wrapper可执行文件 |
+| local.properties |  | 配置Androod SDK位置文件 |
+| settings.gradle |  | 工程配置 |
 
-├── app·····················\#Android App目录  
-│ ├── app.iml···············AS识别项目的配置文件  
-│ ├── build·················\#模块构建输出目录（代码编译后生成的文件存放的位置、生成的Apk文件等）  
-│ ├── build.gradle··········\#module构建脚本  
-│ ├── libs··················相关库文件目录  
-│ ├── proguard-rules.pro····proguard混淆配置  
-│ └── src···················源代码，资源等  
-│  
-├── build···················\#构建输出目录  
-│ ├── generated  
-│ └── intermediates  
-│  
-├── build.gradle············\#工程构建文件  
-│  
-├── gradle  
-│ └── wrapper  
-│  
-├── gradle.properties·······\#gradle相关的全局属性设置  
-├── gradlew·················\#Linux下的gradle wrapper可执行文件  
-├── gradlew.bat·············\#windows下的gradle wrapper可执行文件  
-├── local.properties········配置Androod SDK位置文件  
-└── settings.gradle·········\#工程配置
-
-* **build.gradle \#工程构建文件**
+* **build.gradle #project构建文件**
 
 顶级构建文件，可以为所有子项目/模块添加常用的配置选项。
 
@@ -55,7 +48,7 @@ allprojects {
 }
 ```
 
-* **app/build.gradle \#module构建文件**
+* **app/build.gradle #module构建文件**
 
 模块（module）中的构建文件，对当前模块生效。开发过程中最需要注重的一个文件，应用的相关特性都在这里进行配置。
 
