@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* Android
+* [Android](Android)
   * [Adapter的优化写法](Android/Adapter的优化写法.md)
   * [Android ndk的主要应用场景](Android/Android ndk的主要应用场景.md)
   * [Android内存泄露总结](Android/Android内存泄露总结.md)
@@ -65,8 +65,4 @@
   * [通过uri获取bitmap](Android/通过uri获取bitmap.md)
   * [通过Uri获取路径](Android/通过Uri获取路径.md)
   * [首次安装在安装界面打开应用，退到后台再从桌面launcher打开应用，会打开两个应用](Android/首次安装在安装界面打开应用，退到后台再从桌面launcher打开应用，会打开两个应用.md)
-
-
-
-
 
