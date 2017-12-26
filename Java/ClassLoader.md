@@ -23,6 +23,57 @@ BootStrap允许用null来代替：
 
 这样，因为每次都会从最顶层的类加载开始尝试加载，所以一个已经加载过的类就不会被重复加载。
 
+### 源码
+
+```java
+protected Class<?> loadClass(String name, boolean resolve)
+        throws ClassNotFoundException
+    {
+        synchronized (getClassLoadingLock(name)) {
+            // 看这个类加载过没有如果加载过就不在继续加载了
+            Class c = findLoadedClass(name);
+            if (c == null) {
+                long t0 = System.nanoTime();
+                try {
+                    if (parent != null) {
+                        //先看有没有爸爸类加载器如果有就继续“递归”调用loadclass这个方法
+                        c = parent.loadClass(name, false);
+                    } else {
+                        //如果没有爸爸类加载器了，就说明到头了。看看
+                        //祖先bootstrap类加载器中有没有
+                        c = findBootstrapClassOrNull(name);
+                    }
+                } catch (ClassNotFoundException e) {
+                    // ClassNotFoundException thrown if class not found
+                    // from the non-null parent class loader
+                }
+
+                if (c == null) {
+                    // If still not found, then invoke findClass in order
+                    // to find the class.
+                    long t1 = System.nanoTime();
+                    //如果没有找到就调用自己的findclass找这个类。
+                    c = findClass(name);
+
+                    // this is the defining class loader; record the stats
+                    sun.misc.PerfCounter.getParentDelegationTime().addTime(t1 - t0);
+                    sun.misc.PerfCounter.getFindClassTime().addElapsedTimeFrom(t1);
+                    sun.misc.PerfCounter.getFindClasses().increment();
+                }
+            }
+            if (resolve) {
+                resolveClass(c);
+            }
+            return c;
+        }
+```
+
+### 自定义类加载器
+
+```java
+
+```
+
 ## Android类加载器结构
 
 两个默认类加载器：
@@ -30,5 +81,28 @@ BootStrap允许用null来代替：
 * DexClassLoader
 * PathClassLoader
 
-DexClassLoader可以加载任何路径的apk/dex/jar
+DexClassLoader可以加载任何路径的apk/dex/jar  
 PathClassLoader只能加载/data/app中的apk，也就是已经安装到手机中的apk。这个也是PathClassLoader作为默认的类加载器的原因，因为一般程序都是安装了，在打开，这时候PathClassLoader就去加载指定的apk(解压成dex，然后在优化成odex)就可以了。
+
+```java
+public class DexClassLoader extends BaseDexClassLoader {
+
+    public DexClassLoader(String dexPath, String optimizedDirectory,
+            String librarySearchPath, ClassLoader parent) {
+        super(dexPath, new File(optimizedDirectory), librarySearchPath, parent);
+    }
+}
+```
+
+```java
+public class PathClassLoader extends BaseDexClassLoader {
+
+    public PathClassLoader(String dexPath, ClassLoader parent) {
+        super(dexPath, null, null, parent);
+    }
+
+    public PathClassLoader(String dexPath, String librarySearchPath, ClassLoader parent) {
+        super(dexPath, null, librarySearchPath, parent);
+    }
+}
+```
