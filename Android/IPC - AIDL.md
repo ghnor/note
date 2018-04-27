@@ -12,9 +12,11 @@
 
 	客户端首先绑定服务端的Service，绑定成功后，将服务端返回的Binder对象转为AIDL接口。
 	
-## 创建AIDL接口文件
+## 基本的AIDL应用
+	
+### 1.创建AIDL接口文件**
 
-### AIDL支持的数据类型
+**AIDL支持的数据类型**
 
 * 基本数据类型（int、long、char、boolean、double等）；
 
@@ -28,7 +30,7 @@
 
 * AIDL：所有的AIDL接口本身也可以在AIDL文件中使用。
 
-### 需要注意几点：
+**需要注意几点：**
 
 * 自定义的Parcelable对象和AIDL对象必须显示import进来；
 
@@ -38,7 +40,7 @@
 
 * AIDL接口中只支持方法，不支持声明静态常量。
 
-### 示例代码：
+**示例代码：**
 
 IBookManager.aidl
 
@@ -46,13 +48,10 @@ IBookManager.aidl
 package com.ghnor.ipc;
 
 import com.ghnor.ipc.Book;
-import com.ghnor.ipc.IOnNewBookArrivedListener;
 
 interface IBookManager {
     List<Book> getBookList();
     void addBook(in Book book);
-    void registerListener(IOnNewBookArrivedListener listener);
-    void unregisterListener(IOnNewBookArrivedListener listener);
 }
 ```
 
@@ -111,7 +110,7 @@ package com.ghnor.ipc;
 parcelable Book;
 ```
 
-## 服务端
+### 2.服务端
 
 ```java
 package com.ghnor.ipc;
@@ -133,8 +132,6 @@ public class BookManagerService extends Service {
 
     private CopyOnWriteArrayList<Book> mBookList = new CopyOnWriteArrayList<>();
 
-    private RemoteCallbackList<IOnNewBookArrivedListener> mListeners = new RemoteCallbackList<>();
-
     private Binder mBinder = new IBookManager.Stub() {
         @Override
         public List<Book> getBookList() throws RemoteException {
@@ -144,16 +141,6 @@ public class BookManagerService extends Service {
         @Override
         public void addBook(Book book) throws RemoteException {
             mBookList.add(book);
-        }
-
-        @Override
-        public void registerListener(IOnNewBookArrivedListener listener) throws RemoteException {
-            mListeners.register(listener);
-        }
-
-        @Override
-        public void unregisterListener(IOnNewBookArrivedListener listener) throws RemoteException {
-            mListeners.unregister(listener);
         }
     };
 
@@ -168,20 +155,103 @@ public class BookManagerService extends Service {
         super.onCreate();
         arrivedNewBook(null);
     }
+}
+```
 
-    private void arrivedNewBook(Book book) {
-        final int n = mListeners.beginBroadcast();
-        for (int i = 0; i < n; i++) {
-            IOnNewBookArrivedListener listener = mListeners.getBroadcastItem(i);
-            if (listener != null) {
-                try {
-                    listener.onNewBookArrived(book);
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
+> 因为AIDL方法是在服务端的Binder线程池中执行的，所以这里使用了支持并发读/写的CopyOnWriteArrayList。
+
+> 前面我们提到，AIDL中能够使用的List只有ArrayList，但是我们这里却使用了CopyOnWriteArrayList（注意它不是继承自ArrayList）。为什么能否正常工作呢？这是因为AIDL中所支持的是抽象的List，而List只是一个借口，因此虽然服务端返回的是CopyOnWriteArrayList，但是在Binder中会按照List规范去访问数据并最终形成一个新的ArrayList传递给客户端。类似的还有ConcurrentHashMap。
+
+### 3.客户端
+
+```java
+package com.ghnor.ipc;
+
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.os.Bundle;
+import android.os.IBinder;
+import android.support.v7.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    private IBinder mIBinder;
+
+    private IBookManager mIBookManager;
+
+    private ServiceConnection mServiceConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+            mIBinder = iBinder;
+            mIBookManager = IBookManager.Stub.asInterface(iBinder);
+	    try {
+                List<Book> list = mIBookManager.getBookList();
+            } catch (RemoteException e) {
+                e.printStackTrace();
             }
         }
-        mListeners.finishBroadcast();
+
+        @Override
+        public void onServiceDisconnected(ComponentName componentName) {
+        }
+    };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Intent intent = new Intent(this, BookManagerService.class);
+        bindService(intent, mServiceConnection, Context.BIND_AUTO_CREATE);
     }
+
+    @Override
+    protected void onDestroy() {
+        unbindService(mServiceConnection);
+        super.onDestroy();
+    }
+}
+```
+
+> 需要注意的是，getBookList方法在服务端可能需要执行很久，所以会引起ANR。
+
+## 添加回调
+
+让服务端可以主动通知客户端。
+
+1. 创建一个AID接口；
+
+2. 服务端添加AIDL接口入参的方法；
+
+3. 客户端实现AIDL接口。
+
+### 1.创建AIDL接口
+
+创建一个IOnNewBookArrivedListener.aidl接口文件
+
+```java
+package com.ghnor.ipc;
+
+import com.ghnor.ipc.Book;
+
+interface IOnNewBookArrivedListener {
+    void onNewBookArrived(in Book newBook);
+}
+```
+
+在原来的IBookManager.aidl中先添加两个方法
+
+```java
+package com.ghnor.ipc;
+
+import com.ghnor.ipc.Book;
+import com.ghnor.ipc.IOnNewBookArrivedListener;
+
+interface IBookManager {
+    List<Book> getBookList();
+    void addBook(in Book book);
+    void registerListener(IOnNewBookArrivedListener listener);
+    void unregisterListener(IOnNewBookArrivedListener listener);
 }
 ```
