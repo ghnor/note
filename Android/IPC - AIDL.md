@@ -14,7 +14,7 @@
 	
 ## 基本的AIDL应用
 	
-### 1.创建AIDL接口文件**
+### 1. 创建AIDL接口文件
 
 **AIDL支持的数据类型**
 
@@ -110,7 +110,7 @@ package com.ghnor.ipc;
 parcelable Book;
 ```
 
-### 2.服务端
+### 2. 服务端
 
 ```java
 package com.ghnor.ipc;
@@ -162,7 +162,7 @@ public class BookManagerService extends Service {
 
 > 前面我们提到，AIDL中能够使用的List只有ArrayList，但是我们这里却使用了CopyOnWriteArrayList（注意它不是继承自ArrayList）。为什么能否正常工作呢？这是因为AIDL中所支持的是抽象的List，而List只是一个借口，因此虽然服务端返回的是CopyOnWriteArrayList，但是在Binder中会按照List规范去访问数据并最终形成一个新的ArrayList传递给客户端。类似的还有ConcurrentHashMap。
 
-### 3.客户端
+### 3. 客户端
 
 ```java
 package com.ghnor.ipc;
@@ -226,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
 
 3. 客户端实现AIDL接口。
 
-### 1.创建AIDL接口
+### 1. 创建AIDL接口
 
 创建一个IOnNewBookArrivedListener.aidl接口文件
 
