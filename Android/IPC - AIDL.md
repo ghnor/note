@@ -240,7 +240,7 @@ interface IOnNewBookArrivedListener {
 }
 ```
 
-在原来的IBookManager.aidl中先添加两个方法
+在原来的IBookManager.aidl中先添加两个方法。
 
 ```java
 package com.ghnor.ipc;
@@ -255,3 +255,157 @@ interface IBookManager {
     void unregisterListener(IOnNewBookArrivedListener listener);
 }
 ```
+
+### 2. 服务端添加AIDL接口入参的方法
+
+修改服务端Service，实现IBookManager.Stub新添加的两个方法。
+
+```java
+package com.ghnor.ipc;
+
+import android.app.Service;
+import android.content.Intent;
+import android.os.Binder;
+import android.os.IBinder;
+import android.os.RemoteCallbackList;
+import android.os.RemoteException;
+import android.support.annotation.Nullable;
+
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+public class BookManagerService extends Service {
+
+    private static final String TAG = "BMS";
+
+    private CopyOnWriteArrayList<Book> mBookList = new CopyOnWriteArrayList<>();
+
+    private RemoteCallbackList<IOnNewBookArrivedListener> mListeners = new RemoteCallbackList<>();
+
+    private Binder mBinder = new IBookManager.Stub() {
+        @Override
+        public List<Book> getBookList() throws RemoteException {
+            return mBookList;
+        }
+
+        @Override
+        public void addBook(Book book) throws RemoteException {
+            mBookList.add(book);
+        }
+
+        @Override
+        public void registerListener(IOnNewBookArrivedListener listener) throws RemoteException {
+            mListeners.register(listener);
+        }
+
+        @Override
+        public void unregisterListener(IOnNewBookArrivedListener listener) throws RemoteException {
+            mListeners.unregister(listener);
+        }
+    };
+
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent) {
+        return mBinder;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        arrivedNewBook(new Book(0x01, "new Book " + 0x01));
+    }
+
+    private void arrivedNewBook(Book book) {
+        final int n = mListeners.beginBroadcast();
+        for (int i = 0; i < n; i++) {
+            IOnNewBookArrivedListener listener = mListeners.getBroadcastItem(i);
+            if (listener != null) {
+                try {
+                    listener.onNewBookArrived(book);
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        mListeners.finishBroadcast();
+    }
+}
+```
+
+> 接口的集合类使用了RemoteCallbackList，它是系统专门提供的用于删除扩进程listener的接口。它有两个特点，一是：当客户端进程终止后，它会自动移出客户端注册的listener；二是：内部自动实现了线程同步的功能。
+
+> 尽管RemoteCallbackList名字带List，但它并不是一个List，它的遍历必须按照上面arrivedNewBook方法中的方式进行，beginBroadcast和finishBroadcast必须要配对使用。
+
+### 3. 客户端实现AIDL接口
+
+```java
+package com.ghnor.ipc;
+
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.os.Bundle;
+import android.os.IBinder;
+import android.os.RemoteException;
+import android.support.v7.app.AppCompatActivity;
+
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity {
+
+    private IBinder mIBinder;
+
+    private IBookManager mIBookManager;
+
+    private ServiceConnection mServiceConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+            mIBinder = iBinder;
+            mIBookManager = IBookManager.Stub.asInterface(iBinder);
+            try {
+                List<Book> list = mIBookManager.getBookList();
+                mIBookManager.registerListener(listener);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName componentName) {
+            try {
+                mIBookManager.unregisterListener(listener);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+    };
+
+    private IOnNewBookArrivedListener listener = new IOnNewBookArrivedListener.Stub() {
+
+        @Override
+        public void onNewBookArrived(Book newBook) throws RemoteException {
+
+        }
+    };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Intent intent = new Intent(this, BookManagerService.class);
+        bindService(intent, mServiceConnection, Context.BIND_AUTO_CREATE);
+    }
+
+    @Override
+    protected void onDestroy() {
+        unbindService(mServiceConnection);
+        super.onDestroy();
+    }
+}
+```
+
+> 实现IOnNewBookArrivedListener接口不能直接new这个接口，而是通过IOnNewBookArrivedListener的内部类Stub实现。
+
+> onNewBookArrived方法是在客户端的Binder线程池中执行的，因此，如果要进行UI操作，需要通过Handler切换到客户端的主线程中去执行。
