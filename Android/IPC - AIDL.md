@@ -355,14 +355,11 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private IBinder mIBinder;
-
     private IBookManager mIBookManager;
 
     private ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-            mIBinder = iBinder;
             mIBookManager = IBookManager.Stub.asInterface(iBinder);
             try {
                 List<Book> list = mIBookManager.getBookList();
@@ -409,3 +406,37 @@ public class MainActivity extends AppCompatActivity {
 > 实现IOnNewBookArrivedListener接口不能直接new这个接口，而是通过IOnNewBookArrivedListener的内部类Stub实现。
 
 > onNewBookArrived方法是在客户端的Binder线程池中执行的，因此，如果要进行UI操作，需要通过Handler切换到客户端的主线程中去执行。
+
+## Binder意外死亡
+
+* 设置DeathRecipient监听，当Binder死亡时，会收到binderDied方法的回调，在binderDied方法中重连远程服务；
+
+* 在onServiceDisconnected中重连远程服务。
+
+上述两种方式的区别是：onServiceDisconnected在客户端的UI线程中被调用，而binderDied在客户端的Binder线程池中被回调。也就是说，在binderDied方法中我们不能访问UI。
+
+### 1. 声明一个DeathReceipient对象
+
+```java
+private IBinder.DeathRecipient mDeathRecipient = new IBinder.DeathRecipient() {
+	@Override
+	public void binderDied() {
+		if (mIBookManager == null) {
+			return;
+		}
+		mIBookManager.asBinder().unlinkToDeath(mDeathRecipient, 0);
+		mIBookManager = null;
+		// TODO: 这里重新绑定远程Service
+	}
+};
+```
+
+### 客户端绑定远程服务成功后（onServiceConnected方法），给binder设置死亡代理
+
+```java
+iBinder.linkToDeath(mDeathRecipient, 0);
+```
+
+linkToDeath的第二个参数是个标记位，直接设为0即可。
+
+当Binder死亡的时候客户端就会收到通知。另外，通过Binder的isBinderAlive方法也可以判断Binder是否死亡。
