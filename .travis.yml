@@ -13,8 +13,6 @@ install:
 before_script:
 
 script:
-
-after_script:
   - npm install yamljs
   - git clone https://github.com/ghnor/ghnor.github.io.git  # GH_REF是最下面配置的仓库地址
   - node generate.js
@@ -28,6 +26,8 @@ after_script:
   - git add .
   - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
   - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}"  #Travis_Token是在Travis中配置环境变量的名称
+
+after_script:
 
 # after_success or after_failure
 # OPTIONAL before_deploy
