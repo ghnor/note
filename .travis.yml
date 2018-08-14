@@ -2,32 +2,29 @@ language: node_js
 
 node_js: stable
 
-apt addons:
+# apt addons:
 
-cache components:
+# cache components:
 
-before_install:
+# before_install:
 
-install:
+# install:
 
 before_script:
-
-script:
+  - export TZ='Asia/Shanghai' # 更改时区
   - npm install yamljs
   - git clone https://github.com/ghnor/ghnor.github.io.git  # GH_REF是最下面配置的仓库地址
+
+script:
   - node generate.js
+
+after_script:
   - cd ghnor.github.io
-  # - git checkout master
-  # - cd ../
-  # - mv .deploy_git/.git/ ./public/   # 这一步之前的操作是为了保留master分支的提交记录，不然每次git init的话只有1条commit
-  # - cd ./public
   - git config user.name "ghnor"  #修改name
   - git config user.email "ghnor.gmail.com"  #修改email
   - git add .
-  - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
+  - git commit -m "Travis CI Auto Build at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
   - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}"  #Travis_Token是在Travis中配置环境变量的名称
-
-after_script:
 
 # after_success or after_failure
 # OPTIONAL before_deploy
