@@ -1,0 +1,34 @@
+language: node_js
+
+node_js: stable
+
+apt addons:
+
+cache components:
+
+before_install:
+
+install:
+
+before_script:
+
+script:
+
+after_script:
+  - git clone https://github.com/ghnor/ghnor.github.io.git  # GH_REF是最下面配置的仓库地址
+  - cd ghnor.github.io
+  - git checkout master
+  - cd ../
+  - mv .deploy_git/.git/ ./public/   # 这一步之前的操作是为了保留master分支的提交记录，不然每次git init的话只有1条commit
+  - cd ./public
+  - git config user.name "mtianyan"  #修改name
+  - git config user.email "1147727180@qq.com"  #修改email
+  - git add .
+  - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
+  - git push --force --quiet "https://${Travis_Token}@${GH_REF}" master:master  #Travis_Token是在Travis中配置环境变量的名称
+
+# after_success or after_failure
+# OPTIONAL before_deploy
+# OPTIONAL deploy
+# OPTIONAL after_deploy
+# after_script
