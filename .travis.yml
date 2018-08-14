@@ -17,7 +17,7 @@ script:
 after_script:
   - npm install yamljs
   - git clone https://github.com/ghnor/ghnor.github.io.git  # GH_REF是最下面配置的仓库地址
-  - node test.js
+  - node generate.js
   - cd ghnor.github.io
   # - git checkout master
   # - cd ../
@@ -27,10 +27,14 @@ after_script:
   - git config user.email "1147727180@qq.com"  #修改email
   - git add .
   - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
-  # - git push --force --quiet "https://${Travis_Token}@${GH_REF}" master:master  #Travis_Token是在Travis中配置环境变量的名称
+  - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master  #Travis_Token是在Travis中配置环境变量的名称
 
 # after_success or after_failure
 # OPTIONAL before_deploy
 # OPTIONAL deploy
 # OPTIONAL after_deploy
 # after_script
+
+env:
+  global:
+    - GH_REF: github.com/ghnor/ghnor.github.io.git
