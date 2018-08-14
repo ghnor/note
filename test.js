@@ -1,7 +1,7 @@
 const YAML = require('yamljs');
 const fs = require("fs");
 // file为文件所在路径
-const file = "./.settings.yml"
+const file = ".settings.yml"
 const data = YAML.parse(fs.readFileSync(file).toString());
 
 const PATH = 'ghnor.github.io/source/_posts';
