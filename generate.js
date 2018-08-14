@@ -6,7 +6,11 @@ const data = YAML.parse(fs.readFileSync(file).toString());
 
 const PATH = 'ghnor.github.io/source/_posts';
 
-deleteall(PATH);
+if (fs.existsSync(PATH)) {
+    deleteall(PATH);
+} else {
+    fs.mkdirSync(PATH);
+}
 
 data.forEach(element => {
     let path = element.path;
