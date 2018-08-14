@@ -15,6 +15,7 @@ before_script:
 script:
 
 after_script:
+  - npm install yamljs
   - git clone https://github.com/ghnor/ghnor.github.io.git  # GH_REF是最下面配置的仓库地址
   - node test.js
   - cd ghnor.github.io
