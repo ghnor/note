@@ -24,7 +24,7 @@ after_script:
   - git config user.email "ghnor.gmail.com"  #修改email
   - git add .
   - git commit -m "Travis CI Auto Build at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
-  - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}"  #Travis_Token是在Travis中配置环境变量的名称
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}"  #Travis_Token是在Travis中配置环境变量的名称
 
 # after_success or after_failure
 # OPTIONAL before_deploy
