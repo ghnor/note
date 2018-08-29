@@ -35,8 +35,7 @@ data.forEach(element => {
     let data = fs.readFileSync(path);
     let dataStr = data.toString("utf8");
     dataStr = dataStr.replace(/(\n)|(\r\n)|(\r)/, "\n\n<!--more-->\n\n");
-    console.log(dataStr);
-    fs.appendFileSync(pathHexo, data);
+    fs.appendFileSync(pathHexo, dataStr);
 })
 
 function deleteall(path) {
