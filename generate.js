@@ -28,11 +28,13 @@ data.forEach(element => {
     fileName = fileName.replace(/\s+/g, "-");
     let pathHexo = PATH + fileName;
     console.log("pathHexo--->"+pathHexo);
-    var hexoHeader = "---\n";
+    let hexoHeader = "---\n";
     hexoHeader += YAML.stringify(element);
     hexoHeader += "---\n\n";
     fs.writeFileSync(pathHexo, hexoHeader);
-    var data = fs.readFileSync(path);
+    let data = fs.readFileSync(path);
+    let dataStr = data.toString("utf8");
+    dataStr = dataStr.replace(/\n/, "\n\n<!--more-->\n\n");
     fs.appendFileSync(pathHexo, data);
 })
 
