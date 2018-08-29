@@ -34,6 +34,7 @@ data.forEach(element => {
     fs.writeFileSync(pathHexo, hexoHeader);
     let data = fs.readFileSync(path);
     let dataStr = data.toString("utf8");
+    console.log(dataStr);
     dataStr = dataStr.replace(/\n/, "\n\n<!--more-->\n\n");
     fs.appendFileSync(pathHexo, data);
 })
