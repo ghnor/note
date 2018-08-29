@@ -31,11 +31,10 @@ data.forEach(element => {
     let hexoHeader = "---\n";
     hexoHeader += YAML.stringify(element);
     hexoHeader += "---\n\n";
+    hexoHeader += "<!--more-->\n\n"
     fs.writeFileSync(pathHexo, hexoHeader);
     let data = fs.readFileSync(path);
-    let dataStr = data.toString("utf8");
-    dataStr = dataStr.replace(/(\n)|(\r\n)|(\r)/, "\n\n<!--more-->\n\n");
-    fs.appendFileSync(pathHexo, dataStr);
+    fs.appendFileSync(pathHexo, data);
 })
 
 function deleteall(path) {
