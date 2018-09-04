@@ -3,7 +3,7 @@
   path: Android/Adapter的优化写法.md
   title: Adapter的优化写法
   date: 2016-11-14 22:29:00
-  updated: 2017-11-30 14:27:00
+  updated: 2016-11-14 22:29:00
   tags:
     - Android
   categories:
@@ -62,8 +62,8 @@
   moreLoc: 6
   path: Android/CoordinatorLayout与Behavior的一己之见.md
   title: CoordinatorLayout与Behavior的一己之见
-  date: 2016-10-10 20:11:00
-  updated: 2016-12-04 14:24:00
+  date: 2017-10-10 20:11:00
+  updated: 2017-12-04 14:24:00
   tags:
     - Android
   categories:
@@ -92,8 +92,8 @@
   moreLoc: 1
   path: Android/Gradle 2 - 统一依赖管理.md
   title: Gradle 2 - 统一依赖管理
-  date: 2017-11-30 15:24:01
-  updated: 2017-11-30 15:24:01
+  date: 2017-12-01 15:25:01
+  updated: 2017-12-01 15:25:01
   tags:
     - Android
   categories:
@@ -102,8 +102,8 @@
   moreLoc: 1
   path: Android/Gradle 3 - 引入依赖.md
   title: Gradle 3 - 引入依赖
-  date: 2017-11-30 15:24:02
-  updated: 2017-11-30 15:24:02
+  date: 2017-12-02 15:26:02
+  updated: 2017-12-02 15:26:02
   tags:
     - Android
   categories:
@@ -112,8 +112,8 @@
   moreLoc: 1
   path: Android/Gradle 4 - 常用配置.md
   title: Gradle 4 - 常用配置
-  date: 2017-11-30 15:24:03
-  updated: 2017-11-30 15:24:03
+  date: 2017-12-03 15:27:03
+  updated: 2017-12-03 15:27:03
   tags:
     - Android
   categories:
@@ -122,8 +122,8 @@
   moreLoc: 1
   path: Android/HandlerThread - Handler - Thread.md
   title: HandlerThread - Handler - Thread
-  date: 2017-11-30 15:24:04
-  updated: 2017-11-30 15:24:04
+  date: 2017-12-04 15:24:04
+  updated: 2017-12-04 15:24:04
   tags:
     - Android
   categories:
@@ -163,7 +163,7 @@
   path: Android/Manifest中meta-data元素的配置与获取.md
   title: Manifest中meta-data元素的配置与获取
   date: 2017-03-18 19:36:00
-  updated: 2017-11-30 14:27:00
+  updated: 2017-03-18 19:36:00
   tags:
     - Android
   categories:
@@ -173,7 +173,7 @@
   path: Android/Material Design 1 - 主题样式.md
   title: Material Design 1 - 主题样式
   date: 2017-11-22 20:30:00
-  updated: 2017-11-30 15:24:00
+  updated: 2017-11-22 20:30:00
   tags:
     - Android
   categories:
@@ -182,8 +182,8 @@
   moreLoc: 1
   path: Android/Material Design 2 - Toolbar.md
   title: Material Design 2 - Toolbar
-  date: 2017-11-30 15:24:01
-  updated: 2017-11-30 15:24:01
+  date: 2017-11-23 15:24:01
+  updated: 2017-11-23 15:24:01
   tags:
     - Android
   categories:
@@ -192,8 +192,8 @@
   moreLoc: 1
   path: Android/Material Design 3 - TabLayout.md
   title: Material Design 3 - TabLayout
-  date: 2017-11-30 15:24:02
-  updated: 2017-11-30 15:24:02
+  date: 2017-11-24 15:24:02
+  updated: 2017-11-24 15:24:02
   tags:
     - Android
   categories:
@@ -202,8 +202,8 @@
   moreLoc: 1
   path: Android/Material Design 4 - AppBarLayout.md
   title: Material Design 4 - AppBarLayout
-  date: 2017-11-30 15:24:03
-  updated: 2017-11-30 15:24:03
+  date: 2017-11-25 15:24:03
+  updated: 2017-11-25 15:24:03
   tags:
     - Android
   categories:
@@ -212,8 +212,8 @@
   moreLoc: 1
   path: Android/Material Design 5 - CollapsingToolbarLayout.md
   title: Material Design 5 - CollapsingToolbarLayout
-  date: 2017-11-30 15:24:04
-  updated: 2017-11-30 15:24:04
+  date: 2017-11-26 15:24:04
+  updated: 2017-11-26 15:24:04
   tags:
     - Android
   categories:
@@ -222,8 +222,8 @@
   moreLoc: 1
   path: Android/Material Design 6 - FloatActionButton、Snackbar.md
   title: Material Design 6 - FloatActionButton、Snackbar
-  date: 2017-11-30 15:24:05
-  updated: 2017-11-30 15:24:05
+  date: 2017-11-27 15:24:05
+  updated: 2017-11-27 15:24:05
   tags:
     - Android
   categories:
@@ -232,8 +232,8 @@
   moreLoc: 1
   path: Android/Material Design 7 - DrawerLayout、NavigationView.md
   title: Material Design 7 - DrawerLayout、NavigationView
-  date: 2017-11-30 15:24:06
-  updated: 2017-11-30 15:24:06
+  date: 2017-11-28 15:24:06
+  updated: 2017-11-28 15:24:06
   tags:
     - Android
   categories:
@@ -242,8 +242,8 @@
   moreLoc: 1
   path: Android/NFC基础.md
   title: NFC基础
-  date: 2017-11-30 14:27:00
-  updated: 2017-11-30 14:27:00
+  date: 2017-01-30 14:27:00
+  updated: 2017-01-30 14:27:00
   tags:
     - Android
   categories:
@@ -252,8 +252,8 @@
   moreLoc: 1
   path: Android/Socket的简单使用.md
   title: Socket的简单使用
-  date: 2017-11-30 14:27:00
-  updated: 2017-11-30 14:27:00
+  date: 2017-02-30 14:27:00
+  updated: 2017-02-30 14:27:00
   tags:
     - Android
   categories:
@@ -262,8 +262,8 @@
   moreLoc: 1
   path: Android/inPreferredConfig参数.md
   title: inPreferredConfig参数
-  date: 2017-11-30 14:27:00
-  updated: 2017-11-30 14:27:00
+  date: 2017-03-30 14:27:00
+  updated: 2017-03-30 14:27:00
   tags:
     - Android
   categories:
@@ -273,7 +273,7 @@
   path: Android/数字，日期格式化.md
   title: 数字，日期格式化
   date: 2016-11-14 22:29:00
-  updated: 2017-11-30 14:27:00
+  updated: 2016-11-14 22:29:00
   tags:
     - Android
   categories:

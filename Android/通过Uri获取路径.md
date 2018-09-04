@@ -133,6 +133,8 @@ public class PathUtils {
 }
 ```
 
+---
+
 **Usage:**
 
 ```java
