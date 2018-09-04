@@ -34,7 +34,7 @@ data.forEach(element => {
     fs.writeFileSync(pathHexo, hexoHeader);
     let data = fs.readFileSync(path);
     let dataStr = data.toString("utf8");
-    let dataStrs = dataStr.split(/\r\n/g);
+    let dataStrs = dataStr.split(/\n/g);
     dataStr = "";
     for (index = 0; index < dataStrs.length; index++) {
         let item = dataStrs[index];
