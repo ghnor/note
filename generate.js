@@ -44,6 +44,7 @@ data.forEach(element => {
             dataStr += item + "\n";
         }
     }
+    console.log(dataStr);
     // dataStr = dataStr.replace(/(\n)|(\r\n)|(\r)/, "\n\n<!--more-->\n\n");
     fs.appendFileSync(pathHexo, dataStr);
 })
