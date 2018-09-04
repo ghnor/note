@@ -1,4 +1,5 @@
 -
+  moreLoc: 1
   path: Android/Adapter的优化写法.md
   title: Adapter的优化写法
   date: 2016-11-14 22:29:00
@@ -8,6 +9,7 @@
   categories:
     - Android
 -
+  moreLoc: 3
   path: Android/Android Gradle权威指南 1 - Gradle入门.md
   title: Android Gradle权威指南 1 - Gradle入门
   date: 2017-12-09 23:31:00
@@ -17,6 +19,7 @@
   categories:
     - Android
 -
+  moreLoc: 6
   path: Android/Android内存泄露总结.md
   title: Android内存泄露总结
   date: 2016-10-26 22:19:00
@@ -26,6 +29,7 @@
   categories:
     - Android
 -
+  moreLoc: 3
   path: Android/Android异常之ANR.md
   title: Android异常之ANR
   date: 2016-11-03 13:36:00
@@ -35,6 +39,7 @@
   categories:
     - Android
 -
+  moreLoc: 5
   path: Android/Android异常之FC.md
   title: Android异常之FC
   date: 2016-11-03 13:38:00
@@ -44,6 +49,7 @@
   categories:
     - Android
 -
+  moreLoc: 2
   path: Android/Broadcast Receiver.md
   title: Broadcast Receiver
   date: 2016-11-14 22:29:00
@@ -53,6 +59,7 @@
   categories:
     - Android
 -
+  moreLoc: 6
   path: Android/CoordinatorLayout与Behavior的一己之见.md
   title: CoordinatorLayout与Behavior的一己之见
   date: 2016-10-10 20:11:00
@@ -62,6 +69,7 @@
   categories:
     - Android
 -
+  moreLoc: 5
   path: Android/Dagger2 的初步了解和使用.md
   title: Dagger2 的初步了解和使用
   date: 2017-03-13 12:10:00
@@ -71,6 +79,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/Gradle 1 - AS工程目录及文件说明.md
   title: Gradle 1 - AS工程目录及文件说明
   date: 2017-11-30 15:24:00
@@ -80,6 +89,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/Gradle 2 - 统一依赖管理.md
   title: Gradle 2 - 统一依赖管理
   date: 2017-11-30 15:24:01
@@ -89,6 +99,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/Gradle 3 - 引入依赖.md
   title: Gradle 3 - 引入依赖
   date: 2017-11-30 15:24:02
@@ -98,6 +109,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/Gradle 4 - 常用配置.md
   title: Gradle 4 - 常用配置
   date: 2017-11-30 15:24:03
@@ -107,6 +119,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/HandlerThread - Handler - Thread.md
   title: HandlerThread - Handler - Thread
   date: 2017-11-30 15:24:04
@@ -116,6 +129,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/IPC - AIDL.md
   title: IPC - AIDL
   date: 2018-04-24 22:44:00
@@ -125,6 +139,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/Java和JavaScript交互.md
   title: Java和JavaScript交互
   date: 2016-11-03 10:53:00
@@ -134,6 +149,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/Jenkins构建Android项目.md
   title: Jenkins构建Android项目
   date: 2017-05-15 18:01:00
@@ -143,6 +159,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/Manifest中meta-data元素的配置与获取.md
   title: Manifest中meta-data元素的配置与获取
   date: 2017-03-18 19:36:00
@@ -152,6 +169,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/Material Design 1 - 主题样式.md
   title: Material Design 1 - 主题样式
   date: 2017-11-22 20:30:00
@@ -161,6 +179,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/Material Design 2 - Toolbar.md
   title: Material Design 2 - Toolbar
   date: 2017-11-30 15:24:01
@@ -170,6 +189,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/Material Design 3 - TabLayout.md
   title: Material Design 3 - TabLayout
   date: 2017-11-30 15:24:02
@@ -179,6 +199,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/Material Design 4 - AppBarLayout.md
   title: Material Design 4 - AppBarLayout
   date: 2017-11-30 15:24:03
@@ -188,6 +209,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/Material Design 5 - CollapsingToolbarLayout.md
   title: Material Design 5 - CollapsingToolbarLayout
   date: 2017-11-30 15:24:04
@@ -197,6 +219,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/Material Design 6 - FloatActionButton、Snackbar.md
   title: Material Design 6 - FloatActionButton、Snackbar
   date: 2017-11-30 15:24:05
@@ -206,6 +229,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/Material Design 7 - DrawerLayout、NavigationView.md
   title: Material Design 7 - DrawerLayout、NavigationView
   date: 2017-11-30 15:24:06
@@ -215,6 +239,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/NFC基础.md
   title: NFC基础
   date: 2017-11-30 14:27:00
@@ -224,6 +249,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/Socket的简单使用.md
   title: Socket的简单使用
   date: 2017-11-30 14:27:00
@@ -233,6 +259,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/inPreferredConfig参数.md
   title: inPreferredConfig参数
   date: 2017-11-30 14:27:00
@@ -242,6 +269,7 @@
   categories:
     - Android
 -
+  moreLoc: 1
   path: Android/数字，日期格式化.md
   title: 数字，日期格式化
   date: 2016-11-14 22:29:00
@@ -251,6 +279,7 @@
   categories:
     - Android
 -
+  moreLoc: 7
   path: Android/源码分析 - Router @chenenyu.md
   title: 源码分析 - Router @chenenyu
   date: 2018-08-29 14:58:00
