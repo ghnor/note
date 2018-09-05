@@ -33,7 +33,7 @@ data.forEach(element => {
     hexoHeader += "---\n\n";
     fs.writeFileSync(pathHexo, hexoHeader);
     let data = fs.readFileSync(path);
-    let dataStr = data.toString("utf8");
+    let dataStr = data.toString();
     let dataStrs = dataStr.split(/\n/g);
     dataStr = "";
     for (index = 0; index < dataStrs.length; index++) {
@@ -45,21 +45,8 @@ data.forEach(element => {
         }
     }
     console.log(dataStr);
-    // dataStr = dataStr.replace(/(\n)|(\r\n)|(\r)/, "\n\n<!--more-->\n\n");
     fs.appendFileSync(pathHexo, dataStr);
 })
-
-function find(str, cha, num){
-    var x = str.indexOf(cha);
-    for(var i = 0; i < num; i++){
-        x = str.indexOf(cha, x+cha.length());
-    }
-    return x;
-}
-
-function replace(str, cha, num) {
-    str.replace
-}
 
 function deleteall(path) {
 	var files = [];
