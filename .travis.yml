@@ -38,4 +38,4 @@ branches:
 
 env:
   global:
-    - GITHUB_REF: git@github.com:ghnor/note.git
+    - GITHUB_REF: github.com/ghnor/note.git
