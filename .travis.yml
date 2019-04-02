@@ -34,7 +34,7 @@ after_script:
 
 branches:
   only:
-    - interview-source
+    - source
 
 env:
   global:
