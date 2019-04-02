@@ -1,0 +1,41 @@
+language: node_js
+
+node_js: stable
+
+# apt addons:
+
+# cache components:
+
+# before_install:
+
+install:
+  - npm install -g gitbook-cli
+  - gitbook install
+
+# before_script:
+
+script:
+  - gitbook build
+
+after_script:
+  - cd _book
+  - git init
+  - git config user.name "ghnor"  # 修改name
+  - git config user.email "ghnor.gmail.com"  # 修改email
+  - git remote add origin https://${GITHUB_REF}
+  - git add .
+  - git commit -m "Travis CI Auto Build at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
+  - git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_REF}" master:interview-gitbook  # GITHUB_TOKEN是在Travis中配置环境变量的名称
+
+# after_success or after_failure
+# OPTIONAL before_deploy
+# OPTIONAL deploy
+# OPTIONAL after_deploy
+
+branches:
+  only:
+    - interview-source
+
+env:
+  global:
+    - GITHUB_REF: github.com/ghnor/ghnor.github.io.git
