@@ -25,7 +25,7 @@ after_script:
   - git remote add origin https://${GITHUB_REF}
   - git add .
   - git commit -m "Travis CI Auto Build at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
-  - git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_REF}" master:interview-gitbook  # GITHUB_TOKEN是在Travis中配置环境变量的名称
+  - git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_REF}" master:master  # GITHUB_TOKEN是在Travis中配置环境变量的名称
 
 # after_success or after_failure
 # OPTIONAL before_deploy
@@ -38,4 +38,4 @@ branches:
 
 env:
   global:
-    - GITHUB_REF: github.com/ghnor/ghnor.github.io.git
+    - GITHUB_REF: git@github.com:ghnor/note.git
