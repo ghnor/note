@@ -17,7 +17,6 @@
         * [Activity、Window、Drawable、View的区别](android/Activity、Window、Drawable、View的区别.md)
         * [Application和Activity的Context之间的区别](android/Application和Activity的Context之间的区别.md)
         * [对SurfaceView的了解](android/对SurfaceView的了解.md)
-        * [Serializable和Parcelable的区别](android/Serializable和Parcelable的区别.md)
         * [为什么不能在子线程更新UI](android/为什么不能在子线程更新UI.md)
         * [ListView图片加载错乱的原理和解决方案](android/ListView图片加载错乱的原理和解决方案.md)
         * [RecycleView相关](android/RecycleView相关.md)
@@ -44,7 +43,11 @@
         * [CAS介绍，OAuth授权机制](android/CAS介绍，OAuth授权机制.md)
         * [谈谈你对安卓签名的理解](android/谈谈你对安卓签名的理解.md)
         * [版本适配](android/版本适配.md)
-    * Framework
+        * 目前Android中常见的应用双开，系统是如何实现的
+        * 目前Android中常见的双系统，是如何实现的
+        * Android中一屏展示两个应用，那实现这个效果，你觉得framework层需要做哪些修改
+        * 如果让你用代码实现.9图的伸缩过程，你有什么思路
+    * [Framework](android/framework.md)
         * Android进程分类
         * 谈谈对进程共享和线程安全的认识
         * 谈谈对多进程开发的理解以及多进程应用场景
@@ -56,12 +59,11 @@
         * 一个应用程序安装到手机上的过程发生了什么
         * App启动流程，从点击桌面开始（Activity启动流程）
         * 什么是AIDL？解决了什么问题？如何使用？
-        * Binder机制及工作原理？
         * App中唤醒其他进程的实现方式？
         * ActivityThread，ActivityManagerService，WindowManagerService的工作原理
         * PackageManagerService的工作原理
         * PowerManagerService的工作原理
-        * [Binder](android/Binder.md)
+        * [IPC/Binder](android/IPC_Binder.md)
     * JNI/NDK
         * 请介绍一下NDK
         * 如何在jni中注册native函数，有几种注册方式？
@@ -121,7 +123,8 @@
         * HashTable，ConcurrentHashMap怎么实现线程安全
         * java8对hashmap的优化
         * hashmap和hashset区别，hash怎么散列的
-    * 并发
+        * hashmap的扩容因子是做什么的，每次扩容多少
+    * [并发](java/并发.md)
         * 线程和进程的区别
         * 开启线程的三种方式
         * 如何正确的结束一个Thread
@@ -143,6 +146,9 @@
     * JVM
         * [简述JVM内存模型和内存区域](java/简述JVM内存模型和内存区域.md)
         * [GC机制](java/GC机制.md)
+        * JVM虚拟机垃圾回收机制，不同的回收算法的使用场景，不同的垃圾回收器的特点
+        * java虚拟机垃圾回收算法。为什么要进行分代回收
+        * JVM内存回收时有没有办法监听，如何解救，解救过后finalize方法是否每次都会调用
         * 简述ClassLoader类加载机制
         * 对双亲委派模型的了解
         * 对Dalvik、ART虚拟机的了解
@@ -165,6 +171,7 @@
     * 二叉树的深度优先遍历和广度优先遍历
     * 堆和树的区别
     * 图的了解
+    * 如何判读链表成环，如何找到入环的点，手写伪代码
 * 算法
     * 排序算法有哪些
     * 最快的排序算法是哪个
@@ -187,6 +194,11 @@
     * 烧一根不均匀的绳，从头烧到尾总共需要1个小时。现在有若干条材质相同的绳子，问如何用烧绳的方法来计时一个小时十五分钟呢
     * 5枚硬币，2正3反如何划分为两堆然后通过翻转让两堆中正面向上的硬8币和反面向上的硬币个数相同
     * 时针走一圈，时针分针重合几次
+    * 完全二叉树的遍历，每一行从左到右遍历的。变种，波浪形遍历，在原来的基础上修改最少的代码实现
+    * 被旋转过的有序数组，给你一个数，返回在数组中的位置
+    * 无序数组，含有负数，0，正数，找出两个数，使之和的绝对值最小
+    * 一副牌，用最快的速度将他们打乱顺序，要求随机。你能否想出尽可能多的策略
+    * 在一群人中两两互不认识，但是都认识明星，找出哪一个是明星
 * 设计模式
     * 谈谈你对Android设计模式的理解
     * 项目中常用的设计模式有哪些
