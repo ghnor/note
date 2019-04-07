@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* Android
+* [Android](android/Android.md)
     * 基础
         * [Activity相关](android/Activity相关.md)
         * [Fragment相关](android/Fragment相关.md)
@@ -47,6 +47,7 @@
         * 目前Android中常见的双系统，是如何实现的
         * Android中一屏展示两个应用，那实现这个效果，你觉得framework层需要做哪些修改
         * 如果让你用代码实现.9图的伸缩过程，你有什么思路
+        * android周边工具链，如gradle、proguard、dex、aapt等
     * [Framework](android/framework.md)
         * Android进程分类
         * 谈谈对进程共享和线程安全的认识
@@ -154,6 +155,8 @@
         * 对Dalvik、ART虚拟机的了解
         * 对动态加载（OSGI）的了解
         * 如何打破双亲委托机制
+        * [Dalvik虚拟机与java虚拟机的区别](java/Dalvik虚拟机与java虚拟机的区别.md)
+        * class结构、dex结构、apk结构
 * [网络](net/网络.md)
     * TCP/UDP
         * [TCP和UDP的区别和联系以及应用场景](net/TCP和UDP的区别和联系以及应用场景？.md)
