@@ -10,7 +10,7 @@
         * [BroadcastReceiver相关](android/BroadcastReceiver相关.md)
         * [Handler相关](android/Handler相关.md)
         * [图片相关](android/图片相关.md)
-        * [自定义View](android/自定义View.md)
+        * [View相关](android/View相关.md)
         * [动画](android/动画.md)
         * [数据存储](android/数据存储.md)
         * [Android中的多线程](android/Android中的多线程.md)
