@@ -208,6 +208,7 @@
 * 架构
     * MVC、MVP、MVVM原理和区别？ 请画出MVC、MVP的差异？
     * 从0设计一款App整体架构，如何去做？
-* 笔记
+* 读书笔记
+    * [《Android开发艺术探索》第2章 AIDL](note/《Android开发艺术探索》第2章_AIDL.md)
     * [《Android进阶解密》第13章 热修复原理](note/《Android进阶解密》第13章_热修复原理.md)
 
