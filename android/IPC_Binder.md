@@ -7,3 +7,9 @@
 [写给 Android 应用工程师的 Binder 原理剖析](https://segmentfault.com/a/1190000014295945)
 
 [Binder系列—开篇](http://gityuan.com/2015/10/31/binder-prepare/)
+
+[Android aidl Binder框架浅析](https://blog.csdn.net/lmj623565791/article/details/38461079)
+
+[Android进程间通信（IPC）机制Binder简要介绍和学习计划](https://blog.csdn.net/luoshengyang/article/details/6618363/)
+
+[Android 进程间通信](http://wuxiaolong.me/2018/02/15/AndroidIPC/)

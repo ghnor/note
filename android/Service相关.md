@@ -1,5 +1,9 @@
 # Service相关
 
+[Android中startService和bindService的区别](https://www.jianshu.com/p/d870f99b675c)  
+[Android 进程保活的一般套路](https://juejin.im/entry/58acf391ac502e007e9a0a11)  
+[关于 Android 进程保活，你所需要知道的一切](https://www.jianshu.com/p/63aafe3c12af)
+
 ## Service 的生命周期
 
 * onCreate()：如果service没被创建过，调用startService()后会执行onCreate()回调；如果service已处于运行中，调用startService()不会执行onCreate()方法。也就是说，onCreate()只会在第一次创建service时候调用，多次执行startService()不会重复调用onCreate()，此方法适合完成一些初始化工作；
@@ -10,7 +14,7 @@
 
 ![](https://developer.android.google.cn/images/service_lifecycle.png)
 
-# Service 的启动方式
+## Service 的启动方式
 
 * startService()：通过这种方式调用startService，onCreate()只会被调用一次，多次调用startSercie会多次执行onStartCommand()和onStart()方法。如果外部没有调用stopService()或stopSelf()方法，service会一直运行。
 * bindService()：如果该服务之前还没创建，系统回调顺序为onCreate()→onBind()。如果调用bindService()方法前服务已经被绑定，多次调用bindService()方法不会多次创建服务及绑定。如果调用者希望与正在绑定的服务解除绑定，可以调用unbindService()方法，回调顺序为onUnbind()→onDestroy()；
@@ -36,3 +40,5 @@
 ## Service 和 Activity 之间的通信方式
   * 通过 Binder 对象
   * 通过 Broadcast（广播）的形式
+
+## ServiceConnection里面的回调方法运行在哪个线程

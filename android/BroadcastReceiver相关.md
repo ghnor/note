@@ -1,6 +1,9 @@
 # BroadcastReceiver相关
 
->[Android四大组件：BroadcastReceiver史上最全面解析](https://www.jianshu.com/p/ca3d87a4cdf3)
+[Android四大组件：BroadcastReceiver史上最全面解析](https://www.jianshu.com/p/ca3d87a4cdf3)  
+[Android 广播Broadcast的两种注册方式静态和动态](https://blog.csdn.net/csdn_aiyang/article/details/68947014)  
+[Android四大组件：BroadcastReceiver史上最全面解析](https://blog.csdn.net/carson_ho/article/details/52973504)  
+[安卓广播的底层实现原理](https://www.jianshu.com/p/02085150339c)
 
 ## 广播的分类？使用方式和场景
 

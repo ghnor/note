@@ -1,5 +1,9 @@
 # Fragment相关
 
+[Android Fragment完全解析，关于碎片你所需知道的一切](https://blog.csdn.net/guolin_blog/article/details/8881711)  
+[Android Fragment学习与使用—高级篇](https://blog.csdn.net/qq_24442769/article/details/77679147)  
+[Activity与Fragment生命周期探讨](https://www.jianshu.com/p/1b3f829810a1)
+
 ## 生命周期
 
 Fragment从创建到销毁整个生命周期中涉及到的方法依次为：onAttach()→onCreate()→ onCreateView()→onActivityCreated()→onStart()→onResume()→onPause()→onStop()→onDestroyView()→onDestroy()→onDetach()，其中和Activity有不少名称相同作用相似的方法，而不同的方法有:

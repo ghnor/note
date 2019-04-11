@@ -6,12 +6,18 @@
 
 [Android应用自定义View绘制方法手册](https://blog.csdn.net/yanbober/article/details/50577855)
 
-[灵魂画师，Android绘制流程——Android高级UI](https://juejin.im/post/5c9adb5ff265da60c76ceb1c#heading-10)
-
 * ViewRoot：连接WindowManager(外界访问Window的入口)和DecorView（顶级View）的纽带，View的三大流程均是通过ViewRoot来完成的。
 * DecorView：DecorView是顶级View，本质就是一个FrameLayout包含了两个部分，标题栏和内容栏。内容栏id是content，也就是activity中setContentView所设置的部分，最终将布局添加到id为content的FrameLayout中
 
 ## View的绘制流程
+
+[灵魂画师，Android绘制流程——Android高级UI](https://juejin.im/post/5c9adb5ff265da60c76ceb1c#heading-10)
+
+郭神出品：  
+[Android LayoutInflater原理分析，带你一步步深入了解View(一)](https://blog.csdn.net/guolin_blog/article/details/12921889)  
+[Android视图绘制流程完全解析，带你一步步深入了解View(二)](https://blog.csdn.net/guolin_blog/article/details/16330267)  
+[Android视图状态及重绘流程分析，带你一步步深入了解View(三)](https://blog.csdn.net/guolin_blog/article/details/17045157)  
+[Android自定义View的实现方法，带你一步步深入了解View(四)](https://blog.csdn.net/guolin_blog/article/details/17357967)
 
 View的绘制流程是从ViewRoot的PerformTraversals方法开始的。
 
@@ -23,12 +29,20 @@ Layout过程确定View四个顶点的位置和实际的宽高。
 
 Draw过程确定View的显示，只有draw方法完成后View的内容才会出现在屏幕上。
 
-* 自定义 View 的流程？如何机型适配？
-* 自定义 View 的时怎么获取 View 的大小？
-* View 的事件传递分发机制？
+## 自定义 View 的流程？如何机型适配？
+## 自定义 View 的时怎么获取 View 的大小？
+## View 的事件传递分发机制？
 
-[
-Android LayoutInflater原理分析，带你一步步深入了解View(一)](https://blog.csdn.net/guolin_blog/article/details/12921889)
+郭神出品：  
+[Android事件分发机制完全解析，带你从源码的角度彻底理解(上)](https://blog.csdn.net/guolin_blog/article/details/9097463)  
+[Android事件分发机制完全解析，带你从源码的角度彻底理解(下)](https://blog.csdn.net/guolin_blog/article/details/9153747)
+
+鸿洋出品：  
+[Android View 事件分发机制 源码解析 （上）](https://blog.csdn.net/lmj623565791/article/details/38960443)  
+[Android ViewGroup事件分发机制](https://blog.csdn.net/lmj623565791/article/details/39102591)
+
+[面试：讲讲 Android 的事件分发机制](https://www.jianshu.com/p/d3758eef1f72)  
+
 
 ##  requestLayout()，onLayout()，onDraw()，drawChild() 区别与联系？
 ## invalidate() 和 postInvalidate() 以及 requestLayout() 的区别？

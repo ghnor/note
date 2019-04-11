@@ -1,5 +1,10 @@
 # Handler相关
 
+[Android消息机制的原理及源码解析](https://www.jianshu.com/p/f10cff5b4c25)  
+[Handler 都没搞懂，拿什么去跳槽啊？](https://juejin.im/post/5c74b64a6fb9a049be5e22fc)  
+[Android Handler 消息机制（解惑篇）](https://juejin.im/entry/57fb3c53128fe100546ea4f2)  
+[Android 消息机制](https://blog.csdn.net/guolin_blog/article/details/9991569)
+
 ## Handler 机制和底层实现
 ## Handler的延迟消息是如何实现的
 
@@ -39,5 +44,6 @@ Looper.loop();
 * 通过Message m = Message.obtain
 * 通过Message m = mHandler.obtainMessage
 
-
 后两者效果更好，因为Android默认的消息池中消息数量是10，而后两者是直接在消息池中取出一个Message实例，这样做就可以避免多生成Message实例。
+
+## Messagequeue 的数据结构是什么？为什么要用这个数据结构？

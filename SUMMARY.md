@@ -13,39 +13,43 @@
         * [View相关](android/View相关.md)
         * [动画](android/动画.md)
         * [数据存储](android/数据存储.md)
-        * [Android中的多线程](android/Android中的多线程.md)
-        * [AlertDialog、popupWindow、Activity之间的区别](android/AlertDialog、popupWindow、Activity之间的区别.md)
-        * [Activity、Window、Drawable、View的区别](android/Activity、Window、Drawable、View的区别.md)
-        * [Application和Activity的Context之间的区别](android/Application和Activity的Context之间的区别.md)
-        * [对SurfaceView的了解](android/对SurfaceView的了解.md)
-        * [ListView图片加载错乱的原理和解决方案](android/ListView图片加载错乱的原理和解决方案.md)
         * [RecycleView相关](android/RecycleView相关.md)
-        * [Android Manifest的作用与理解](android/Android_Manifest的作用与理解.md)
-        * [低版本SDK如何使用高版本API](android/低版本SDK如何使用高版本API.md)
-        * [如果在onStop的时候做了网络请求，onResume的时候怎么恢复](android/如果在onStop的时候做了网络请求，onResume的时候怎么恢复.md)
-        * [ThreadLocal原理、实现及如何保证Local属性](android/ThreadLocal原理、实现及如何保证Local属性.md)
-        * [进程和Application的生命周期的关系](android/进程和Application的生命周期的关系.md)
-        * [SpareArray的实现原理？Android中其他优化集合的实现？](android/SpareArray的实现原理？Android中其他优化集合的实现？.md)
+        * [Android中的多线程](android/Android中的多线程.md)
+        * [版本适配](android/版本适配.md)
+        * [屏幕适配](android/屏幕适配.md)
     * 开源项目
         * [EventBus](android/EventBus.md)
         * [ButterKnife](android/ButterKnife.md)
         * [Volley](android/Volley.md)
-        * [okhttp](android/okhttp.md)
+        * [OkHttp](android/OkHttp.md)
         * [RxJava](android/RxJava.md)
         * [Retrofit](android/Retrofit.md)
+        * [Glide](android/Glide.md)
     * 其他
         * [服务器只提供数据接收接口，在多线程或多进程条件下，如何保证数据的有序到达？](android/服务器只提供数据接收接口，在多线程或多进程条件下，如何保证数据的有序到达？.md)
         * [SQLite数据库升级，数据迁移问题](android/SQLite数据库升级，数据迁移问题.md)
         * [数据库框架对比和源码分析](android/数据库框架对比和源码分析.md)
         * [CAS介绍，OAuth授权机制](android/CAS介绍，OAuth授权机制.md)
         * [谈谈你对安卓签名的理解](android/谈谈你对安卓签名的理解.md)
-        * [版本适配](android/版本适配.md)
         * 目前Android中常见的应用双开，系统是如何实现的
         * 目前Android中常见的双系统，是如何实现的
         * Android中一屏展示两个应用，那实现这个效果，你觉得framework层需要做哪些修改
         * 如果让你用代码实现.9图的伸缩过程，你有什么思路
         * android周边工具链，如gradle、proguard、dex、aapt等
-    * [Framework](android/framework.md)
+        * [AlertDialog、popupWindow、Activity之间的区别](android/AlertDialog、popupWindow、Activity之间的区别.md)
+        * [Activity、Window、Drawable、View的区别](android/Activity、Window、Drawable、View的区别.md)
+        * [Application和Activity的Context之间的区别](android/Application和Activity的Context之间的区别.md)
+        * [对SurfaceView的了解](android/对SurfaceView的了解.md)
+        * [ListView图片加载错乱的原理和解决方案](android/ListView图片加载错乱的原理和解决方案.md)
+        * [Android Manifest的作用与理解](android/Android_Manifest的作用与理解.md)
+        * [低版本SDK如何使用高版本API](android/低版本SDK如何使用高版本API.md)
+        * [如果在onStop的时候做了网络请求，onResume的时候怎么恢复](android/如果在onStop的时候做了网络请求，onResume的时候怎么恢复.md)
+        * [ThreadLocal原理、实现及如何保证Local属性](android/ThreadLocal原理、实现及如何保证Local属性.md)
+        * [进程和Application的生命周期的关系](android/进程和Application的生命周期的关系.md)
+        * [SpareArray的实现原理？Android中其他优化集合的实现？](android/SpareArray的实现原理？Android中其他优化集合的实现？.md)
+        * [MVC、MVP、MVVM](android/MVC、MVP、MVVM.md)
+        * [Gradle](android/Gradle.md)
+    * [Framework](android/Framework.md)
         * Android进程分类
         * 谈谈对进程共享和线程安全的认识
         * 谈谈对多进程开发的理解以及多进程应用场景
@@ -81,8 +85,9 @@
         * App启动崩溃异常怎么捕捉？
         * 如何缩小Apk的体积?
         * 如何统计启动时长？
-    * 动态化
+    * [动态化](android/动态化.md)
         * [热修复的原理，你都了解过哪几种热修复框架](android/热修复的原理，你都了解过哪几种热修复框架？.md)
+    * [组件化](android/组件化.md)
 * Java
     * 基础
         * [如何理解面向对象（OOP）](java/如何理解面向对象（OOP）.md)

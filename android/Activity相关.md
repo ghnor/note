@@ -1,5 +1,9 @@
 # Activity相关
 
+[Activity的四种启动模式应用场景](https://blog.csdn.net/black_bird_cn/article/details/79764794)  
+[onSaveInstanceState()和onRestoreInstanceState()使用详解](https://www.jianshu.com/p/27181e2e32d2)  
+[onConfigurationChanged方法介绍及问题解决](https://www.jianshu.com/p/0127fb67516d)
+
 ## 主要的生命周期有哪些？
 
 * onCreate()：表示Activity正在被创建，常用来初始化工作，比如调用setContentView加载界面布局资源，初始化Activity所需数据等；
@@ -58,6 +62,7 @@ Activity的堆栈管理以ActivityRecord为单位,所有的ActivityRecord都放�
 
 调用startActivity()后经过重重方法会转移到ActivityManagerService的startActivity()，并通过一个IPC回到ActivityThread的内部类ApplicationThread中，并调用其scheduleLaunchActivity()将启动Activity的消息发送并交由Handler H处理。Handler H对消息的处理会调用handleLaunchActivity()→performLaunchActivity()得以完成Activity对象的创建和启动；
 
->[Android四大组件启动机制之Activity启动过程](https://blog.csdn.net/qq_30379689/article/details/79611217)
+[Android四大组件启动机制之Activity启动过程](https://blog.csdn.net/qq_30379689/article/details/79611217)  
+[【凯子哥带你学Framework】Activity启动过程全解析](https://blog.csdn.net/zhaokaiqiang1992/article/details/49428287)
 
 ## resume时activity是否完成了渲染
