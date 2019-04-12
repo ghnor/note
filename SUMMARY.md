@@ -65,6 +65,7 @@
         * ActivityThread，ActivityManagerService，WindowManagerService的工作原理
         * PackageManagerService的工作原理
         * PowerManagerService的工作原理
+        * installd的工作原理
         * [IPC/Binder](android/IPC_Binder.md)
     * [性能优化](android/性能优化.md)
         * [内存优化](android/内存优化.md)
@@ -144,6 +145,7 @@
         * 对Thread的理解？线程状态？阻塞和运行状态区别？
         * 锁的种类，什么是自旋锁，ReentrantLock？
         * 可重入锁的实现，公平锁非公平锁都是什么定义？
+        * [生产者-消费者模式](java/生产者-消费者模式.md)
     * JVM
         * [简述JVM内存模型和内存区域](java/简述JVM内存模型和内存区域.md)
         * [GC机制](java/GC机制.md)
@@ -206,7 +208,6 @@
 * 设计模式
     * [Android中的设计模式](dp/Android中的设计模式.md)
     * 项目中常用的设计模式有哪些
-    * 手写生产者-消费者模式
     * 手写观察者模式
     * [适配器模式、装饰者模式、外观模式的异同](dp/适配器模式、装饰者模式、外观模式的异同.md)
     * [单例模式](dp/单例模式.md)

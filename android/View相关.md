@@ -132,3 +132,5 @@ requestLayout()也会递归调用父窗口的requestLayout()方法，直到触�
 * View需要在UI线程对画面进行刷新，而SurfaceView可在子线程进行页面的刷新
 * View适用于主动更新的情况，而SurfaceView适用于被动更新，如频繁刷新，这是因为如果使用View频繁刷新会阻塞主线程，导致界面卡顿
 * SurfaceView在底层已实现双缓冲机制，而View没有，因此SurfaceView更适用于需要频繁刷新、刷新时数据处理量很大的页面（如视频播放界面）
+
+## Selector 是怎么实现的
