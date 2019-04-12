@@ -44,11 +44,11 @@
         * [Android Manifest的作用与理解](android/Android_Manifest的作用与理解.md)
         * [低版本SDK如何使用高版本API](android/低版本SDK如何使用高版本API.md)
         * [如果在onStop的时候做了网络请求，onResume的时候怎么恢复](android/如果在onStop的时候做了网络请求，onResume的时候怎么恢复.md)
-        * [ThreadLocal原理、实现及如何保证Local属性](android/ThreadLocal原理、实现及如何保证Local属性.md)
+        * [ThreadLocal](android/ThreadLocal.md)
         * [进程和Application的生命周期的关系](android/进程和Application的生命周期的关系.md)
         * [SpareArray的实现原理？Android中其他优化集合的实现？](android/SpareArray的实现原理？Android中其他优化集合的实现？.md)
-        * [MVC、MVP、MVVM](android/MVC、MVP、MVVM.md)
         * [Gradle](android/Gradle.md)
+        * [LinearLayout、FrameLayout、RelativeLayout性能对比](android/LinearLayout、FrameLayout、RelativeLayout性能对比.md)
     * [Framework](android/Framework.md)
         * Android进程分类
         * 谈谈对进程共享和线程安全的认识
@@ -66,16 +66,13 @@
         * PackageManagerService的工作原理
         * PowerManagerService的工作原理
         * [IPC/Binder](android/IPC_Binder.md)
-    * JNI/NDK
-        * 请介绍一下NDK
-        * 如何在jni中注册native函数，有几种注册方式？
     * [性能优化](android/性能优化.md)
         * [内存优化](android/内存优化.md)
         * [WebView优化](android/WebView优化.md)
         * [启动优化](android/启动优化.md)
         * 如何对Android应用进行性能分析以及优化？
-        * ANR产生的原因是什么？怎么定位？
-        * OOM是什么？怎么解决？是否可以try catch？
+        * [ANR](android/ANR.md)
+        * [OOM](android/OOM.md)
         * 内存泄露的解决方法？
         * ddms和traceView的使用？
         * 性能优化如何分析systrace？
@@ -85,8 +82,8 @@
         * App启动崩溃异常怎么捕捉？
         * 如何缩小Apk的体积?
         * 如何统计启动时长？
+    * [JNI/NDK](android/JNI_NDK.md)
     * [动态化](android/动态化.md)
-        * [热修复的原理，你都了解过哪几种热修复框架](android/热修复的原理，你都了解过哪几种热修复框架？.md)
     * [组件化](android/组件化.md)
 * Java
     * 基础
@@ -135,6 +132,7 @@
         * run()与start()方法的区别
         * sleep()与wait()方法的区别
         * wait与notify关键字的区别
+        * [除了notify还有什么方式可以唤醒线程](java/除了notify还有什么方式可以唤醒线程.md)
         * synchronized关键字的用法、作用及实现原理
         * volatile关键字的用法、作用及实现原理
         * transient关键字的用法、作用及实现原理
@@ -149,6 +147,7 @@
     * JVM
         * [简述JVM内存模型和内存区域](java/简述JVM内存模型和内存区域.md)
         * [GC机制](java/GC机制.md)
+        * [内存回收机制与GC算法](java/内存回收机制与GC算法.md)
         * JVM虚拟机垃圾回收机制，不同的回收算法的使用场景，不同的垃圾回收器的特点
         * java虚拟机垃圾回收算法。为什么要进行分代回收
         * JVM内存回收时有没有办法监听，如何解救，解救过后finalize方法是否每次都会调用
@@ -205,13 +204,14 @@
     * 一副牌，用最快的速度将他们打乱顺序，要求随机。你能否想出尽可能多的策略
     * 在一群人中两两互不认识，但是都认识明星，找出哪一个是明星
 * 设计模式
-    * 谈谈你对Android设计模式的理解
+    * [Android中的设计模式](dp/Android中的设计模式.md)
     * 项目中常用的设计模式有哪些
     * 手写生产者-消费者模式
     * 手写观察者模式
-    * 适配器模式、装饰者模式、外观模式的异同
+    * [适配器模式、装饰者模式、外观模式的异同](dp/适配器模式、装饰者模式、外观模式的异同.md)
+    * [单例模式](dp/单例模式.md)
 * 架构
-    * MVC、MVP、MVVM原理和区别？ 请画出MVC、MVP的差异？
+    * [MVC、MVP、MVVM](android/MVC、MVP、MVVM.md)
     * 从0设计一款App整体架构，如何去做？
 * 读书笔记
     * [《Android开发艺术探索》第2章 AIDL](note/《Android开发艺术探索》第2章_AIDL.md)

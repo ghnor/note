@@ -2,7 +2,8 @@
 
 [Activity的四种启动模式应用场景](https://blog.csdn.net/black_bird_cn/article/details/79764794)  
 [onSaveInstanceState()和onRestoreInstanceState()使用详解](https://www.jianshu.com/p/27181e2e32d2)  
-[onConfigurationChanged方法介绍及问题解决](https://www.jianshu.com/p/0127fb67516d)
+[onConfigurationChanged方法介绍及问题解决](https://www.jianshu.com/p/0127fb67516d)  
+[Android隐式启动intent-filter详解](https://blog.csdn.net/sunzhaojie613/article/details/77433994)
 
 ## 主要的生命周期有哪些？
 
@@ -33,6 +34,8 @@ onPause() →onStop()→onDestory()→onCreate()→onStart()→onResume()
 * 设置Activity的android:configChanges="orientation"时，切屏还是会重新调用各个生命周期，切横、竖屏时只会执行一次；
 * 设置Activity的android:configChanges="orientation|keyboardHidden|screenSize"时，切屏不会重新调用各个生命周期，只会执行onConfigurationChanged方法；
 
+[Android 横竖屏切换加载不同的布局](https://blog.csdn.net/u010365819/article/details/76618443)
+
 ## 前台切换到后台，然后再回到前台时 Activity 的生命周期
 ## 弹出 Dialog 的时候按 Home 键时 Activity 的生命周期
 ## 两个 Activity 之间跳转时的生命周期
@@ -60,9 +63,16 @@ Activity的堆栈管理以ActivityRecord为单位,所有的ActivityRecord都放�
 
 ## Acitivty的启动流程
 
+解释一：  
 调用startActivity()后经过重重方法会转移到ActivityManagerService的startActivity()，并通过一个IPC回到ActivityThread的内部类ApplicationThread中，并调用其scheduleLaunchActivity()将启动Activity的消息发送并交由Handler H处理。Handler H对消息的处理会调用handleLaunchActivity()→performLaunchActivity()得以完成Activity对象的创建和启动；
 
+解释二：  
+1. 点击App图标后通过startActivity远程调用到AMS中，AMS中将新启动的activity以activityrecord的结构压入activity栈中，并通过远程binder回调到原进程，使得原进程进入pause状态，原进程pause后通知AMS我pause了
+2. 此时AMS再根据栈中Activity的启动intent中的flag是否含有new_task的标签判断是否需要启动新进程，启动新进程通过startProcessXXX的函数
+3. 启动新进程后通过反射调用ActivityThread的main函数，main函数中调用looper.prepar和lopper.loop启动消息队列循环机制。最后远程告知AMS我启动了。AMS回调handleLauncherAcitivyt加载activity。在handlerLauncherActivity中会通过反射调用Application的onCreate和activity的onCreate以及通过handleResumeActivity中反射调用Activity的onResume
+
 [Android四大组件启动机制之Activity启动过程](https://blog.csdn.net/qq_30379689/article/details/79611217)  
-[【凯子哥带你学Framework】Activity启动过程全解析](https://blog.csdn.net/zhaokaiqiang1992/article/details/49428287)
+[【凯子哥带你学Framework】Activity启动过程全解析](https://blog.csdn.net/zhaokaiqiang1992/article/details/49428287)  
+[Android进阶——Android四大组件启动机制之Activity启动过程](https://blog.csdn.net/qq_30379689/article/details/79611217)
 
 ## resume时activity是否完成了渲染
