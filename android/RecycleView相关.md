@@ -1,5 +1,9 @@
 # RecycleView相关
 
+[【Android进阶】RecyclerView之ItemDecoration（一）](https://juejin.im/post/5c806d9de51d457cd75bc680)  
+[【Android进阶】RecyclerView之缓存（二）](https://juejin.im/post/5c876633e51d4510a06d4868)  
+[【Android进阶】RecyclerView之绘制流程（三）](https://juejin.im/post/5cad57f7e51d456e651b644a)
+
 ## 对 RecycleView 的了解
 ## Recycleview 和 ListView 的区别
 
@@ -12,8 +16,8 @@
   * RecyclerView中可以实现局部刷新，例如：notifyItemChanged()；
 
 * 缓存区别：
-* RecyclerView比ListView多两级缓存，支持多个离ItemView缓存，支持开发者自定义缓存处理逻辑，支持所有RecyclerView共用同一个RecyclerViewPool(缓存池)。
-* ListView和RecyclerView缓存机制基本一致，但缓存使用不同
+  * RecyclerView比ListView多两级缓存，支持多个离ItemView缓存，支持开发者自定义缓存处理逻辑，支持所有RecyclerView共用同一个RecyclerViewPool(缓存池)。
+  * ListView和RecyclerView缓存机制基本一致，但缓存使用不同。
 
 [【腾讯Bugly干货分享】Android ListView 与 RecyclerView 对比浅析—缓存机制](https://zhuanlan.zhihu.com/p/23339185)  
 [ListView 与 RecyclerView 简单对比](https://blog.csdn.net/shu_lance/article/details/79566189)  
