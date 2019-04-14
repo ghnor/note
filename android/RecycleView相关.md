@@ -4,6 +4,8 @@
 [【Android进阶】RecyclerView之缓存（二）](https://juejin.im/post/5c876633e51d4510a06d4868)  
 [【Android进阶】RecyclerView之绘制流程（三）](https://juejin.im/post/5cad57f7e51d456e651b644a)
 
+[看完感觉我RecyclerView白学了！](https://mp.weixin.qq.com/s/Qey-3JDdKYG04mo9WeBZ2g)
+
 ## 对 RecycleView 的了解
 ## Recycleview 和 ListView 的区别
 
