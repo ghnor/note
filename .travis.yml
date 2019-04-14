@@ -26,6 +26,7 @@ after_script:
   - git add .
   - git commit -m "Travis CI Auto Build at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
   - git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_REF}" master:master  # GITHUB_TOKEN是在Travis中配置环境变量的名称
+  - git push --force --quiet "https://${CODING_TOKEN}@${CODING_REF}" master:master  # CODING_TOKEN是在Travis中配置环境变量的名称
 
 # after_success or after_failure
 # OPTIONAL before_deploy
@@ -39,3 +40,4 @@ branches:
 env:
   global:
     - GITHUB_REF: github.com/ghnor/note.git
+    - CODING_REF: git.dev.tencent.com/ghnor/note.git
