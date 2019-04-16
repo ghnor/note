@@ -21,6 +21,12 @@ Fragment从创建到销毁整个生命周期中涉及到的方法依次为：onA
 
 ![](https://developer.android.google.cn/images/activity_fragment_lifecycle.png)
 
+## Fragment显示重叠的问题
+
+本质上要理解FragmentManager的事务设计模型，一旦Fragment实例对象进入FragmentManager之后，对Fragment的全部操作，包括显示隐藏，生命周期的执行都由FragmentManager管理，外部除了保持一个引用供业务调用之外，异常情况的处理全部交给FragmentManager自己处理。
+
+所以，在add Fragment的时候就要添加一个Tag，如果Activity被异常销毁，重新初始化自身之后，要根据Tag从FragmentManager里拿回需要的Fragment引用。不然，就相当于实例化了两个Fragment对象，一个是Activity中持有的新创建的Fragment对象，另一个则是被FragmentManager持有的之前的Fragment对象。
+
 ## Activity 和 Fragment 之间怎么通信， Fragment 和 Fragment 怎么通信
 
 Activity 传值给 Fragment：通过 Bundle 对象来传递，Activity 中构造 bundle 数据包，调用 Fragment 对象的 setArguments(Bundle b) 方法，Fragment 中使用 getArguments() 方法获取 Activity 传递过来的数据包取值。
@@ -37,7 +43,7 @@ Fragment 传值给 Fragment：一个 Fragment 通过 Activity 获取到另外一
 * Fragment可以在XML文件中直接进行写入，也可以在Activity中动态添加；
 * Fragment可以使用show()/hide()或者replace()随时对Fragment进行切换，并且切换的时候不会出现明显的效果，用户体验会好；Activity虽然也可以进行切换，但是Activity之间切换会有明显的翻页或者其他的效果，在小部分内容的切换上给用户的感觉不是很好；
 
-## Fragment中add与replace的区别（Fragment重叠）
+## Fragment中add与replace的区别
 
 * add不会重新初始化fragment，replace每次都会。所以如果在fragment生命周期内获取获取数据,使用replace会重复获取；
 * 添加相同的fragment时，replace不会有任何变化，add会报IllegalStateException异常；
