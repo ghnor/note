@@ -216,6 +216,6 @@
     * 从0设计一款App整体架构，如何去做？
 * 读书笔记
     * [《Android开发艺术探索》第2章 AIDL](note/《Android开发艺术探索》第2章_AIDL.md)
-    * [《Android进阶解密》第4章（1）Activity启动过程](note/《Android进阶解密》第4章（1）Activity启动过程.md)
+    * [《Android进阶解密》第4章 四大组件的工作过程](note/《Android进阶解密》第4章_四大组件的工作过程.md)
     * [《Android进阶解密》第13章 热修复原理](note/《Android进阶解密》第13章_热修复原理.md)
 
