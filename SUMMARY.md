@@ -86,6 +86,10 @@
     * [JNI/NDK](android/JNI_NDK.md)
     * [动态化](android/动态化.md)
     * [组件化](android/组件化.md)
+    * [安全](android/安全.md)
+        * [混淆](android/混淆.md)
+        * [加固](android/加固.md)
+        * [签名](android/签名.md)
 * [Java](java/Java.md)
     * 基础
         * [如何理解面向对象（OOP）](java/如何理解面向对象（OOP）.md)
@@ -146,7 +150,7 @@
         * 锁的种类，什么是自旋锁，ReentrantLock？
         * 可重入锁的实现，公平锁非公平锁都是什么定义？
         * [生产者-消费者模式](java/生产者-消费者模式.md)
-    * JVM
+    * [JVM](java/JVM.md)
         * [简述JVM内存模型和内存区域](java/简述JVM内存模型和内存区域.md)
         * [GC机制](java/GC机制.md)
         * [内存回收机制与GC算法](java/内存回收机制与GC算法.md)
