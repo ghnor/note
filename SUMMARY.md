@@ -68,9 +68,10 @@
         * installd的工作原理
         * [IPC/Binder](android/IPC_Binder.md)
     * [性能优化](android/性能优化.md)
+        * [UI优化](android/UI优化.md)
         * [内存优化](android/内存优化.md)
-        * [WebView优化](android/WebView优化.md)
         * [启动优化](android/启动优化.md)
+        * [WebView优化](android/WebView优化.md)
         * 如何对Android应用进行性能分析以及优化？
         * [ANR](android/ANR.md)
         * [OOM](android/OOM.md)
