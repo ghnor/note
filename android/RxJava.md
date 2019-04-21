@@ -6,7 +6,26 @@
 [友好 RxJava2.x 源码解析（二）线程切换](https://juejin.im/post/5a248206f265da432153ddbc)  
 [友好 RxJava2.x 源码解析（三）zip 源码分析](https://juejin.im/post/5ac16a2d6fb9a028b617a82a)
 
+[RxJava 沉思录（一）：你认为 RxJava 真的好用吗？](https://juejin.im/post/5b8f536c5188255c352d3528)  
+[RxJava 沉思录（二）：空间维度](https://juejin.im/post/5b8f5470e51d450e3d2c8ddf)  
+[RxJava 沉思录（三）：时间维度](https://juejin.im/post/5b8f5ea8f265da0a9223887e)  
+[RxJava 沉思录（四）：总结](https://juejin.im/post/5b8f5f0ee51d450ea52f6a37)
+
 [RxJava 源码解析之观察者模式](https://juejin.im/post/58dcc66444d904006dfd857a)
+
+**reactiveX**
+
+reactiveX是一个跨语言的标准、规范，即：响应式编程。
+
+reactivex是最开始是一个在微软的计算机科学家发明的，是一个编程的框架，当时用的是.net语言，全称是reactive extensions也叫reactiveX或者RX。
+
+核心其实是观察者模式，主要想解决问题是并行和异步。
+
+**Rxjava**
+
+rxjava的全称是reactivexjava，是jvm的reactivex的一个实现，是一个library，类似于 httpServlet、springmvc这种的对servlet的实现。
+
+目前java语言实现rx的有jdk9的Flow api、rxjava(现在是2.0版)、Spring Framework 5的reactor。
 
 ## 常用操作符
 
