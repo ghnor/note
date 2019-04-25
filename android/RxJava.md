@@ -13,6 +13,8 @@
 
 [RxJava 源码解析之观察者模式](https://juejin.im/post/58dcc66444d904006dfd857a)
 
+[Android Rxjava：图解不一样的诠释](https://juejin.im/post/5cb72999e51d456e5d3dac29#heading-13)
+
 **reactiveX**
 
 reactiveX是一个跨语言的标准、规范，即：响应式编程。
