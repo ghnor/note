@@ -15,6 +15,14 @@
 
 [Android Rxjava：图解不一样的诠释](https://juejin.im/post/5cb72999e51d456e5d3dac29#heading-13)
 
+[【Android】勤用RXJava compose操作符消除重复代码]([Android]勤用RXJava compose操作符消除重复代码)
+
+[Android 生命周期架构组件与 RxJava 完美协作](https://listenzz.github.io/android-lifecyle-works-perfectly-with-rxjava.html)
+
+[一篇不太一样的RxJava介绍](https://juejin.im/post/5a2549576fb9a04519696d45)
+
+[看了一些 RxJava 的文章我依然不知道的事](https://www.jianshu.com/p/b672724dbff8)
+
 **reactiveX**
 
 reactiveX是一个跨语言的标准、规范，即：响应式编程。
