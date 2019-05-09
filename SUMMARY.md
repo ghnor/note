@@ -72,6 +72,7 @@
         * [内存优化](android/内存优化.md)
         * [启动优化](android/启动优化.md)
         * [WebView优化](android/WebView优化.md)
+        * [UI调试工具](android/UI调试工具.md)
         * 如何对Android应用进行性能分析以及优化？
         * [ANR](android/ANR.md)
         * [OOM](android/OOM.md)
