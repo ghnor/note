@@ -49,6 +49,10 @@
         * [SpareArray的实现原理？Android中其他优化集合的实现？](android/SpareArray的实现原理？Android中其他优化集合的实现？.md)
         * [Gradle](android/Gradle.md)
         * [LinearLayout、FrameLayout、RelativeLayout性能对比](android/LinearLayout、FrameLayout、RelativeLayout性能对比.md)
+        * [ViewPager刷新问题](android/ViewPager刷新问题.md)
+        * [gradle本地依赖碰到的问题](android/gradle本地依赖碰到的问题.md)
+        * [buildscript和allprojects的区别](android/buildscript和allprojects的区别.md)
+        * [Android Studio设置内存大小](anroid/Android-Studio设置内存大小.md)
     * [Framework](android/Framework.md)
         * Android进程分类
         * 谈谈对进程共享和线程安全的认识

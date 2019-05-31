@@ -1,0 +1,7 @@
+# ViewPager刷新问题
+
+关键在于调用了notifyChanged方法之后，内部会再调用getItemPosition方法。该方法遍历ViewPager中所有的Item，每个Item返回一个状态值（即：POSITION_NONE/POSITION_UNCHANGED）。如果是POSITION_NONE，就调用destroyItem方法，销毁该Item并调用instantiateItem方法重新生成Item视图；如果是POSITION_UNCHANGED，就不会重新生成视图。
+
+暴力一点的方式，就是重写getItemPosition方法，全部都返回POSITION_NONE。但这种方式会导致可见页面视图的闪烁，毕竟视图被重新生成了。
+
+优化的方式，在instantiateItem中为生成的视图添加tag（view.setTag()），之后在getItemPosition方法中判断次tag来决定是否需要刷新Item视图。
