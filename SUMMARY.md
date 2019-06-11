@@ -52,7 +52,7 @@
         * [ViewPager刷新问题](android/ViewPager刷新问题.md)
         * [gradle本地依赖碰到的问题](android/gradle本地依赖碰到的问题.md)
         * [buildscript和allprojects的区别](android/buildscript和allprojects的区别.md)
-        * [Android Studio设置内存大小](anroid/Android-Studio设置内存大小.md)
+        * [Android Studio设置内存大小](android/Android-Studio设置内存大小.md)
     * [Framework](android/Framework.md)
         * Android进程分类
         * 谈谈对进程共享和线程安全的认识
