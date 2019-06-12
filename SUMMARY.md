@@ -53,6 +53,7 @@
         * [gradle本地依赖碰到的问题](android/gradle本地依赖碰到的问题.md)
         * [buildscript和allprojects的区别](android/buildscript和allprojects的区别.md)
         * [Android Studio设置内存大小](android/Android-Studio设置内存大小.md)
+        * [Gradle更新SNAPSHOT](android/Gradle更新SNAPSHOT.md)
     * [Framework](android/Framework.md)
         * Android进程分类
         * 谈谈对进程共享和线程安全的认识
@@ -228,3 +229,4 @@
     * [《Android开发艺术探索》第2章 AIDL](note/《Android开发艺术探索》第2章_AIDL.md)
     * [《Android进阶解密》第4章 四大组件的工作过程](note/《Android进阶解密》第4章_四大组件的工作过程.md)
     * [《Android进阶解密》第13章 热修复原理](note/《Android进阶解密》第13章_热修复原理.md)
+
