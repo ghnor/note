@@ -223,6 +223,7 @@
     * [Gradle更新SNAPSHOT](mg/Gradle更新SNAPSHOT.md)
     * [gradle本地依赖碰到的问题](mg/gradle本地依赖碰到的问题.md)
     * [buildscript和allprojects的区别](mg/buildscript和allprojects的区别.md)
+    * [Gradle管理依赖的版本](mg/Gradle管理依赖的版本.md)
 * [架构](arch/架构.md)
     * [MVC、MVP、MVVM](android/MVC、MVP、MVVM.md)
     * 从0设计一款App整体架构，如何去做？
