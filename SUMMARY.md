@@ -50,10 +50,7 @@
         * [Gradle](android/Gradle.md)
         * [LinearLayout、FrameLayout、RelativeLayout性能对比](android/LinearLayout、FrameLayout、RelativeLayout性能对比.md)
         * [ViewPager刷新问题](android/ViewPager刷新问题.md)
-        * [gradle本地依赖碰到的问题](android/gradle本地依赖碰到的问题.md)
-        * [buildscript和allprojects的区别](android/buildscript和allprojects的区别.md)
         * [Android Studio设置内存大小](android/Android-Studio设置内存大小.md)
-        * [Gradle更新SNAPSHOT](android/Gradle更新SNAPSHOT.md)
     * [Framework](android/Framework.md)
         * Android进程分类
         * 谈谈对进程共享和线程安全的认识
@@ -222,6 +219,10 @@
     * 手写观察者模式
     * [适配器模式、装饰者模式、外观模式的异同](dp/适配器模式、装饰者模式、外观模式的异同.md)
     * [单例模式](dp/单例模式.md)
+* [Maven/Gradle](mg/Maven_Gradle.md)
+    * [Gradle更新SNAPSHOT](mg/Gradle更新SNAPSHOT.md)
+    * [gradle本地依赖碰到的问题](mg/gradle本地依赖碰到的问题.md)
+    * [buildscript和allprojects的区别](mg/buildscript和allprojects的区别.md)
 * [架构](arch/架构.md)
     * [MVC、MVP、MVVM](android/MVC、MVP、MVVM.md)
     * 从0设计一款App整体架构，如何去做？
