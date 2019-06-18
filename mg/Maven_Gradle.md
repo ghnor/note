@@ -7,3 +7,5 @@
 [Android Gradle 构建 - 理解 DSL 语言以及运行机制](https://juejin.im/entry/57d1258a128fe100550d01f0)
 
 [零散知识点总结(1) - Gradle 使用配置总结](https://www.jianshu.com/p/47cbbb4eab13)
+
+[Android Plugin DSL Reference](http://google.github.io/android-gradle-dsl/)
