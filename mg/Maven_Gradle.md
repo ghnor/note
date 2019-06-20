@@ -11,3 +11,5 @@
 [Android Gradle 构建 - 理解 DSL 语言以及运行机制](https://juejin.im/entry/57d1258a128fe100550d01f0)
 
 [零散知识点总结(1) - Gradle 使用配置总结](https://www.jianshu.com/p/47cbbb4eab13)
+
+[看完这一系列，彻底搞懂 Gradle](https://juejin.im/post/5d07c70bf265da1ba431eea6)
