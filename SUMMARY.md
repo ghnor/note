@@ -51,6 +51,7 @@
         * [LinearLayout、FrameLayout、RelativeLayout性能对比](android/LinearLayout、FrameLayout、RelativeLayout性能对比.md)
         * [ViewPager刷新问题](android/ViewPager刷新问题.md)
         * [Android Studio设置内存大小](android/Android-Studio设置内存大小.md)
+        * [悬浮窗权限](android/悬浮窗权限.md)
     * [Framework](android/Framework.md)
         * Android进程分类
         * 谈谈对进程共享和线程安全的认识
@@ -229,6 +230,7 @@
 * [架构](arch/架构.md)
     * [MVC、MVP、MVVM](android/MVC、MVP、MVVM.md)
     * 从0设计一款App整体架构，如何去做？
+* [音视频](av/音视频.md)
 * 读书笔记
     * [《Android开发艺术探索》第2章 AIDL](note/《Android开发艺术探索》第2章_AIDL.md)
     * [《Android进阶解密》第4章 四大组件的工作过程](note/《Android进阶解密》第4章_四大组件的工作过程.md)
