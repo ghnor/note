@@ -1,238 +1,176 @@
-# Summary
+# Your Book Title
 
-* [Introduction](README.md)
-* [Android](android/Android.md)
-    * 基础
-        * [Activity相关](android/Activity相关.md)
-        * [Fragment相关](android/Fragment相关.md)
-        * [Service相关](android/Service相关.md)
-        * [ContentProvider相关](android/ContentProvider相关.md)
-        * [BroadcastReceiver相关](android/BroadcastReceiver相关.md)
-        * [Handler相关](android/Handler相关.md)
-        * [图片相关](android/图片相关.md)
-        * [View相关](android/View相关.md)
-        * [动画](android/动画.md)
-        * [数据存储](android/数据存储.md)
-        * [RecycleView相关](android/RecycleView相关.md)
-        * [Android中的多线程](android/Android中的多线程.md)
-        * [版本适配](android/版本适配.md)
-        * [屏幕适配](android/屏幕适配.md)
-    * [开源项目](android/开源项目.md)
-        * [EventBus](android/EventBus.md)
-        * [ButterKnife](android/ButterKnife.md)
-        * [Volley](android/Volley.md)
-        * [OkHttp](android/OkHttp.md)
-        * [RxJava](android/RxJava.md)
-        * [Retrofit](android/Retrofit.md)
-        * [Glide](android/Glide.md)
-    * 其他
-        * [服务器只提供数据接收接口，在多线程或多进程条件下，如何保证数据的有序到达？](android/服务器只提供数据接收接口，在多线程或多进程条件下，如何保证数据的有序到达？.md)
-        * [SQLite数据库升级，数据迁移问题](android/SQLite数据库升级，数据迁移问题.md)
-        * [数据库框架对比和源码分析](android/数据库框架对比和源码分析.md)
-        * [CAS介绍，OAuth授权机制](android/CAS介绍，OAuth授权机制.md)
-        * [谈谈你对安卓签名的理解](android/谈谈你对安卓签名的理解.md)
-        * 目前Android中常见的应用双开，系统是如何实现的
-        * 目前Android中常见的双系统，是如何实现的
-        * Android中一屏展示两个应用，那实现这个效果，你觉得framework层需要做哪些修改
-        * 如果让你用代码实现.9图的伸缩过程，你有什么思路
-        * android周边工具链，如gradle、proguard、dex、aapt等
-        * [AlertDialog、popupWindow、Activity之间的区别](android/AlertDialog、popupWindow、Activity之间的区别.md)
-        * [Activity、Window、Drawable、View的区别](android/Activity、Window、Drawable、View的区别.md)
-        * [Application和Activity的Context之间的区别](android/Application和Activity的Context之间的区别.md)
-        * [对SurfaceView的了解](android/对SurfaceView的了解.md)
-        * [ListView图片加载错乱的原理和解决方案](android/ListView图片加载错乱的原理和解决方案.md)
-        * [Android Manifest的作用与理解](android/Android_Manifest的作用与理解.md)
-        * [低版本SDK如何使用高版本API](android/低版本SDK如何使用高版本API.md)
-        * [如果在onStop的时候做了网络请求，onResume的时候怎么恢复](android/如果在onStop的时候做了网络请求，onResume的时候怎么恢复.md)
-        * [ThreadLocal](android/ThreadLocal.md)
-        * [进程和Application的生命周期的关系](android/进程和Application的生命周期的关系.md)
-        * [SpareArray的实现原理？Android中其他优化集合的实现？](android/SpareArray的实现原理？Android中其他优化集合的实现？.md)
-        * [Gradle](android/Gradle.md)
-        * [LinearLayout、FrameLayout、RelativeLayout性能对比](android/LinearLayout、FrameLayout、RelativeLayout性能对比.md)
-        * [ViewPager刷新问题](android/ViewPager刷新问题.md)
-        * [Android Studio设置内存大小](android/Android-Studio设置内存大小.md)
-        * [悬浮窗权限](android/悬浮窗权限.md)
-    * [Framework](android/Framework.md)
-        * Android进程分类
-        * 谈谈对进程共享和线程安全的认识
-        * 谈谈对多进程开发的理解以及多进程应用场景
-        * 什么是协程
-        * 逻辑地址与物理地址，为什么使用逻辑地址
-        * Android为每个应用程序分配的内存大小是多少
-        * 进程保活的方式
-        * 系统启动流程是什么
-        * 一个应用程序安装到手机上的过程发生了什么
-        * App启动流程，从点击桌面开始（Activity启动流程）
-        * 什么是AIDL？解决了什么问题？如何使用？
-        * App中唤醒其他进程的实现方式？
-        * ActivityThread，ActivityManagerService，WindowManagerService的工作原理
-        * PackageManagerService的工作原理
-        * PowerManagerService的工作原理
-        * installd的工作原理
-        * [IPC/Binder](android/IPC_Binder.md)
-    * [性能优化](android/性能优化.md)
-        * [UI优化](android/UI优化.md)
-        * [内存优化](android/内存优化.md)
-        * [启动优化](android/启动优化.md)
-        * [WebView优化](android/WebView优化.md)
-        * [UI调试工具](android/UI调试工具.md)
-        * 如何对Android应用进行性能分析以及优化？
-        * [ANR](android/ANR.md)
-        * [OOM](android/OOM.md)
-        * 内存泄露的解决方法？
-        * ddms和traceView的使用？
-        * 性能优化如何分析systrace？
-        * 用IDE如何分析内存泄漏？
-        * Java多线程引发的性能问题，怎么解决？
-        * 启动页白屏、黑屏、太慢怎么解决？
-        * App启动崩溃异常怎么捕捉？
-        * 如何缩小Apk的体积?
-        * 如何统计启动时长？
-    * [JNI/NDK](android/JNI_NDK.md)
-    * [动态化](android/动态化.md)
-    * [组件化](android/组件化.md)
-    * [安全](android/安全.md)
-        * [混淆](android/混淆.md)
-        * [加固](android/加固.md)
-        * [签名](android/签名.md)
-* [Java](java/Java.md)
-    * 基础
-        * [如何理解面向对象（OOP）](java/如何理解面向对象（OOP）.md)
-        * [如何理解多态](java/如何理解多态.md)
-        * [接口（Interface）与抽象类（Abstract Class）的区别](java/接口（Interface）与抽象类（Abstract_Class）的区别.md)
-        * [重写（Override）与重载（Overload）的区别](java/重写（Override）与重载（Overload）的区别.md)
-        * [父类的静态方法能否被子类重写](java/父类的静态方法能否被子类重写.md)
-        * 静态属性和静态方法是否可以被继承？是否可以被重写？为什么？
-        * 什么是内部类？内部类、静态内部类、局部内部类和匿名内部类的区别及作用
-        * [==和equals和hashCode的区别](java/==和equals和hashCode的区别.md)
-        * Integer和int之间的区别
-        * String转换成Integer的方式及原理
-        * 自动装箱实现原理？类型转换实现原理？
-        * [String](java/String.md)
-        * [final、finally和finalize的区别](java/final、finally和finalize的区别.md)
-        * [static关键字有什么作用](java/static关键字有什么作用.md)
-        * [序列化](java/序列化.md)
-        * 反射
-        * [注解](java/注解.md)
-        * 依赖注入
-        * [泛型](java/泛型.md)
-        * Java的异常体系
-        * 解析与分派
-        * 静态代理和动态代理的区别？有什么场景使用？
-        * 谈谈对 Java 状态机理解
-        * [强引用、软引用、弱引用、虚引用之间的区别](java/强引用、软引用、弱引用、虚引用之间的区别.md)
-        * [动态代理、Hook、AOP、插件化技术的联系与区别](java/动态代理、Hook、AOP、插件化技术的联系与区别.md)
-    * [集合/容器](java/集合_容器.md)
-        * 列举Java的集合以及集合之间的继承关系
-        * [Map、Set、List、Queue、Stack](java/Map、Set、List、Queue、Stack.md)
-        * [ArrayList、LinkedList的区别](java/ArrayList、LinkedList的区别.md)
-        * HashMap、HashTable、ConcurrentHashMap实现原理以及区别
-        * HashSet与HashMap怎么判断集合元素重复
-        * HashMap的哈希散列实现，线程安全吗，为什么？
-        * ArrayList和Vector扩容的区别
-        * HashTable，ConcurrentHashMap怎么实现线程安全
-        * java8对hashmap的优化
-        * hashmap和hashset区别，hash怎么散列的
-        * hashmap的扩容因子是做什么的，每次扩容多少
-    * [并发](java/并发.md)
-        * 线程和进程的区别
-        * 开启线程的三种方式
-        * 如何正确的结束一个Thread
-        * Thread与Runnable的区别
-        * run()与start()方法的区别
-        * sleep()与wait()方法的区别
-        * wait与notify关键字的区别
-        * [除了notify还有什么方式可以唤醒线程](java/除了notify还有什么方式可以唤醒线程.md)
-        * synchronized关键字的用法、作用及实现原理
-        * volatile关键字的用法、作用及实现原理
-        * transient关键字的用法、作用及实现原理
-        * ReentrantLock、synchronized、volatile之间的区别
-        * [线程池相关](java/线程池相关.md)
-        * 多线程断点续传的实现原理
-        * 什么是深拷贝和浅拷贝
-        * Java中对象的生命周期
-        * 对Thread的理解？线程状态？阻塞和运行状态区别？
-        * 锁的种类，什么是自旋锁，ReentrantLock？
-        * 可重入锁的实现，公平锁非公平锁都是什么定义？
-        * [生产者-消费者模式](java/生产者-消费者模式.md)
-    * [JVM](java/JVM.md)
-        * [简述JVM内存模型和内存区域](java/简述JVM内存模型和内存区域.md)
-        * [GC机制](java/GC机制.md)
-        * [内存回收机制与GC算法](java/内存回收机制与GC算法.md)
-        * JVM虚拟机垃圾回收机制，不同的回收算法的使用场景，不同的垃圾回收器的特点
-        * java虚拟机垃圾回收算法。为什么要进行分代回收
-        * JVM内存回收时有没有办法监听，如何解救，解救过后finalize方法是否每次都会调用
-        * 简述ClassLoader类加载机制
-        * 对双亲委派模型的了解
-        * 对Dalvik、ART虚拟机的了解
-        * 对动态加载（OSGI）的了解
-        * 如何打破双亲委托机制
-        * [Dalvik虚拟机与java虚拟机的区别](java/Dalvik虚拟机与java虚拟机的区别.md)
-        * class结构、dex结构、apk结构
-* [Groovy](groovy/Groovy.md)
-* [网络](net/网络.md)
-    * TCP/UDP
-        * [TCP和UDP的区别和联系以及应用场景](net/TCP和UDP的区别和联系以及应用场景？.md)
-        * [TCP中3次握手和4次挥手的过程](net/TCP中3次握手和4次挥手的过程.md)
-    * Socket
-        * [谈谈你对WebSocket的理解](net/谈谈你对WebSocket的理解.md)
-        * [WebSocket与socket的区别](net/WebSocket与socket的区别.md)
-    * HTTP/HTTPS
-        * [描述一次网络请求的流程](net/描述一次网络请求的流程.md)
-        * [Https的流程](net/Https的流程.md)
-* [数据结构](ds/数据结构.md)
-    * 简述常见的数据结构
-    * 堆的结构
-    * 树、B+树、二叉树、红黑树的了解
-    * 二叉树的深度优先遍历和广度优先遍历
-    * 堆和树的区别
-    * 图的了解
-    * 如何判读链表成环，如何找到入环的点，手写伪代码
-* [算法](alg/算法.md)
-    * 排序算法有哪些
-    * 最快的排序算法是哪个
-    * 手写冒泡排序
-    * 手写快速排序
-    * 快速排序的过程、时间复杂度、空间复杂度
-    * 手写堆排序
-    * 给阿里2万多名员工按年龄排序应该选择哪个算法
-    * GC算法(各种算法的优缺点以及应用场景)
-    * 蚁群算法与蒙特卡洛算法
-    * 子串包含问题(KMP 算法)写代码实现
-    * 一个无序，不重复数组，输出N个元素，使得N个元素的和相加为M，给出时间复杂度、空间复杂度。手写算法
-    * 万亿级别的两个URL文件A和B，如何求出A和B的差集C(提示：Bit映射->hash分组->多文件读写效率->磁盘寻址以及应用层面对寻址的优化)
-    * 两个不重复的数组集合中，求共同的元素
-    * 两个不重复的数组集合中，这两个集合都是海量数据，内存中放不下，怎么求共同的元素
-    * 一个文件中有100万个整数，由空格分开，在程序中判断用户输入的整数是否在此文件中。说出最优的方法
-    * 一张Bitmap所占内存以及内存占用的计算
-    * 2000万个整数，找出第五十大的数字
-    * 求1000以内的水仙花数以及40亿以内的水仙花数
-    * 烧一根不均匀的绳，从头烧到尾总共需要1个小时。现在有若干条材质相同的绳子，问如何用烧绳的方法来计时一个小时十五分钟呢
-    * 5枚硬币，2正3反如何划分为两堆然后通过翻转让两堆中正面向上的硬8币和反面向上的硬币个数相同
-    * 时针走一圈，时针分针重合几次
-    * 完全二叉树的遍历，每一行从左到右遍历的。变种，波浪形遍历，在原来的基础上修改最少的代码实现
-    * 被旋转过的有序数组，给你一个数，返回在数组中的位置
-    * 无序数组，含有负数，0，正数，找出两个数，使之和的绝对值最小
-    * 一副牌，用最快的速度将他们打乱顺序，要求随机。你能否想出尽可能多的策略
-    * 在一群人中两两互不认识，但是都认识明星，找出哪一个是明星
-* [设计模式](dp/设计模式.md)
-    * [Android中的设计模式](dp/Android中的设计模式.md)
-    * 项目中常用的设计模式有哪些
-    * 手写观察者模式
-    * [适配器模式、装饰者模式、外观模式的异同](dp/适配器模式、装饰者模式、外观模式的异同.md)
-    * [单例模式](dp/单例模式.md)
-* [Maven/Gradle](mg/Maven_Gradle.md)
-    * [Gradle更新SNAPSHOT](mg/Gradle更新SNAPSHOT.md)
-    * [gradle本地依赖碰到的问题](mg/gradle本地依赖碰到的问题.md)
-    * [buildscript和allprojects的区别](mg/buildscript和allprojects的区别.md)
-    * [Gradle管理依赖的版本](mg/Gradle管理依赖的版本.md)
-    * [Gradle插件打包上传到远程仓库](mg/Gradle插件打包上传到远程仓库.md)
-* [架构](arch/架构.md)
-    * [MVC、MVP、MVVM](android/MVC、MVP、MVVM.md)
-    * 从0设计一款App整体架构，如何去做？
-* [音视频](av/音视频.md)
-* 读书笔记
-    * [《Android开发艺术探索》第2章 AIDL](note/《Android开发艺术探索》第2章_AIDL.md)
-    * [《Android进阶解密》第4章 四大组件的工作过程](note/《Android进阶解密》第4章_四大组件的工作过程.md)
-    * [《Android进阶解密》第13章 热修复原理](note/《Android进阶解密》第13章_热修复原理.md)
-
+- [Java](1-java/README.md)
+  * [==和equals和hashCode的区别](1-java/==和equals和hashCode的区别.md)
+  * [ArrayList、LinkedList的区别](1-java/ArrayList、LinkedList的区别.md)
+  * [Dalvik虚拟机与java虚拟机的区别](1-java/Dalvik虚拟机与java虚拟机的区别.md)
+  * [final、finally和finalize的区别](1-java/final、finally和finalize的区别.md)
+  * [GC机制](1-java/GC机制.md)
+  * [Java动态代理](1-java/Java动态代理.md)
+  * [Java静态变量、代码块，非静态变量、代码块，构造函数的初始化顺序](1-java/Java静态变量、代码块，非静态变量、代码块，构造函数的初始化顺序.md)
+  * [JVM](1-java/JVM.md)
+  * [Map、Set、List、Queue、Stack](1-java/Map、Set、List、Queue、Stack.md)
+  * [static关键字有什么作用](1-java/static关键字有什么作用.md)
+  * [String](1-java/String.md)
+  * [内存回收机制与GC算法](1-java/内存回收机制与GC算法.md)
+  * [动态代理、Hook、AOP、插件化技术的联系与区别](1-java/动态代理、Hook、AOP、插件化技术的联系与区别.md)
+  * [如何理解多态](1-java/如何理解多态.md)
+  * [如何理解面向对象（OOP）](1-java/如何理解面向对象（OOP）.md)
+  * [并发](1-java/并发.md)
+  * [序列化](1-java/序列化.md)
+  * [强引用、软引用、弱引用、虚引用之间的区别](1-java/强引用、软引用、弱引用、虚引用之间的区别.md)
+  * [接口（Interface）与抽象类（Abstract_Class）的区别](1-java/接口（Interface）与抽象类（Abstract_Class）的区别.md)
+  * [泛型](1-java/泛型.md)
+  * [注解](1-java/注解.md)
+  * [父类的静态方法能否被子类重写](1-java/父类的静态方法能否被子类重写.md)
+  * [生产者-消费者模式](1-java/生产者-消费者模式.md)
+  * [简述JVM内存模型和内存区域](1-java/简述JVM内存模型和内存区域.md)
+  * [线程池相关](1-java/线程池相关.md)
+  * [重写（Override）与重载（Overload）的区别](1-java/重写（Override）与重载（Overload）的区别.md)
+  * [除了notify还有什么方式可以唤醒线程](1-java/除了notify还有什么方式可以唤醒线程.md)
+  * [集合_容器](1-java/集合_容器.md)
+- [Android](2-android/README.md)
+  - [基础](2-android/1-基础/README.md)
+    * [Activity、Window、Drawable、View的区别](2-android/1-基础/Activity、Window、Drawable、View的区别.md)
+    * [Activity相关](2-android/1-基础/Activity相关.md)
+    * [AlertDialog、popupWindow、Activity之间的区别](2-android/1-基础/AlertDialog、popupWindow、Activity之间的区别.md)
+    * [Android_Manifest的作用与理解](2-android/1-基础/Android_Manifest的作用与理解.md)
+    * [Android中的多线程](2-android/1-基础/Android中的多线程.md)
+    * [Android内存泄露总结](2-android/1-基础/Android内存泄露总结.md)
+    * [ANR](2-android/1-基础/ANR.md)
+    * [Application和Activity的Context之间的区别](2-android/1-基础/Application和Activity的Context之间的区别.md)
+    * [Broadcast Receiver](2-android/1-基础/Broadcast Receiver.md)
+    * [BroadcastReceiver相关](2-android/1-基础/BroadcastReceiver相关.md)
+    * [Content Provider](2-android/1-基础/Content Provider.md)
+    * [ContentProvider相关](2-android/1-基础/ContentProvider相关.md)
+    * [Fragment相关](2-android/1-基础/Fragment相关.md)
+    * [Handler Thread Handler Thread](2-android/1-基础/HandlerThread - Handler - Thread.md)
+    * [Handler相关](2-android/1-基础/Handler相关.md)
+    * [LinearLayout、FrameLayout、RelativeLayout性能对比](2-android/1-基础/LinearLayout、FrameLayout、RelativeLayout性能对比.md)
+    * [ListView图片加载错乱的原理和解决方案](2-android/1-基础/ListView图片加载错乱的原理和解决方案.md)
+    * [OOM](2-android/1-基础/OOM.md)
+    * [RecycleView相关](2-android/1-基础/RecycleView相关.md)
+    * [Service相关](2-android/1-基础/Service相关.md)
+    * [ViewPager刷新问题](2-android/1-基础/ViewPager刷新问题.md)
+    * [View相关](2-android/1-基础/View相关.md)
+    * [事件分发机制](2-android/1-基础/事件分发机制.md)
+    * [低版本SDK如何使用高版本API](2-android/1-基础/低版本SDK如何使用高版本API.md)
+    * [动画](2-android/1-基础/动画.md)
+    * [双指缩放的实现](2-android/1-基础/双指缩放的实现.md)
+    * [图片相关](2-android/1-基础/图片相关.md)
+    * [对SurfaceView的了解](2-android/1-基础/对SurfaceView的了解.md)
+    * [屏幕适配](2-android/1-基础/屏幕适配.md)
+    * [数据存储](2-android/1-基础/数据存储.md)
+    * [版本适配](2-android/1-基础/版本适配.md)
+    * [自定义View](2-android/1-基础/自定义View.md)
+    * [进程和Application的生命周期的关系](2-android/1-基础/进程和Application的生命周期的关系.md)
+  - [View系统](2-android/2-View系统/README.md)
+  - [性能优化](2-android/3-性能优化/README.md)
+    * [UI优化](2-android/3-性能优化/UI优化.md)
+    * [UI调试工具](2-android/3-性能优化/UI调试工具.md)
+    * [WebView优化](2-android/3-性能优化/WebView优化.md)
+    * [内存优化](2-android/3-性能优化/内存优化.md)
+    * [启动优化](2-android/3-性能优化/启动优化.md)
+  - [开源项目](2-android/4-开源项目/README.md)
+    * [Butter Knife](2-android/4-开源项目/ButterKnife.md)
+    * [Event Bus](2-android/4-开源项目/EventBus.md)
+    * [Glide](2-android/4-开源项目/Glide.md)
+    * [Okhttp](2-android/4-开源项目/okhttp.md)
+    * [Retrofit](2-android/4-开源项目/Retrofit.md)
+    * [Rx Java](2-android/4-开源项目/RxJava.md)
+    * [Volley](2-android/4-开源项目/Volley.md)
+    * [数据库框架对比和源码分析](2-android/4-开源项目/数据库框架对比和源码分析.md)
+  - [架构](2-android/5-架构/README.md)
+    * [MVC、MVP、MVVM](2-android/5-架构/MVC、MVP、MVVM.md)
+  - [Framework](2-android/6-Framework/README.md)
+    * [IPC Binder](2-android/6-Framework/IPC_Binder.md)
+  - [组件化](2-android/7-组件化/README.md)
+  - [动态化](2-android/8-动态化/README.md)
+  - [安全](2-android/9-安全/README.md)
+    * [CAS介绍，OAuth授权机制](2-android/9-安全/CAS介绍，OAuth授权机制.md)
+    * [加固](2-android/9-安全/加固.md)
+    * [混淆](2-android/9-安全/混淆.md)
+    * [签名](2-android/9-安全/签名.md)
+    * [谈谈你对安卓签名的理解](2-android/9-安全/谈谈你对安卓签名的理解.md)
+  - [硬件](2-android/10-硬件/README.md)
+    * [NFC基础](2-android/10-硬件/NFC基础.md)
+  - [其他](2-android/20-其他/README.md)
+    * [Adapter的优化写法](2-android/20-其他/Adapter的优化写法.md)
+    * [Alarm Manager](2-android/20-其他/AlarmManager.md)
+    * [Android Hook初见](2-android/20-其他/Android Hook初见.md)
+    * [Android ndk的主要应用场景](2-android/20-其他/Android ndk的主要应用场景.md)
+    * [Studio设置内存大小](2-android/20-其他/Android-Studio设置内存大小.md)
+    * [Android性能测试](2-android/20-其他/Android性能测试.md)
+    * [Android推送](2-android/20-其他/Android推送.md)
+    * [Android面向切面编程（AOP）](2-android/20-其他/Android面向切面编程（AOP）.md)
+    * [APM工具调研](2-android/20-其他/APM工具调研.md)
+    * [Fragment - 不同场景下的生命周期](2-android/20-其他/Fragment - 不同场景下的生命周期.md)
+    * [Fragment - 懒加载](2-android/20-其他/Fragment - 懒加载.md)
+    * [inPreferredConfig参数](2-android/20-其他/inPreferredConfig参数.md)
+    * [Java和JavaScript交互](2-android/20-其他/Java和JavaScript交互.md)
+    * [Jenkins构建Android项目](2-android/20-其他/Jenkins构建Android项目.md)
+    * [JNI NDK](2-android/20-其他/JNI_NDK.md)
+    * [Manifest中meta-data元素的配置与获取](2-android/20-其他/Manifest中meta-data元素的配置与获取.md)
+    * [Service保活](2-android/20-其他/Service保活.md)
+    * [Socket的简单使用](2-android/20-其他/Socket的简单使用.md)
+    * [SpareArray的实现原理？Android中其他优化集合的实现？](2-android/20-其他/SpareArray的实现原理？Android中其他优化集合的实现？.md)
+    * [SQLite数据库升级，数据迁移问题](2-android/20-其他/SQLite数据库升级，数据迁移问题.md)
+    * [style样式和attr预定义样式](2-android/20-其他/style样式和attr预定义样式.md)
+    * [Thread Local](2-android/20-其他/ThreadLocal.md)
+    * [图片处理](2-android/20-其他/图片处理.md)
+    * [如果在onStop的时候做了网络请求，onResume的时候怎么恢复](2-android/20-其他/如果在onStop的时候做了网络请求，onResume的时候怎么恢复.md)
+    * [实现定时和倒计时任务](2-android/20-其他/实现定时和倒计时任务.md)
+    * [对沉浸式状态栏的记录](2-android/20-其他/对沉浸式状态栏的记录.md)
+    * [悬浮窗权限](2-android/20-其他/悬浮窗权限.md)
+    * [数字，日期格式化](2-android/20-其他/数字，日期格式化.md)
+    * [服务器只提供数据接收接口，在多线程或多进程条件下，如何保证数据的有序到达？](2-android/20-其他/服务器只提供数据接收接口，在多线程或多进程条件下，如何保证数据的有序到达？.md)
+    * [横竖屏切换时Activity的生命周期](2-android/20-其他/横竖屏切换时Activity的生命周期.md)
+    * [特殊资源目录——assets，raw，xml的说明](2-android/20-其他/特殊资源目录——assets，raw，xml的说明.md)
+    * [监听CollapsingToolbarLayout的展开和折叠](2-android/20-其他/监听CollapsingToolbarLayout的展开和折叠.md)
+    * [自动重发送的线程池](2-android/20-其他/自动重发送的线程池.md)
+    * [解决ListView和GridView嵌套于其他滑动组件引起的滑动冲突](2-android/20-其他/解决ListView和GridView嵌套于其他滑动组件引起的滑动冲突.md)
+    * [通过Uri获取路径](2-android/20-其他/通过Uri获取路径.md)
+  - [代码片段](2-android/21-代码片段/README.md)
+    * [方形布局 SquareLayout](2-android/21-代码片段/方形布局 SquareLayout.md)
+  - 问题
+    * [TimePickerDialog在某些机型上会连续返回两次结果](2-android/22-问题/DatePickerDialog-TimePickerDialog在某些机型上会连续返回两次结果.md)
+    * [SwipeRefreshLayout首次加载时显示刷新动画](2-android/22-问题/SwipeRefreshLayout首次加载时显示刷新动画.md)
+    * [首次安装在安装界面打开应用，退到后台再从桌面launcher打开应用，会打开两个应用](2-android/22-问题/首次安装在安装界面打开应用，退到后台再从桌面launcher打开应用，会打开两个应用.md)
+- [数据结构与算法](3-数据结构与算法/README.md)
+  * [数据结构](3-数据结构与算法/数据结构.md)
+  * [算法](3-数据结构与算法/算法.md)
+- [设计模式](4-设计模式/README.md)
+  * [Android中的设计模式](4-设计模式/Android中的设计模式.md)
+  * [单例模式](4-设计模式/单例模式.md)
+  * [设计模式](4-设计模式/设计模式.md)
+  * [适配器模式、装饰者模式、外观模式的异同](4-设计模式/适配器模式、装饰者模式、外观模式的异同.md)
+- [网络](5-网络/README.md)
+  * [Https的流程](5-网络/Https的流程.md)
+  * [TCP中3次握手和4次挥手的过程](5-网络/TCP中3次握手和4次挥手的过程.md)
+  * [TCP和UDP的区别和联系以及应用场景？](5-网络/TCP和UDP的区别和联系以及应用场景？.md)
+  * [WebSocket与socket的区别](5-网络/WebSocket与socket的区别.md)
+  * [描述一次网络请求的流程](5-网络/描述一次网络请求的流程.md)
+  * [谈谈你对WebSocket的理解](5-网络/谈谈你对WebSocket的理解.md)
+- [架构](6-架构/README.md)
+- [依赖管理](7-依赖管理/README.md)
+  * [buildscript和allprojects的区别](7-依赖管理/buildscript和allprojects的区别.md)
+  * [Gradle](7-依赖管理/Gradle.md)
+  * [Gradle插件开发 - 1 - ](7-依赖管理/Gradle插件开发 - 1 - .md)
+  * [Gradle插件打包上传到远程仓库](7-依赖管理/Gradle插件打包上传到远程仓库.md)
+  * [Gradle更新SNAPSHOT](7-依赖管理/Gradle更新SNAPSHOT.md)
+  * [gradle本地依赖碰到的问题](7-依赖管理/gradle本地依赖碰到的问题.md)
+  * [Gradle管理依赖的版本](7-依赖管理/Gradle管理依赖的版本.md)
+  * [Maven Gradle](7-依赖管理/Maven_Gradle.md)
+  * [分享自己的代码到公共仓库](7-依赖管理/分享自己的代码到公共仓库.md)
+- [音视频](8-音视频/README.md)
+- [Groovy](9-groovy/README.md)
+- [读书笔记](10-读书笔记/README.md)
+  * [《Android开发艺术探索》第2章_AIDL](10-读书笔记/《Android开发艺术探索》第2章_AIDL.md)
+  * [《Android进阶解密》第13章_热修复原理](10-读书笔记/《Android进阶解密》第13章_热修复原理.md)
+  * [《Android进阶解密》第4章_四大组件的工作过程](10-读书笔记/《Android进阶解密》第4章_四大组件的工作过程.md)
+  * [Android Gradle权威指南（1）Gradle入门](10-读书笔记/Android Gradle权威指南（1）Gradle入门.md)
+  * [Android Gradle权威指南（2）Groovy基础](10-读书笔记/Android Gradle权威指南（2）Groovy基础.md)
+- [其他](11-其他/README.md)
+  * [JetBrains全家桶破解](11-其他/JetBrains全家桶破解.md)
+  * [YAML简单介绍](11-其他/YAML简单介绍.md)
+  * [图床的选择和一些工具](11-其他/图床的选择和一些工具.md)

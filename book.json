@@ -1,5 +1,7 @@
 {
     "plugins": [
-        "expandable-chapters"
-    ]
+        "toggle-chapters"
+    ],
+    "ignores": ["_book", "node_modules"],
+    "sortedBy": "-"
 }
