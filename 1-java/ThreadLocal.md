@@ -42,90 +42,28 @@ OK，用法非常简单。
 
 1、将这个线程本身作为key，需要线程隔离的变量作为value，存储在Map当中。不同线程在访问这个Map的时候，自身线程在Map中存储过，就put一个新的value。
 
-    在设计上，因为需要维护value的初始值、真正需要线程隔离的对象以及Map对象，肯定需要一个包装类，其实真正的ThreadLocal就是这样一个包装类。
+    用ThreadLocal这样一个包装类去维护value的初始值、真正需要线程隔离的对象以及Map对象。
 
-    想想看，因为是用全部线程共享的Map去维护需要线程隔离的变量，肯定涉及到锁竞争的问题
+    因为是用全部线程共享的Map去维护需要线程隔离的变量，会涉及到锁竞争的问题。
 
-2、反过来，如果将维护Map的任务交给Thread本身呢。
+2、反过来，将维护Map的任务交给Thread本身。将包装类ThreadLocal作为Map的key，需要线程隔离的变量作为value存储。
 
-Map去存储线程局部变量，创建一个类ThreadLocal，维护一个Map对象
+    能够避免锁竞争的问题。
 
-假如在ThreadLocal出现之前，从零设计一个ThreadLocal
+    Map的数量也减少了，第一种方式Map的数量等于线程的数量，第二种方式Map的数量等于需要维护的线程隔离变量的数量。
 
-Java中的线程其实就是Thread对象，那给Thread类增加一个成员变量obj（类型是Object），直接将需要被线程隔离的变量赋值给该obj就可以了。
 
-```java
-Thread thread = Thread.currentThread();
+## 内存泄漏的优化
 
-# Set
-String strS = new String("线程局部变量");
-thread.obj = strS;
+把变量交给Thread自身维护提高了性能，带来另一个问题：
 
-# Get
-String strG = thread.obj;
-```
+因为存储变量的Map的生命周期一定等于线程的生命周期，而变量的生命周期不一定等于线程的生命周期，势必引起内存泄漏的问题。
 
-很容易发现一个问题，要是有个多个变量都需要线程隔离呢。
+ThreadLocal里做了两点优化：
 
-那就交给Map对象去维护，key和value都是线程局部变量。同时将Thread类的成员变量obj改成map（类型是Map）。
+1、Map的key是作为弱引用存储；
 
-```java
-Thread thread = Thread.currentThread();
-
-# Set
-if (thread.map == null) {
-    thread.map = new HashMap<>();
-}
-Map<Object, Object> map = thread.map;
-String str = new String("线程局部变量");
-map.put(str, str);
-thread.map = map;
-
-# Get
-Map<Object, Object> map = thread.map;
-String strG = map.get();
-```
-
-一是：
-
-这么写不OO，代码会很分散，设计上来说这样是不及格的；
-
-二是：
-
-将线程隔离的变量本身作为key不可控，因为不同对象的equals方法是各自实现的。
-
-比如示例中的String对象，equals方法是自己实现，想想看，str的值被线程A修改之后，再去set一次，map就存放了两份数据，明显不合理。
-
-所以我们再设计一个包装类，实现equals方法，将包装类自身作为map的key去存储实际需要线程隔离的变量。
-
-这个包装类实际上就是ThreadLocal。
-
-```java
-# Definition
-public class ThreadLocalWrapper<T> {
-
-    public void set(T t) {
-        Thread thread = Thread.currentThread();
-        if (thread.map == null) {
-            thread.map = new HashMap<>();
-        }
-        Map<Object, Object> map = thread.map;
-        map.put(this, t);
-    }
-
-    public T get() {
-        Thread thread = Thread.currentThread();
-        Map<Object, Object> map = thread.map;
-        return (T) map.get(this);
-    }
-}
-
-# Usage
-ThreadLocalWrapper<String> wrapper = new ThreadLocalWrapper<>();
-wrapper.set(new String("线程局部变量"));
-
-wrapper.get();
-```
+2、因为是弱引用，势必存在key为null的一对键值对，所以ThreadLocal每次去读取和写入的时候，都会遍历这个Map，去移除key为null的内容。
 
 ---
 
