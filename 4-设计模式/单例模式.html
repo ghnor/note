@@ -1,0 +1,2635 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>单例模式 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="设计模式.html" />
+    
+    
+    <link rel="prev" href="Android中的设计模式.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1-java/README.md">
+            
+                <span>
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1-java/==和equals和hashCode的区别.md">
+            
+                <span>
+            
+                    
+                    ==和equals和hashCode的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1-java/ArrayList、LinkedList的区别.md">
+            
+                <span>
+            
+                    
+                    ArrayList、LinkedList的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1-java/Dalvik虚拟机与java虚拟机的区别.md">
+            
+                <span>
+            
+                    
+                    Dalvik虚拟机与java虚拟机的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1-java/final、finally和finalize的区别.md">
+            
+                <span>
+            
+                    
+                    final、finally和finalize的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../1-java/GC机制.md">
+            
+                <span>
+            
+                    
+                    GC机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../1-java/Java动态代理.md">
+            
+                <span>
+            
+                    
+                    Java动态代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../1-java/Java静态变量、代码块，非静态变量、代码块，构造函数的初始化顺序.md">
+            
+                <span>
+            
+                    
+                    Java静态变量、代码块，非静态变量、代码块，构造函数的初始化顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../1-java/JVM.md">
+            
+                <span>
+            
+                    
+                    JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../1-java/Map、Set、List、Queue、Stack.md">
+            
+                <span>
+            
+                    
+                    Map、Set、List、Queue、Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../1-java/static关键字有什么作用.md">
+            
+                <span>
+            
+                    
+                    static关键字有什么作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../1-java/String.md">
+            
+                <span>
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../1-java/内存回收机制与GC算法.md">
+            
+                <span>
+            
+                    
+                    内存回收机制与GC算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../1-java/动态代理、Hook、AOP、插件化技术的联系与区别.md">
+            
+                <span>
+            
+                    
+                    动态代理、Hook、AOP、插件化技术的联系与区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../1-java/如何理解多态.md">
+            
+                <span>
+            
+                    
+                    如何理解多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../1-java/如何理解面向对象（OOP）.md">
+            
+                <span>
+            
+                    
+                    如何理解面向对象（OOP）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../1-java/并发.md">
+            
+                <span>
+            
+                    
+                    并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../1-java/序列化.md">
+            
+                <span>
+            
+                    
+                    序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../1-java/强引用、软引用、弱引用、虚引用之间的区别.md">
+            
+                <span>
+            
+                    
+                    强引用、软引用、弱引用、虚引用之间的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../1-java/接口（Interface）与抽象类（Abstract_Class）的区别.md">
+            
+                <span>
+            
+                    
+                    接口（Interface）与抽象类（Abstract_Class）的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../1-java/泛型.md">
+            
+                <span>
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="../1-java/注解.md">
+            
+                <span>
+            
+                    
+                    注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="../1-java/父类的静态方法能否被子类重写.md">
+            
+                <span>
+            
+                    
+                    父类的静态方法能否被子类重写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="../1-java/生产者-消费者模式.md">
+            
+                <span>
+            
+                    
+                    生产者-消费者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="../1-java/简述JVM内存模型和内存区域.md">
+            
+                <span>
+            
+                    
+                    简述JVM内存模型和内存区域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="../1-java/线程池相关.md">
+            
+                <span>
+            
+                    
+                    线程池相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="../1-java/重写（Override）与重载（Overload）的区别.md">
+            
+                <span>
+            
+                    
+                    重写（Override）与重载（Overload）的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="../1-java/除了notify还有什么方式可以唤醒线程.md">
+            
+                <span>
+            
+                    
+                    除了notify还有什么方式可以唤醒线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.28" data-path="../1-java/集合_容器.md">
+            
+                <span>
+            
+                    
+                    集合_容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2-android/README.md">
+            
+                <span>
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2-android/1-基础/README.md">
+            
+                <span>
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../2-android/1-基础/Activity、Window、Drawable、View的区别.md">
+            
+                <span>
+            
+                    
+                    Activity、Window、Drawable、View的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../2-android/1-基础/Activity相关.md">
+            
+                <span>
+            
+                    
+                    Activity相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../2-android/1-基础/AlertDialog、popupWindow、Activity之间的区别.md">
+            
+                <span>
+            
+                    
+                    AlertDialog、popupWindow、Activity之间的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../2-android/1-基础/Android_Manifest的作用与理解.md">
+            
+                <span>
+            
+                    
+                    Android_Manifest的作用与理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../2-android/1-基础/Android中的多线程.md">
+            
+                <span>
+            
+                    
+                    Android中的多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../2-android/1-基础/Android内存泄露总结.md">
+            
+                <span>
+            
+                    
+                    Android内存泄露总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../2-android/1-基础/ANR.md">
+            
+                <span>
+            
+                    
+                    ANR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../2-android/1-基础/Application和Activity的Context之间的区别.md">
+            
+                <span>
+            
+                    
+                    Application和Activity的Context之间的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../2-android/1-基础/Broadcast Receiver.md">
+            
+                <span>
+            
+                    
+                    Broadcast Receiver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../2-android/1-基础/BroadcastReceiver相关.md">
+            
+                <span>
+            
+                    
+                    BroadcastReceiver相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="../2-android/1-基础/Content Provider.md">
+            
+                <span>
+            
+                    
+                    Content Provider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="../2-android/1-基础/ContentProvider相关.md">
+            
+                <span>
+            
+                    
+                    ContentProvider相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="../2-android/1-基础/Fragment相关.md">
+            
+                <span>
+            
+                    
+                    Fragment相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.14" data-path="../2-android/1-基础/HandlerThread - Handler - Thread.md">
+            
+                <span>
+            
+                    
+                    Handler Thread Handler Thread
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.15" data-path="../2-android/1-基础/Handler相关.md">
+            
+                <span>
+            
+                    
+                    Handler相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.16" data-path="../2-android/1-基础/LinearLayout、FrameLayout、RelativeLayout性能对比.md">
+            
+                <span>
+            
+                    
+                    LinearLayout、FrameLayout、RelativeLayout性能对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.17" data-path="../2-android/1-基础/ListView图片加载错乱的原理和解决方案.md">
+            
+                <span>
+            
+                    
+                    ListView图片加载错乱的原理和解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.18" data-path="../2-android/1-基础/OOM.md">
+            
+                <span>
+            
+                    
+                    OOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.19" data-path="../2-android/1-基础/RecycleView相关.md">
+            
+                <span>
+            
+                    
+                    RecycleView相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.20" data-path="../2-android/1-基础/Service相关.md">
+            
+                <span>
+            
+                    
+                    Service相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.21" data-path="../2-android/1-基础/ViewPager刷新问题.md">
+            
+                <span>
+            
+                    
+                    ViewPager刷新问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.22" data-path="../2-android/1-基础/View相关.md">
+            
+                <span>
+            
+                    
+                    View相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.23" data-path="../2-android/1-基础/事件分发机制.md">
+            
+                <span>
+            
+                    
+                    事件分发机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.24" data-path="../2-android/1-基础/低版本SDK如何使用高版本API.md">
+            
+                <span>
+            
+                    
+                    低版本SDK如何使用高版本API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.25" data-path="../2-android/1-基础/动画.md">
+            
+                <span>
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.26" data-path="../2-android/1-基础/双指缩放的实现.md">
+            
+                <span>
+            
+                    
+                    双指缩放的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.27" data-path="../2-android/1-基础/图片相关.md">
+            
+                <span>
+            
+                    
+                    图片相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.28" data-path="../2-android/1-基础/对SurfaceView的了解.md">
+            
+                <span>
+            
+                    
+                    对SurfaceView的了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.29" data-path="../2-android/1-基础/屏幕适配.md">
+            
+                <span>
+            
+                    
+                    屏幕适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.30" data-path="../2-android/1-基础/数据存储.md">
+            
+                <span>
+            
+                    
+                    数据存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.31" data-path="../2-android/1-基础/版本适配.md">
+            
+                <span>
+            
+                    
+                    版本适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.32" data-path="../2-android/1-基础/自定义View.md">
+            
+                <span>
+            
+                    
+                    自定义View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.33" data-path="../2-android/1-基础/进程和Application的生命周期的关系.md">
+            
+                <span>
+            
+                    
+                    进程和Application的生命周期的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2-android/2-View系统/README.md">
+            
+                <span>
+            
+                    
+                    View系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2-android/3-性能优化/README.md">
+            
+                <span>
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../2-android/3-性能优化/UI优化.md">
+            
+                <span>
+            
+                    
+                    UI优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../2-android/3-性能优化/UI调试工具.md">
+            
+                <span>
+            
+                    
+                    UI调试工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../2-android/3-性能优化/WebView优化.md">
+            
+                <span>
+            
+                    
+                    WebView优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../2-android/3-性能优化/内存优化.md">
+            
+                <span>
+            
+                    
+                    内存优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../2-android/3-性能优化/启动优化.md">
+            
+                <span>
+            
+                    
+                    启动优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2-android/4-开源项目/README.md">
+            
+                <span>
+            
+                    
+                    开源项目
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../2-android/4-开源项目/ButterKnife.md">
+            
+                <span>
+            
+                    
+                    Butter Knife
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../2-android/4-开源项目/EventBus.md">
+            
+                <span>
+            
+                    
+                    Event Bus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../2-android/4-开源项目/Glide.md">
+            
+                <span>
+            
+                    
+                    Glide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../2-android/4-开源项目/okhttp.md">
+            
+                <span>
+            
+                    
+                    Okhttp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../2-android/4-开源项目/Retrofit.md">
+            
+                <span>
+            
+                    
+                    Retrofit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../2-android/4-开源项目/RxJava.md">
+            
+                <span>
+            
+                    
+                    Rx Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="../2-android/4-开源项目/Volley.md">
+            
+                <span>
+            
+                    
+                    Volley
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.8" data-path="../2-android/4-开源项目/数据库框架对比和源码分析.md">
+            
+                <span>
+            
+                    
+                    数据库框架对比和源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2-android/5-架构/README.md">
+            
+                <span>
+            
+                    
+                    架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../2-android/5-架构/MVC、MVP、MVVM.md">
+            
+                <span>
+            
+                    
+                    MVC、MVP、MVVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../2-android/6-Framework/README.md">
+            
+                <span>
+            
+                    
+                    Framework
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../2-android/6-Framework/IPC_Binder.md">
+            
+                <span>
+            
+                    
+                    IPC Binder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../2-android/7-组件化/README.md">
+            
+                <span>
+            
+                    
+                    组件化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../2-android/8-动态化/README.md">
+            
+                <span>
+            
+                    
+                    动态化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../2-android/9-安全/README.md">
+            
+                <span>
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.9.1" data-path="../2-android/9-安全/CAS介绍，OAuth授权机制.md">
+            
+                <span>
+            
+                    
+                    CAS介绍，OAuth授权机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.2" data-path="../2-android/9-安全/加固.md">
+            
+                <span>
+            
+                    
+                    加固
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.3" data-path="../2-android/9-安全/混淆.md">
+            
+                <span>
+            
+                    
+                    混淆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.4" data-path="../2-android/9-安全/签名.md">
+            
+                <span>
+            
+                    
+                    签名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.5" data-path="../2-android/9-安全/谈谈你对安卓签名的理解.md">
+            
+                <span>
+            
+                    
+                    谈谈你对安卓签名的理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../2-android/10-硬件/README.md">
+            
+                <span>
+            
+                    
+                    硬件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.10.1" data-path="../2-android/10-硬件/NFC基础.md">
+            
+                <span>
+            
+                    
+                    NFC基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../2-android/20-其他/README.md">
+            
+                <span>
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.11.1" data-path="../2-android/20-其他/Adapter的优化写法.md">
+            
+                <span>
+            
+                    
+                    Adapter的优化写法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.2" data-path="../2-android/20-其他/AlarmManager.md">
+            
+                <span>
+            
+                    
+                    Alarm Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.3" data-path="../2-android/20-其他/Android Hook初见.md">
+            
+                <span>
+            
+                    
+                    Android Hook初见
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.4" data-path="../2-android/20-其他/Android ndk的主要应用场景.md">
+            
+                <span>
+            
+                    
+                    Android ndk的主要应用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.5" data-path="../2-android/20-其他/Android-Studio设置内存大小.md">
+            
+                <span>
+            
+                    
+                    Studio设置内存大小
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.6" data-path="../2-android/20-其他/Android性能测试.md">
+            
+                <span>
+            
+                    
+                    Android性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.7" data-path="../2-android/20-其他/Android推送.md">
+            
+                <span>
+            
+                    
+                    Android推送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.8" data-path="../2-android/20-其他/Android面向切面编程（AOP）.md">
+            
+                <span>
+            
+                    
+                    Android面向切面编程（AOP）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.9" data-path="../2-android/20-其他/APM工具调研.md">
+            
+                <span>
+            
+                    
+                    APM工具调研
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.10" data-path="../2-android/20-其他/Fragment - 不同场景下的生命周期.md">
+            
+                <span>
+            
+                    
+                    Fragment - 不同场景下的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.11" data-path="../2-android/20-其他/Fragment - 懒加载.md">
+            
+                <span>
+            
+                    
+                    Fragment - 懒加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.12" data-path="../2-android/20-其他/inPreferredConfig参数.md">
+            
+                <span>
+            
+                    
+                    inPreferredConfig参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.13" data-path="../2-android/20-其他/Java和JavaScript交互.md">
+            
+                <span>
+            
+                    
+                    Java和JavaScript交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.14" data-path="../2-android/20-其他/Jenkins构建Android项目.md">
+            
+                <span>
+            
+                    
+                    Jenkins构建Android项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.15" data-path="../2-android/20-其他/JNI_NDK.md">
+            
+                <span>
+            
+                    
+                    JNI NDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.16" data-path="../2-android/20-其他/Manifest中meta-data元素的配置与获取.md">
+            
+                <span>
+            
+                    
+                    Manifest中meta-data元素的配置与获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.17" data-path="../2-android/20-其他/Service保活.md">
+            
+                <span>
+            
+                    
+                    Service保活
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.18" data-path="../2-android/20-其他/Socket的简单使用.md">
+            
+                <span>
+            
+                    
+                    Socket的简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.19" data-path="../2-android/20-其他/SpareArray的实现原理？Android中其他优化集合的实现？.md">
+            
+                <span>
+            
+                    
+                    SpareArray的实现原理？Android中其他优化集合的实现？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.20" data-path="../2-android/20-其他/SQLite数据库升级，数据迁移问题.md">
+            
+                <span>
+            
+                    
+                    SQLite数据库升级，数据迁移问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.21" data-path="../2-android/20-其他/style样式和attr预定义样式.md">
+            
+                <span>
+            
+                    
+                    style样式和attr预定义样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.22" data-path="../2-android/20-其他/ThreadLocal.md">
+            
+                <span>
+            
+                    
+                    Thread Local
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.23" data-path="../2-android/20-其他/图片处理.md">
+            
+                <span>
+            
+                    
+                    图片处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.24" data-path="../2-android/20-其他/如果在onStop的时候做了网络请求，onResume的时候怎么恢复.md">
+            
+                <span>
+            
+                    
+                    如果在onStop的时候做了网络请求，onResume的时候怎么恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.25" data-path="../2-android/20-其他/实现定时和倒计时任务.md">
+            
+                <span>
+            
+                    
+                    实现定时和倒计时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.26" data-path="../2-android/20-其他/对沉浸式状态栏的记录.md">
+            
+                <span>
+            
+                    
+                    对沉浸式状态栏的记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.27" data-path="../2-android/20-其他/悬浮窗权限.md">
+            
+                <span>
+            
+                    
+                    悬浮窗权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.28" data-path="../2-android/20-其他/数字，日期格式化.md">
+            
+                <span>
+            
+                    
+                    数字，日期格式化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.29" data-path="../2-android/20-其他/服务器只提供数据接收接口，在多线程或多进程条件下，如何保证数据的有序到达？.md">
+            
+                <span>
+            
+                    
+                    服务器只提供数据接收接口，在多线程或多进程条件下，如何保证数据的有序到达？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.30" data-path="../2-android/20-其他/横竖屏切换时Activity的生命周期.md">
+            
+                <span>
+            
+                    
+                    横竖屏切换时Activity的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.31" data-path="../2-android/20-其他/特殊资源目录——assets，raw，xml的说明.md">
+            
+                <span>
+            
+                    
+                    特殊资源目录——assets，raw，xml的说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.32" data-path="../2-android/20-其他/监听CollapsingToolbarLayout的展开和折叠.md">
+            
+                <span>
+            
+                    
+                    监听CollapsingToolbarLayout的展开和折叠
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.33" data-path="../2-android/20-其他/自动重发送的线程池.md">
+            
+                <span>
+            
+                    
+                    自动重发送的线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.34" data-path="../2-android/20-其他/解决ListView和GridView嵌套于其他滑动组件引起的滑动冲突.md">
+            
+                <span>
+            
+                    
+                    解决ListView和GridView嵌套于其他滑动组件引起的滑动冲突
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.35" data-path="../2-android/20-其他/通过Uri获取路径.md">
+            
+                <span>
+            
+                    
+                    通过Uri获取路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../2-android/21-代码片段/README.md">
+            
+                <span>
+            
+                    
+                    代码片段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.12.1" data-path="../2-android/21-代码片段/方形布局 SquareLayout.md">
+            
+                <span>
+            
+                    
+                    方形布局 SquareLayout
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" >
+            
+                <span>
+            
+                    
+                    问题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.13.1" data-path="../2-android/22-问题/DatePickerDialog-TimePickerDialog在某些机型上会连续返回两次结果.md">
+            
+                <span>
+            
+                    
+                    TimePickerDialog在某些机型上会连续返回两次结果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13.2" data-path="../2-android/22-问题/SwipeRefreshLayout首次加载时显示刷新动画.md">
+            
+                <span>
+            
+                    
+                    SwipeRefreshLayout首次加载时显示刷新动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13.3" data-path="../2-android/22-问题/首次安装在安装界面打开应用，退到后台再从桌面launcher打开应用，会打开两个应用.md">
+            
+                <span>
+            
+                    
+                    首次安装在安装界面打开应用，退到后台再从桌面launcher打开应用，会打开两个应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3-数据结构与算法/README.md">
+            
+                <span>
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3-数据结构与算法/数据结构.md">
+            
+                <span>
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3-数据结构与算法/算法.md">
+            
+                <span>
+            
+                    
+                    算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="Android中的设计模式.html">
+            
+                <a href="Android中的设计模式.html">
+            
+                    
+                    Android中的设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="单例模式.html">
+            
+                <a href="单例模式.html">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="设计模式.html">
+            
+                <a href="设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="适配器模式、装饰者模式、外观模式的异同.html">
+            
+                <a href="适配器模式、装饰者模式、外观模式的异同.html">
+            
+                    
+                    适配器模式、装饰者模式、外观模式的异同
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5-网络/README.md">
+            
+                <span>
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5-网络/Https的流程.md">
+            
+                <span>
+            
+                    
+                    Https的流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5-网络/TCP中3次握手和4次挥手的过程.md">
+            
+                <span>
+            
+                    
+                    TCP中3次握手和4次挥手的过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../5-网络/TCP和UDP的区别和联系以及应用场景？.md">
+            
+                <span>
+            
+                    
+                    TCP和UDP的区别和联系以及应用场景？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../5-网络/WebSocket与socket的区别.md">
+            
+                <span>
+            
+                    
+                    WebSocket与socket的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../5-网络/描述一次网络请求的流程.md">
+            
+                <span>
+            
+                    
+                    描述一次网络请求的流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../5-网络/谈谈你对WebSocket的理解.md">
+            
+                <span>
+            
+                    
+                    谈谈你对WebSocket的理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6-架构/README.md">
+            
+                <span>
+            
+                    
+                    架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7-依赖管理/README.md">
+            
+                <span>
+            
+                    
+                    依赖管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../7-依赖管理/buildscript和allprojects的区别.md">
+            
+                <span>
+            
+                    
+                    buildscript和allprojects的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../7-依赖管理/Gradle.md">
+            
+                <span>
+            
+                    
+                    Gradle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../7-依赖管理/Gradle插件开发 - 1 - .md">
+            
+                <span>
+            
+                    
+                    Gradle插件开发 - 1 - 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../7-依赖管理/Gradle插件打包上传到远程仓库.md">
+            
+                <span>
+            
+                    
+                    Gradle插件打包上传到远程仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../7-依赖管理/Gradle更新SNAPSHOT.md">
+            
+                <span>
+            
+                    
+                    Gradle更新SNAPSHOT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../7-依赖管理/gradle本地依赖碰到的问题.md">
+            
+                <span>
+            
+                    
+                    gradle本地依赖碰到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../7-依赖管理/Gradle管理依赖的版本.md">
+            
+                <span>
+            
+                    
+                    Gradle管理依赖的版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../7-依赖管理/Maven_Gradle.md">
+            
+                <span>
+            
+                    
+                    Maven Gradle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../7-依赖管理/分享自己的代码到公共仓库.md">
+            
+                <span>
+            
+                    
+                    分享自己的代码到公共仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8-音视频/">
+            
+                <a href="../8-音视频/">
+            
+                    
+                    音视频
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9-groovy/README.md">
+            
+                <span>
+            
+                    
+                    Groovy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10-读书笔记/README.md">
+            
+                <span>
+            
+                    
+                    读书笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../10-读书笔记/《Android开发艺术探索》第2章_AIDL.md">
+            
+                <span>
+            
+                    
+                    《Android开发艺术探索》第2章_AIDL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../10-读书笔记/《Android进阶解密》第13章_热修复原理.md">
+            
+                <span>
+            
+                    
+                    《Android进阶解密》第13章_热修复原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../10-读书笔记/《Android进阶解密》第4章_四大组件的工作过程.md">
+            
+                <span>
+            
+                    
+                    《Android进阶解密》第4章_四大组件的工作过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../10-读书笔记/Android Gradle权威指南（1）Gradle入门.md">
+            
+                <span>
+            
+                    
+                    Android Gradle权威指南（1）Gradle入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../10-读书笔记/Android Gradle权威指南（2）Groovy基础.md">
+            
+                <span>
+            
+                    
+                    Android Gradle权威指南（2）Groovy基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11-其他/README.md">
+            
+                <span>
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../11-其他/JetBrains全家桶破解.md">
+            
+                <span>
+            
+                    
+                    JetBrains全家桶破解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../11-其他/YAML简单介绍.md">
+            
+                <span>
+            
+                    
+                    YAML简单介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../11-其他/图床的选择和一些工具.md">
+            
+                <span>
+            
+                    
+                    图床的选择和一些工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >单例模式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5355;&#x4F8B;&#x6A21;&#x5F0F;">&#x5355;&#x4F8B;&#x6A21;&#x5F0F;</h1>
+<ul>
+<li>&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#x6709;&#x591A;&#x79CD;&#xFF1A;&#x997F;&#x6C49;&#xFF0C;&#x61D2;&#x6C49;(&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#xFF0C;&#x7EBF;&#x7A0B;&#x975E;&#x5B89;&#x5168;)&#xFF0C;&#x53CC;&#x91CD;&#x68C0;&#x67E5;(DCL),&#x5185;&#x90E8;&#x7C7B;&#xFF0C;&#x4EE5;&#x53CA;&#x679A;&#x4E3E;&#x3002;</li>
+<li>&#x6240;&#x8C13;&#x53CC;&#x5C42;&#x68C0;&#x9A8C;&#x9501;&#xFF08;&#x5728;&#x52A0;&#x9501;&#x524D;&#x540E;&#x5BF9;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x4E24;&#x6B21;&#x5224;&#x7A7A;&#x7684;&#x68C0;&#x9A8C;&#xFF09;&#xFF1A;&#x52A0;&#x9501;&#x662F;&#x4E3A;&#x4E86;&#x7B2C;&#x4E00;&#x6B21;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x5316;&#x7684;&#x7EBF;&#x7A0B;&#x540C;&#x6B65;&#xFF0C;&#x800C;&#x9501;&#x5185;&#x8FD8;&#x8981;&#x6709;&#x7B2C;&#x4E8C;&#x5C42;&#x5224;&#x7A7A;&#x662F;&#x56E0;&#x4E3A;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x8FDB;&#x5165;&#x7B2C;&#x4E00;&#x5C42;if&#x5224;&#x65AD;&#x5185;&#x90E8;&#xFF0C;&#x800C;&#x5728;&#x52A0;&#x9501;&#x4EE3;&#x7801;&#x5757;&#x5916;&#x6392;&#x961F;&#x7B49;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x9501;&#x5185;&#x4E0D;&#x8FDB;&#x884C;&#x7B2C;&#x4E8C;&#x6B21;&#x68C0;&#x9A8C;&#xFF0C;&#x4ECD;&#x7136;&#x4F1A;&#x51FA;&#x73B0;&#x5B9E;&#x4F8B;&#x5316;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x60C5;&#x51B5;&#x3002;</li>
+</ul>
+<p><a href="https://xxxblank.github.io/2017/09/14/singleTon/" target="_blank">&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x7684;&#x603B;&#x7ED3;</a><br><a href="http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/" target="_blank">&#x5982;&#x4F55;&#x6B63;&#x786E;&#x5730;&#x5199;&#x51FA;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;</a>&#xFF1A;&#x5BF9;&#x4E3B;&#x8981;&#x51E0;&#x79CD;&#x5355;&#x4F8B;&#x5199;&#x6CD5;&#x7684;&#x6574;&#x7406;&#xFF0C;&#x5E76;&#x5206;&#x6790;&#x5176;&#x4F18;&#x7F3A;&#x70B9;&#x3002;<br><a href="http://www.race604.com/java-double-checked-singleton/" target="_blank">Java &#x5355;&#x4F8B;&#x771F;&#x7684;&#x5199;&#x5BF9;&#x4E86;&#x4E48;?</a>&#xFF1A;&#x5206;&#x6790;&#x4E86;&#x53CC;&#x91CD;&#x6821;&#x9A8C;&#x9501;&#x666E;&#x904D;&#x5B58;&#x5728;&#x7684;&#x4E00;&#x79CD;&#x9519;&#x8BEF;&#x5199;&#x6CD5;<br><a href="http://www.infoq.com/cn/articles/java-memory-model-6" target="_blank">&#x6DF1;&#x5165;&#x7406;&#x89E3;Java&#x5185;&#x5B58;&#x6A21;&#x578B;&#xFF08;&#x516D;&#xFF09;</a>&#xFF1A;&#x5173;&#x4E8E; <strong>final</strong> &#x5173;&#x952E;&#x5B57;&#x7684;&#x539F;&#x7406;</p>
+<hr>
+<p>&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x5E94;&#x8BE5;&#x4FDD;&#x8BC1;&#x5728;&#x4EFB;&#x4F55;&#x65F6;&#x5019;&#x90FD;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x6240;&#x4EE5;&#x4E2A;&#x4EBA;&#x8BA4;&#x4E3A;&#x4E0D;&#x80FD;&#x63D0;&#x4F9B;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x5176;&#x5B9E;&#x6839;&#x672C;&#x4E0D;&#x80FD;&#x7B97;&#x5355;&#x4F8B;&#xFF0C;&#x5F88;&#x9057;&#x61BE;&#xFF0C;&#x751A;&#x81F3;&#x5728;&#x6559;&#x79D1;&#x4E66;&#x4E2D;&#x4F60;&#x770B;&#x5230;&#x7684;&#x90FD;&#x662F;&#x8FD9;&#x79CD;&#x975E;&#x5B89;&#x5168;&#x7684;&#x5355;&#x4F8B;&#x3002;<br>&#x7F51;&#x4E0A;&#x603B;&#x7ED3;&#x7684;&#x5355;&#x4F8B;&#x5E94;&#x8BE5;&#x6709;&#x4E94;&#x79CD;&#xFF0C;&#x61D2;&#x6C49;&#xFF0C;&#x6076;&#x6C49;&#xFF0C;&#x53CC;&#x91CD;&#x6821;&#x9A8C;&#x9501;&#xFF0C;&#x679A;&#x4E3E;&#x548C;&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;&#x3002;<br>&#x8FD9;&#x91CC;&#x53EA;&#x8BF4;&#x660E;&#x8FD9;&#x4E24;&#x79CD;&#xFF0C;<strong>&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;</strong>&#x548C;<strong>&#x679A;&#x4E3E;</strong>&#x3002;</p>
+<h2 id="&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;">&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;</h2>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Singleton</span> </span>{  
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Singleton</span> <span class="hljs-params">()</span></span>{}  
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SingletonHolder</span> </span>{  
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Singleton INSTANCE = <span class="hljs-keyword">new</span> Singleton();  
+    } 
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Singleton <span class="hljs-title">getInstance</span><span class="hljs-params">()</span> </span>{  
+        <span class="hljs-keyword">return</span> SingletonHolder.INSTANCE; 
+    }  
+}
+</code></pre>
+<p>&#x6211;&#x6BD4;&#x8F83;&#x503E;&#x5411;&#x4E8E;&#x4F7F;&#x7528;&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x4E5F;&#x662F;&#x300A;Effective Java&#x300B;&#x4E0A;&#x6240;&#x63A8;&#x8350;&#x7684;&#x3002;<br>&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x4ECD;&#x7136;&#x4F7F;&#x7528; JVM &#x672C;&#x8EAB;&#x673A;&#x5236;&#x4FDD;&#x8BC1;&#x4E86;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x95EE;&#x9898;&#xFF1B;<br>&#x7531;&#x4E8E; SingletonHolder &#x662F;&#x79C1;&#x6709;&#x7684;&#xFF0C;&#x9664;&#x4E86; getInstance() &#x4E4B;&#x5916;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x8BBF;&#x95EE;&#x5B83;&#xFF0C;&#x56E0;&#x6B64;&#x5B83;&#x662F;&#x61D2;&#x6C49;&#x5F0F;&#x7684;&#xFF1B;<br>&#x540C;&#x65F6;&#x8BFB;&#x53D6;&#x5B9E;&#x4F8B;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x4F1A;&#x8FDB;&#x884C;&#x540C;&#x6B65;&#xFF0C;&#x6CA1;&#x6709;&#x6027;&#x80FD;&#x7F3A;&#x9677;&#xFF1B;&#x4E5F;&#x4E0D;&#x4F9D;&#x8D56; JDK &#x7248;&#x672C;&#x3002;</p>
+<h2 id="&#x679A;&#x4E3E;">&#x679A;&#x4E3E;</h2>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Singleton{
+    INSTANCE;
+}
+</code></pre>
+<p>&#x6700;&#x7B80;&#x5355;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x662F; Android&#xFF0C;&#x5E94;&#x8BE5;&#x907F;&#x514D;&#x4F7F;&#x7528;enum&#x3002;<br>&#x7528;&#x6CD5;&#x540C;&#x6837;&#x6BD4;&#x4E00;&#x822C;&#x5355;&#x4F8B;&#x7B80;&#x5355;&#xFF0C;&#x901A;&#x8FC7; Singleton.INSTANCE &#x6765;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;&#x3002;<br>&#x521B;&#x5EFA;&#x679A;&#x4E3E;&#x9ED8;&#x8BA4;&#x5C31;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x9700;&#x8981;&#x62C5;&#x5FC3; double checked locking&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x80FD;&#x9632;&#x6B62;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x5BFC;&#x81F4;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#x3002;<br>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;java 1.5&#x624D;&#x52A0;&#x5165; enum &#x7279;&#x6027;&#x3002;</p>
+<h2 id="&#x5B9E;&#x73B0;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x6709;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;">&#x5B9E;&#x73B0;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x6709;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;</h2>
+<h2 id="&#x61D2;&#x6C49;&#x5F0F;&#x4E2D;&#x53CC;&#x5C42;&#x9501;&#x7684;&#x76EE;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;&#x4E24;&#x6B21;&#x5224;&#x7A7A;&#x7684;&#x76EE;&#x7684;&#x53C8;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;">&#x61D2;&#x6C49;&#x5F0F;&#x4E2D;&#x53CC;&#x5C42;&#x9501;&#x7684;&#x76EE;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;&#x4E24;&#x6B21;&#x5224;&#x7A7A;&#x7684;&#x76EE;&#x7684;&#x53C8;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Android中的设计模式.html" class="navigation navigation-prev " aria-label="Previous page: Android中的设计模式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="设计模式.html" class="navigation navigation-next " aria-label="Next page: 设计模式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"单例模式","level":"1.5.2","depth":2,"next":{"title":"设计模式","level":"1.5.3","depth":2,"path":"4-设计模式/设计模式.md","ref":"4-设计模式/设计模式.md","articles":[]},"previous":{"title":"Android中的设计模式","level":"1.5.1","depth":2,"path":"4-设计模式/Android中的设计模式.md","ref":"4-设计模式/Android中的设计模式.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","variables":{},"gitbook":"*"},"file":{"path":"4-设计模式/单例模式.md","mtime":"2020-06-22T08:45:34.524Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-22T08:46:27.168Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

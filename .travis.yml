@@ -1,0 +1,42 @@
+language: node_js
+
+node_js: stable
+
+# apt addons:
+
+# cache components:
+
+# before_install:
+
+install:
+  - npm install -g gitbook-cli
+  - gitbook install
+
+# before_script:
+
+script:
+  - gitbook build
+
+after_script:
+  - cd _book
+  - git init
+  - git config user.name "ghnor"  # 修改name
+  - git config user.email "ghnor.me@gmail.com"  # 修改email
+  - git add .
+  - git commit -m "Travis CI Auto Build at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
+  - git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_REF}" master:master  # GITHUB_TOKEN是在Travis中配置环境变量的名称
+  - git push --force --quiet "https://ghnor:${CODING_TOKEN}@${CODING_REF}" master:master  # CODING_TOKEN是在Travis中配置环境变量的名称
+
+# after_success or after_failure
+# OPTIONAL before_deploy
+# OPTIONAL deploy
+# OPTIONAL after_deploy
+
+branches:
+  only:
+    - source
+
+env:
+  global:
+    - GITHUB_REF: github.com/ghnor/note.git
+    - CODING_REF: git.dev.tencent.com/ghnor/note.git
