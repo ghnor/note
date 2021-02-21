@@ -9,3 +9,6 @@
 
 [面试官问我Java8~14的有哪些重要的新特性，我哭了~~~](https://juejin.im/post/5e9e3ab46fb9a03c8e5fa719)
 
+
+[[译] 一文带你玩转 Java8 Stream 流，从此操作集合 So Easy](https://juejin.im/post/5cc124a95188252d891d00f2)
+

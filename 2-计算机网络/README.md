@@ -18,3 +18,5 @@
 
 [Android 你不得不学的HTTP相关知识](https://juejin.im/post/5e8b4b69f265da47f25609ce)
 
+[也许，这样理解HTTPS更容易](https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650825181&idx=1&sn=62bb9652c0236e4b0a9fe4848981493e&chksm=80b7b543b7c03c55e5a86416c3523bdba598456fba9dc5597d5ccce324db43c80d8037e2d68f&scene=21#wechat_redirect)
+

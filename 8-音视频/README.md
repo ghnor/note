@@ -8,3 +8,6 @@
 
 [移动开发者的必知音视频基础知识](https://juejin.im/post/5e12fe306fb9a0481467d399)
 
+[视频格式基础知识](https://vcb-s.com/archives/2726)  
+[那些播放器教程背后的知识](https://vcb-s.com/archives/4567)
+
