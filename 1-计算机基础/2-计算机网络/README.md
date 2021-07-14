@@ -20,3 +20,20 @@
 
 [也许，这样理解HTTPS更容易](https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650825181&idx=1&sn=62bb9652c0236e4b0a9fe4848981493e&chksm=80b7b543b7c03c55e5a86416c3523bdba598456fba9dc5597d5ccce324db43c80d8037e2d68f&scene=21#wechat_redirect)
 
+100 个网络基础知识，全部掌握顶半个网络高手：https://mp.weixin.qq.com/s/B96t8C3m2nUnY6qJO8z2tg
+
+计算机网络基础知识总结：https://mp.weixin.qq.com/s/c2glZ6ouef0aDAdHB1yBFw
+
+还分不清 Cookie、Session、Token、JWT？：https://mp.weixin.qq.com/s/HCEZfGaDs6t34754ZxA5eA
+
+实战！我用 Wireshark 让你“看见“ TCP：https://zhuanlan.zhihu.com/p/142665708
+
+四连问：API 接口应该如何设计？如何保证安全？如何签名？如何防重？：https://zhuanlan.zhihu.com/p/145752963
+
+图文详解 HTTPS 工作原理：https://segmentfault.com/a/1190000022740692
+
+图解 HTTP 缓存：https://juejin.cn/post/6844904153043435533#heading-9
+
+面试头条你需要懂的 TCP 拥塞控制原理:https://zhuanlan.zhihu.com/p/76023663?utm_source=ZHShareTargetIDMore&utm_medium=social&utm_oi=44187122663424
+
+面试官:讲讲DNS的原理？:https://zhuanlan.zhihu.com/p/79350395?utm_source=wechat_session&utm_medium=social&utm_oi=44187122663424&from=singlemessage&isappinstalled=0&wechatShare=1&s_r=0

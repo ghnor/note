@@ -19,7 +19,17 @@
 * Ramda
   * [Ramda 函数库参考教程](http://www.ruanyifeng.com/blog/2017/03/ramda.html)
 
+<<<<<<< HEAD
 ## 深入
 
 https://github.com/mqyqingfeng/Blog
 
+=======
+帮你深入了解虚拟DOM和DOM-diff：https://juejin.cn/post/6844904182676193294
+
+想自学JS吗？想提升JS底层原理吗？76张脑图带你彻底搞懂原生JS：https://juejin.cn/post/6844904166192578567#heading-2
+
+简书网页劫持分析，浏览器指纹信息，使用 Chrome DevTools 调试 JavaScript 技巧，Android Chrome 远程调试，利用 CSP 预防劫持：https://www.52pojie.cn/thread-1070300-1-1.html
+
+为什么 React 现在要推行函数式组件，用 class 不好吗？：https://www.zhihu.com/question/343314784/answer/937174224?utm_source=ZHShareTargetIDMore&utm_medium=social&utm_oi=44187122663424
+>>>>>>> 38a2bb63d426448295a9b34673d329fedc66c2c4

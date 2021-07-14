@@ -143,3 +143,36 @@ https://github.com/futurice/android-best-practices
 
 
 https://jakkypan.gitbooks.io/trivial/content/
+
+
+“新技术” 又又又又来了？：https://mp.weixin.qq.com/s/wWB5ENo3eQJH03OXvoup8w
+“新技术” 又来了？：https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650829948&idx=1&sn=4de83eb35707b8c628af7760e77f51db&chksm=80b7a0e2b7c029f48bc31327418df80f6b3b5cd59c5929c6dbf7989863f3751f3239adc18fed&mpshare=1&scene=1&srcid=&sharer_sharetime=1582507610177&sharer_shareid=83f150d5009bfe961d0e122033ad7186#rd
+
+阅读 ANDROID 源码的一些姿势：https://www.kaedea.com/2016/02/09/android-about-source-code-how-to-read/
+
+源码阅读存档：https://juejin.cn/post/6844904089248071688#heading-31
+
+OpenGL ES 怎么学？ 打开未知技术的大门：https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650829797&idx=1&sn=c5c4e84178073fc75bf1864bb430157e&chksm=80b7a77bb7c02e6d9c7c09b3c3b700f4b47cae833c012c8ead82c75622ed1cc7d0e2ed6f10a0&mpshare=1&scene=1&srcid=&sharer_sharetime=1580779278618&sharer_shareid=83f150d5009bfe961d0e122033ad7186#rd
+
+Android 一些值得你深入的细节 | Window 篇：https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650829577&idx=1&sn=546eed10c9da5537427726593cc79c04&chksm=80b7a797b7c02e81dd5ecba3699711ee9b796af5781a8e055cbb263c50c4f8a8ec77e004e2a0&mpshare=1&scene=1&srcid=&sharer_sharetime=1576629765425&sharer_shareid=83f150d5009bfe961d0e122033ad7186#rd
+
+Android文本，软键盘全解《初级》：https://mp.weixin.qq.com/s?__biz=MzIyNTY4NjU0OQ==&mid=2247488079&idx=2&sn=8e27e95d2b12e8fad959299cc852d7ac&chksm=e87ab735df0d3e23793b9e7975df5db708dc0945ce34b315946f7da080eb9ad989c47c05e169&mpshare=1&scene=1&srcid=&sharer_sharetime=1576116871480&sharer_shareid=83f150d5009bfe961d0e122033ad7186#rd
+
+美团点评移动网络优化实践：https://tech.meituan.com/2017/03/17/shark-sdk.html?from=groupmessage&isappinstalled=0
+
+创建一个简单的后门App：https://zhuanlan.zhihu.com/p/92834140?utm_source=ZHShareTargetIDMore&utm_medium=social&utm_oi=44187122663424
+
+
+[Android 高级开发面试题以及答案整理](https://juejin.im/post/5c8b1bd56fb9a049e12b1692#heading-11)  
+[ByteDance Android 高工面试记](https://juejin.im/entry/5c9c6ad35188252c49505d8c)
+
+[Android2017-2018最新面试题（3-5年经验个人面试经历）](https://www.jianshu.com/p/de11b16946f4)  
+[Android(2017-2018)BAT面试题整理（java篇，含答案）](https://www.jianshu.com/p/7de76a9646fc)  
+[Android(2017-2018)BAT面试题整理（Android篇，含答案）](https://www.jianshu.com/p/4115bcf9f92e)
+
+[2019初中级Android开发社招面试解答（上）](https://juejin.im/post/5c8211fee51d453a136e36b0)  
+[2019初中级Android开发社招面试解答（中）](https://juejin.im/post/5c85cead5188257c6703af47#heading-31)
+
+[潇湘剑雨](https://yq.aliyun.com/users/gnwvk6v2cgzi4/?spm=a2c4e.11155435.0.0.1c3146d99IBIx3&p=2)
+
+[Awesome-Android-Interview](https://github.com/JsonChao/Awesome-Android-Interview)
