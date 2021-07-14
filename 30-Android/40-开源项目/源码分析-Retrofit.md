@@ -247,7 +247,7 @@ Response<T> parseResponse(okhttp3.Response rawResponse) throws IOException {
 
 感性地认识一下这两个类，CallAdapter负责包装请求，每次的网路请求实质上由Okhttp3.Call来完成的，但是在上一部分的分析中，提到过Retrofit提供的默认CallAdapter实现了UI线程的封装。CallAdapter支持自定义，最常见的就是对RxJava的支持。
 
-Converter则是对请求数据和相应数据进行二次加工。
+Converter则是对请求数据和响应数据进行二次加工。
 
 还是进代码去深入了解，首先看CallAdapter和Converter是哪里来的。跟到`Retrofit.Builder.build()`：
 

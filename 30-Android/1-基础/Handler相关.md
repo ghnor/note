@@ -1,5 +1,3 @@
-# Handler相关
-
 [Android消息机制的原理及源码解析](https://www.jianshu.com/p/f10cff5b4c25)  
 [Handler 都没搞懂，拿什么去跳槽啊？](https://juejin.im/post/5c74b64a6fb9a049be5e22fc)  
 [Android Handler 消息机制（解惑篇）](https://juejin.im/entry/57fb3c53128fe100546ea4f2)  
@@ -45,3 +43,116 @@ Looper.loop();
 后两者效果更好，因为Android默认的消息池中消息数量是10，而后两者是直接在消息池中取出一个Message实例，这样做就可以避免多生成Message实例。
 
 ## Messagequeue 的数据结构是什么？为什么要用这个数据结构？
+
+## Handler是如何实现线程切换的：ThreadLocal
+
+```java
+private static void prepare(boolean quitAllowed) {
+    ...
+    sThreadLocal.set(new Looper(quitAllowed));
+}
+```
+
+```java
+private Looper(boolean quitAllowed) {
+    mQueue = new MessageQueue(quitAllowed);
+    mThread = Thread.currentThread();
+}
+```
+
+在Looper初始化的时候，将自己的实例交给ThreadLocal管理，每个线程都维护着一个Looper实例（每个都是独立的）。同时Looper在初始化自身时，实例化了MessageQueue作为自己的成员变量维护。
+
+```java
+public Handler(@NonNull Looper looper, @Nullable Callback callback, boolean async) {
+    mLooper = looper;
+    mQueue = looper.mQueue;
+    mCallback = callback;
+    mAsynchronous = async;
+}
+```
+
+每次初始化Handler的时候，拿到对应的Looper，Looper可以由外部指定，也可以默认通过Looper.myLooper()从当前实例化Handler的线程中获取。切换到主线程就是主线程中的Looper取出消息并执行。
+
+## 同步屏障
+
+1. 加入同步屏障
+
+  ```java
+  mTraversalBarrier = mHandler.getLooper().getQueue().postSyncBarrier();
+  ```
+
+2. 移除同步屏障
+
+  ```java
+  mHandler.getLooper().getQueue().removeSyncBarrier(mTraversalBarrier);
+  ```
+
+3. 设置成异步消息
+
+  ```java
+  Message msg = Message.obtain(mHandler, this);
+  msg.setAsynchronous(true);
+  ```
+
+>  加入同步屏障就是加入一个target为null的Message对象，同步屏障会根据时间顺序在合适的位置插入到MessageQueue。
+>
+> MessageQueue中遍历到同步屏障的Message之后，同步屏障后面的同步Message会跳过，优先执行异步Message。执行完一个异步Message，再去正常遍历MessageQueue中的全部Message。
+>
+> 如果同步屏障没有被移除，那么继续重复上面的步骤，找到异步Message并执行。
+>
+> 如果同步屏障已经被移除，那么就正常执行全部的Message。
+
+```java
+Message next() {
+   	...
+    for (;;) {
+       	...
+
+        synchronized (this) {
+            // Try to retrieve the next message.  Return if found.
+            final long now = SystemClock.uptimeMillis();
+            Message prevMsg = null;
+            // Message链表头部第一个mMessages
+            Message msg = mMessages;
+            // msg.target == null，同步屏障Message
+            if (msg != null && msg.target == null) {
+                // Stalled by a barrier.  Find the next asynchronous message in the queue.
+                // 找到异步Message并赋值给msg，退出循环
+                do {
+                    prevMsg = msg;
+                    msg = msg.next;
+                } while (msg != null && !msg.isAsynchronous());
+            }
+            if (msg != null) {
+                if (now < msg.when) {
+                    // Next message is not ready.  Set a timeout to wake up when it is ready.
+                    nextPollTimeoutMillis = (int) Math.min(msg.when - now, Integer.MAX_VALUE);
+                } else {
+                    // Got a message.
+                    mBlocked = false;
+                    if (prevMsg != null) {
+                        // prevMsg不为空，表示存在同步屏障
+                        // 下一次消息循环，会遍历原来的整个消息队列
+                        prevMsg.next = msg.next;
+                    } else {
+                        // 不存在同步屏障，链表头部消息修改为下一条消息
+                        mMessages = msg.next;
+                    }
+                    msg.next = null;
+                    if (DEBUG) Log.v(TAG, "Returning message: " + msg);
+                    msg.markInUse();
+                    return msg;
+                }
+            } else {
+                // No more messages.
+                nextPollTimeoutMillis = -1;
+            }
+
+            ...
+        }
+
+        ...
+    }
+}
+```
+

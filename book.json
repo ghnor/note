@@ -1,7 +1,0 @@
-{
-    "plugins": [
-        "toggle-chapters"
-    ],
-    "ignores": ["_book", "node_modules"],
-    "sortedBy": "-"
-}
