@@ -22,3 +22,4 @@
 
 [Android 插件化和热修复知识梳理](https://www.jianshu.com/p/704cac3eb13d)
 
+面向页面的移动端架构设计：https://juejin.cn/post/6844904158496047111

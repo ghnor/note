@@ -1,13 +1,13 @@
 ## 官方文档
 
 [Android官方文档：配置构建](https://developer.android.com/studio/build?hl=zh-cn)  
-[Android Gradle 插件](https://developer.android.com/studio/releases/gradle-plugin?hl=zh-cn)   
-[Android 插件 DSL 参考文档](http://google.github.io/android-gradle-dsl/current/)
+[Android官方文档：Gradle插件](https://developer.android.com/studio/releases/gradle-plugin?hl=zh-cn)  
+[Android官方文档：插件DSL参考文档](https://developer.android.com/reference/tools/gradle-api)
 
-[Gradle DSL 参考文档](https://docs.gradle.org/current/dsl/)  
-[Gradle 用户指南](https://docs.gradle.org/current/userguide/userguide.html)
+[Gradle官方文档：Gradle DSL参考文档](https://docs.gradle.org/current/dsl/)  
+[Gradle官方文档：Gradle用户指南](https://docs.gradle.org/current/userguide/userguide.html)
 
-[Gradle用户指南 中文版（w3c）](https://www.w3cschool.cn/gradle_user_guide/gradle_user_guide-t5um26hg.html)
+[W3C：Gradle用户指南 中文版](https://www.w3cschool.cn/gradle_user_guide/gradle_user_guide-t5um26hg.html)
 
 ## 系列文章
 
@@ -50,3 +50,14 @@
 
 [深度探索 Gradle 自动化构建技术（二、Groovy 筑基篇）](https://juejin.im/post/5e97ac34f265da47aa3f6dca)
 
+吹爆系列：深度探索 Gradle 自动化构建技术：https://mp.weixin.qq.com/s/trAxRzz573TFyJk2klKdag
+
+一篇文章深入gradle（上篇）:依赖机制：https://blog.csdn.net/oubin66/article/details/100557596
+
+一篇文章基本看懂gradle：https://juejin.cn/post/6844903928543313933
+
+如何用Android Studio查看build.gradle源码：https://www.cnblogs.com/dasusu/p/6650782.html
+
+连载 | 深入理解Gradle框架之一：Plugin, Extension, buildSrc：https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247485042&idx=1&sn=fe32711dbcb483f7a47dfa0e304087c4&chksm=e9d0cd90dea74486da18430f2a4ee839d9e440c42951872393ba1c61c4cee1e75f5f132d1268&mpshare=1&scene=1&srcid=&sharer_sharetime=1583409274986&sharer_shareid=83f150d5009bfe961d0e122033ad7186#rd
+
+玩转 Gradle，Plugin本质是什么？剖析个知名插件：https://mp.weixin.qq.com/s/XNJVXNZk_aMIVQsn16Dynw

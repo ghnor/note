@@ -2,11 +2,9 @@
 
 在开发的时候发现尽管远程依赖的库已经SNAPSHOT版本了，但是每次build的时候都不会去拉取新代码，导致每次都要更新依赖库的版本。
 
-google了一下：
+google了一下，找到个类似的提问：
 
 > https://stackoverflow.com/questions/42058626/how-to-get-newest-snapshot-of-a-dependency-without-changing-version-in-gradle
-
-**翻译：**
 
 首先确认依赖库的版本是SNAPSHOT版本：
 
