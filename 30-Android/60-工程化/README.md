@@ -23,3 +23,14 @@
 [Android 插件化和热修复知识梳理](https://www.jianshu.com/p/704cac3eb13d)
 
 面向页面的移动端架构设计：https://juejin.cn/post/6844904158496047111
+
+## 编译流程
+
+[编译流程](./编译流程.md)
+
+## 安全相关
+
+[如何防止 Android 应用被二次打包？](https://www.zhihu.com/question/41368839)
+
+[Android安全知识笔记合集](https://juejin.im/post/5deb7478518825126204f4d7)
+
