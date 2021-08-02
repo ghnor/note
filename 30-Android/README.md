@@ -1,10 +1,30 @@
 # Android
 
+- Java基础
+    - 
+- 基础
+    - Activity
+    - Service
+    - Broadcast
+    - Content Provider
+    - 动画
+    - 
+- 进阶
+- 动态化
+    - https://juejin.cn/post/6915758752050511880
+- 性能优化
+    - https://zhuanlan.zhihu.com/p/264386835
+- Kotlin
+    - 协程
+- Java进阶
+    - jvm内存模型https://segmentfault.com/a/1190000016694247 https://zhuanlan.zhihu.com/p/102702428
+
 google官方提供的android源码在线阅读网站：https://cs.android.com/
 
 [发展路径by动脑学院](http://naotu.baidu.com/file/ef0ba1de6bb36752c349591bfcae265b?qq-pf-to=pcqq.c2c)
 
 ## 开发设计
+
 [AndroidDevTools](https://github.com/inferjay/AndroidDevTools)
 
 ## 综合
@@ -41,6 +61,7 @@ google官方提供的android源码在线阅读网站：https://cs.android.com/
 [ANDROID SDK 源码解析](https://github.com/LittleFriendsGroup/AndroidSdkSourceAnalysis)
 
 ## 架构
+
 [安卓架构文章合集](https://github.com/CameloeAnthony/AndroidArchitectureCollection)
 
 ## 最佳实践
@@ -68,7 +89,7 @@ https://github.com/futurice/android-best-practices
 
 
 
-## 综合类博客
+## 博客
 
 > jsonchao，现在应该在腾讯的效能组：https://jsonchao.github.io/archives/
 >
@@ -80,7 +101,13 @@ https://github.com/futurice/android-best-practices
 >
 > 性能优化、framework知识
 
+> [Android轮子哥](https://www.jianshu.com/u/f7bb67d86765)
+>
+> 源码解析（eventBus、glide、okHttp）
 
+> B站UP主
+>
+> https://space.bilibili.com/517679415
 
 ### 文章列表
 
