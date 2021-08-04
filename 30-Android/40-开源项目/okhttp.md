@@ -8,3 +8,9 @@
 [OKHttp全解析系列（一） -- HTTP基础](https://www.jianshu.com/p/8962f1f175e8)
 
 ## 参数是如何组装的？
+
+## addInterceptor与addNetworkInterceptor的区别
+
+## 涉及http缓存原理
+
+

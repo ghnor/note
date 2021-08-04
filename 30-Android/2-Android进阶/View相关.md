@@ -103,30 +103,7 @@ Layout过程确定View四个顶点的位置和实际的宽高。
 * 当明确知道一个ViewGroup需要通过onDraw来绘制内容时，我们需要显示地关闭WILL_NOT_DRAW这个标记位。
 
 ## 自定义View的时怎么获取View的大小
-## View的事件传递分发机制
 
-郭神出品：  
-[Android事件分发机制完全解析，带你从源码的角度彻底理解(上)](https://blog.csdn.net/guolin_blog/article/details/9097463)  
-[Android事件分发机制完全解析，带你从源码的角度彻底理解(下)](https://blog.csdn.net/guolin_blog/article/details/9153747)
-
-鸿洋出品：  
-[Android View 事件分发机制 源码解析 （上）](https://blog.csdn.net/lmj623565791/article/details/38960443)  
-[Android ViewGroup事件分发机制](https://blog.csdn.net/lmj623565791/article/details/39102591)
-
-[面试：讲讲 Android 的事件分发机制](https://www.jianshu.com/p/d3758eef1f72)
-
-## View的事件冲突
-
-常见开发中事件冲突的有ScrollView与RecyclerView的滑动冲突、RecyclerView内嵌同时滑动同一方向。
-
-滑动冲突的处理规则：
-* 对于由于外部滑动和内部滑动方向不一致导致的滑动冲突，可以根据滑动的方向判断谁来拦截事件。
-* 对于由于外部滑动方向和内部滑动方向一致导致的滑动冲突，可以根据业务需求，规定何时让外部View拦截事件，何时由内部View拦截事件。
-* 对于上面两种情况的嵌套，相对复杂，可同样根据需求在业务上找到突破点。
-
-滑动冲突的实现方法：
-* 外部拦截法：指点击事件都先经过父容器的拦截处理，如果父容器需要此事件就拦截，否则就不拦截。具体方法：需要重写父容器的onInterceptTouchEvent方法，在内部做出相应的拦截。
-* 内部拦截法：指父容器不拦截任何事件，而将所有的事件都传递给子容器，如果子容器需要此事件就直接消耗，否则就交由父容器进行处理。具体方法：需要配合requestDisallowInterceptTouchEvent方法。
 
 ## scrollTo()和scollBy()的区别
 
