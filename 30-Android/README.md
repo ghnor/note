@@ -1,24 +1,5 @@
 # Android
 
-- Java基础
-    - 
-- 基础
-    - Activity
-    - Service
-    - Broadcast
-    - Content Provider
-    - 动画
-    - 
-- 进阶
-- 动态化
-    - https://juejin.cn/post/6915758752050511880
-- 性能优化
-    - https://zhuanlan.zhihu.com/p/264386835
-- Kotlin
-    - 协程
-- Java进阶
-    - jvm内存模型https://segmentfault.com/a/1190000016694247 https://zhuanlan.zhihu.com/p/102702428
-
 google官方提供的android源码在线阅读网站：https://cs.android.com/
 
 [发展路径by动脑学院](http://naotu.baidu.com/file/ef0ba1de6bb36752c349591bfcae265b?qq-pf-to=pcqq.c2c)
@@ -60,36 +41,42 @@ google官方提供的android源码在线阅读网站：https://cs.android.com/
 ## 源码分析
 [ANDROID SDK 源码解析](https://github.com/LittleFriendsGroup/AndroidSdkSourceAnalysis)
 
-## 架构
+## 架构设计
 
 [安卓架构文章合集](https://github.com/CameloeAnthony/AndroidArchitectureCollection)
 
 ## 最佳实践
 https://github.com/futurice/android-best-practices
 
-## 面试题
+## 面试捡垃圾
 
 [金九银十跳槽季，记一次Android面试（附详细答案）](https://juejin.im/post/5d8b9387f265da5ba12cd2f0#heading-4)
 
 [ Android校招面试指南](https://lrh1993.gitbooks.io/android_interview_guide/content/)
 
+[Android 高级开发面试题以及答案整理](https://juejin.im/post/5c8b1bd56fb9a049e12b1692#heading-11)  
+[ByteDance Android 高工面试记](https://juejin.im/entry/5c9c6ad35188252c49505d8c)
 
+[Android2017-2018最新面试题（3-5年经验个人面试经历）](https://www.jianshu.com/p/de11b16946f4)  
+[Android(2017-2018)BAT面试题整理（java篇，含答案）](https://www.jianshu.com/p/7de76a9646fc)  
+[Android(2017-2018)BAT面试题整理（Android篇，含答案）](https://www.jianshu.com/p/4115bcf9f92e)
+
+[2019初中级Android开发社招面试解答（上）](https://juejin.im/post/5c8211fee51d453a136e36b0)  
+[2019初中级Android开发社招面试解答（中）](https://juejin.im/post/5c85cead5188257c6703af47#heading-31)
+
+[Awesome-Android-Interview](https://github.com/JsonChao/Awesome-Android-Interview)
+
+## 思考和展望
 
 [[译]Android原生开发的现状，截止到2019年12月](https://juejin.im/post/5e0eb606f265da5d0d435b88#heading-11)
 
-
-
-
-
-安卓博主：
+## 博客和博主们
 
 重学安卓、承香墨影、却把青梅嗅
 
 [dasu](https://www.cnblogs.com/dasusu/)
 
-
-
-## 博客
+[潇湘剑雨](https://yq.aliyun.com/users/gnwvk6v2cgzi4/?spm=a2c4e.11155435.0.0.1c3146d99IBIx3&p=2)
 
 > jsonchao，现在应该在腾讯的效能组：https://jsonchao.github.io/archives/
 >
@@ -109,7 +96,7 @@ https://github.com/futurice/android-best-practices
 >
 > https://space.bilibili.com/517679415
 
-### 文章列表
+### 系列文章
 
 #### Android 10 源码系列
 
@@ -158,21 +145,5 @@ Android 一些值得你深入的细节 | Window 篇：https://mp.weixin.qq.com/s
 
 Android文本，软键盘全解《初级》：https://mp.weixin.qq.com/s?__biz=MzIyNTY4NjU0OQ==&mid=2247488079&idx=2&sn=8e27e95d2b12e8fad959299cc852d7ac&chksm=e87ab735df0d3e23793b9e7975df5db708dc0945ce34b315946f7da080eb9ad989c47c05e169&mpshare=1&scene=1&srcid=&sharer_sharetime=1576116871480&sharer_shareid=83f150d5009bfe961d0e122033ad7186#rd
 
-美团点评移动网络优化实践：https://tech.meituan.com/2017/03/17/shark-sdk.html?from=groupmessage&isappinstalled=0
-
 创建一个简单的后门App：https://zhuanlan.zhihu.com/p/92834140?utm_source=ZHShareTargetIDMore&utm_medium=social&utm_oi=44187122663424
 
-
-[Android 高级开发面试题以及答案整理](https://juejin.im/post/5c8b1bd56fb9a049e12b1692#heading-11)  
-[ByteDance Android 高工面试记](https://juejin.im/entry/5c9c6ad35188252c49505d8c)
-
-[Android2017-2018最新面试题（3-5年经验个人面试经历）](https://www.jianshu.com/p/de11b16946f4)  
-[Android(2017-2018)BAT面试题整理（java篇，含答案）](https://www.jianshu.com/p/7de76a9646fc)  
-[Android(2017-2018)BAT面试题整理（Android篇，含答案）](https://www.jianshu.com/p/4115bcf9f92e)
-
-[2019初中级Android开发社招面试解答（上）](https://juejin.im/post/5c8211fee51d453a136e36b0)  
-[2019初中级Android开发社招面试解答（中）](https://juejin.im/post/5c85cead5188257c6703af47#heading-31)
-
-[潇湘剑雨](https://yq.aliyun.com/users/gnwvk6v2cgzi4/?spm=a2c4e.11155435.0.0.1c3146d99IBIx3&p=2)
-
-[Awesome-Android-Interview](https://github.com/JsonChao/Awesome-Android-Interview)
