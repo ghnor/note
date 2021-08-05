@@ -64,3 +64,23 @@ Android Camera的进化史：https://zhuanlan.zhihu.com/p/82010550?utm_source=ZH
 Android自定义View，你摸的透透的了？：https://mp.weixin.qq.com/s?__biz=MzIyNTY4NjU0OQ==&mid=2247488773&idx=1&sn=28d1f8c7da973fb6142703a3292f1d4c&chksm=e87ab07fdf0d396957bce7b441c3a38fad41c79b9551f53e4cbe885e916151bc448621c29974&mpshare=1&scene=1&srcid=&sharer_sharetime=1583197234857&sharer_shareid=83f150d5009bfe961d0e122033ad7186#rd
 
 Android面试官：说说多线程并发问题:https://mp.weixin.qq.com/s?__biz=MzIyNTY4NjU0OQ==&mid=2247487510&idx=1&sn=1cdfee2c5d9798c8d88d4b2189d52126&chksm=e87ab56cdf0d3c7a40b0740fcec77b5dba88e2c9d6b3898177ef1235122af813fed450480808&mpshare=1&scene=1&srcid=&sharer_sharetime=1570677454760&sharer_shareid=83f150d5009bfe961d0e122033ad7186#rd
+
+
+
+# Framework
+
+[Android进阶——Android四大组件启动机制之Activity启动过程](https://blog.csdn.net/qq_30379689/article/details/79611217)
+
+[一篇文章看明白 Android 系统启动时都干了什么](https://blog.csdn.net/freekiteyu/article/details/79175010)
+
+[请从AMS,WMS,PMS的角度考虑，以及进程是如何启动的](https://juejin.im/post/5c8b1bd56fb9a049e12b1692#heading-11)
+
+[Android解析ActivityManagerService（一）AMS启动流程和AMS家族](https://juejin.im/post/5c8b1bd56fb9a049e12b1692#heading-11)
+
+[Android解析WindowManagerService（一）WMS的诞生](https://blog.csdn.net/itachi85/article/details/78186741)
+
+[Android PackageManagerService分析一：PMS的启动](https://blog.csdn.net/lilian0118/article/details/24455019)
+
+[腾讯面试官：Binder的系统服务是如何获取的？](https://juejin.im/post/5ddf1a306fb9a0716c07f99a)
+
+

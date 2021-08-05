@@ -162,7 +162,7 @@ static final class CallAdapted<ResponseT, ReturnT> extends HttpServiceMethod<Res
 
 实例化了一个OkHttpCall，抽象地认识OkHttpCall就是一个网络请求的真正执行类。
 
-紧接着执行自己的`adapt(call, args);`方法，``adapt()`方法的最终实现就在`CallAdapted`，代码copy一下：
+紧接着执行自己的`adapt(call, args);`方法，`adapt()`方法的最终实现就在`CallAdapted`，代码copy一下：
 
 ```java
 # CallAdapted

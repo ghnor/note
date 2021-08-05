@@ -55,7 +55,7 @@ class ObservableEmitter {
 }
 ```
 
-*那么问题来了，首先observer的来源是哪里；第二个是emmiter要执行的话，肯定要执行ObservableOnSubscribe的subscribe()方法，那么是谁又是如何执行了subscribe()方法。*
+那么问题来了，首先observer的来源是哪里；第二个是emmiter要执行的话，肯定要执行ObservableOnSubscribe的subscribe()方法，那么是谁又是如何执行了subscribe()方法。
 
 2. **ObservableOnSubscribe.subscribe()要执行的话，只能是通过Observable.subscribe()，因为除此之外，再没有我们主动去调用的方法了。而且两个方法名也是一样的，猜测一段伪代码：**
 
