@@ -50,3 +50,11 @@ Android Studio：
 
 [Android性能优化杂谈-如何监控和解决ANR问题？](https://blog.csdn.net/ljcitworld/article/details/104420422)
 
+
+
+[Android 性能优化之内存检测、卡顿优化、耗电优化、APK瘦身](https://blog.csdn.net/csdn_aiyang/article/details/74989318)
+
+分享一波 Android 性能优化的总结！:https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650836937&idx=1&sn=6b595cc3c3e5f74850d6b1f5e7ac40f2&chksm=80b75b57b7c0d241c8ca0c6c6f3586bcb01aabdd9e84c97311bd800fdd1610b08151d1853b42&scene=21#wechat_redirect
+
+分享一波深入的Android 性能优化总结！:https://mp.weixin.qq.com/s/EzIbxeWexQv7ENDugT-UFg
+

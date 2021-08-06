@@ -48,7 +48,7 @@ google官方提供的android源码在线阅读网站：https://cs.android.com/
 ## 最佳实践
 https://github.com/futurice/android-best-practices
 
-## 面试捡垃圾
+## 面试题合集
 
 [金九银十跳槽季，记一次Android面试（附详细答案）](https://juejin.im/post/5d8b9387f265da5ba12cd2f0#heading-4)
 

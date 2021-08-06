@@ -50,7 +50,7 @@
 > [ APK 的前世今生：从 Android 源码到 apk 的编译打包流程](https://www.cnblogs.com/yazhidev/p/11245545.html)
 
 1. 生成仅包含资源文件的 apk 包和 R.java 文件
-    
+   
     根据资源文件和 AndroidManifest.xml 由工具 AAPT 生成 R.java 文件。Android Gradle Plugin 3.0.0 以后默认使用 AAPT2。
 
     1. 预编译
@@ -150,4 +150,3 @@ V2签名优点很明显:
 签名验证时间更短(不需要解压验证),因而安装速度加快
 
 注意: apksigner工具默认同时使用V1和V2签名,以兼容Android 7.0以下版本
- 
