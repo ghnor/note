@@ -18,3 +18,6 @@
 在编译期已经收集了全部订阅的方法信息，生成为一个类，在eventBus初始化的时候实例化并执行，同时在运行期会收集实际每个执行过register的类对象。post事件之后，同时查找register过的对象集合和全部subscriber的方法集合，反射执行方法。
 
 2.0则是在register的时候，反射去收集方法信息。
+
+[EventBus 3.0 源码分析](https://www.jianshu.com/p/f057c460c77e)
+

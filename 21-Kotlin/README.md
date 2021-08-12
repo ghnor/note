@@ -20,8 +20,6 @@
 > [Kotlin作用域函数之间的区别和使用场景详解](https://www.zhangshengrong.com/p/9Oab8JqyXd/)
 >
 > [Kotlin作用域函数之间的区别与使用场景](https://juejin.cn/post/6863853301210906638#heading-14)
->
-> []()
 
 > [Kotlin的inline noinline crossinline笔记](https://www.jianshu.com/p/1d7374349a00)
 >
@@ -40,4 +38,16 @@
 >   - 中缀表示法
 > - refied
 >   - 搭配inline一起使用
+
+> 扩展函数
+>
+> 通过生成一个类，将扩展函数作为类的静态方法使用。
+
+> 伴生对象
+>
+> > [Kotlin的伴生对象到底是不是java的static？ Kotlin的加载顺序是怎样的？](https://www.zhihu.com/question/277220015)
+> >
+> > 虽然 object 的名称通常建议大写，以至于让一部分人误以为跟 Class 类似是储存一种结构，然后可以基于这种结构创建实例。
+> >
+> > 实际上 object 在声明后就已经存在实例引用，并且有且只有一个实例，那就是 object 的名称。所以可以将 object 理解为一种只需要单实例的 Class 对象，它在声明的时候定义结构，第一次访问的时候进行创建，以后无论访问多少次都只是同一个对象。
 

@@ -4,6 +4,8 @@
 
 [Android多渠道打包（VasDolly实现原理）](https://www.jianshu.com/p/5baea0e1cd1e?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation)
 
+[VasDolly实现原理](https://github.com/Tencent/VasDolly/wiki/VasDolly%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86)
+
 > 针对v1签名
 
 * 美团的方案

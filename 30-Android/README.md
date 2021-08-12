@@ -147,3 +147,18 @@ Android文本，软键盘全解《初级》：https://mp.weixin.qq.com/s?__biz=M
 
 创建一个简单的后门App：https://zhuanlan.zhihu.com/p/92834140?utm_source=ZHShareTargetIDMore&utm_medium=social&utm_oi=44187122663424
 
+手势冲突的解决
+
+kotlin扩展函数
+
+eventbus post出来的对象是同一个吗，接收消息的顺序是什么
+
+针对mvvm有哪些封装，viewmodel是对应activity还是fragment
+
+自定义控件有哪些步骤
+
+ca证书是怎么验证的  证书是颁发给域名还是ip的
+
+RN和原生是如何通信的  RN中flatlist的原理是什么
+
+加固的原理
