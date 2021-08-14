@@ -48,7 +48,7 @@ Android Studio：
 
 
 
-[Android性能优化杂谈-如何监控和解决ANR问题？](https://blog.csdn.net/ljcitworld/article/details/104420422)
+
 
 
 

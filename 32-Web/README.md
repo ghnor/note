@@ -20,6 +20,7 @@
   * [Ramda 函数库参考教程](http://www.ruanyifeng.com/blog/2017/03/ramda.html)
 
 <<<<<<< HEAD
+
 ## 深入
 
 https://github.com/mqyqingfeng/Blog
@@ -33,3 +34,8 @@ https://github.com/mqyqingfeng/Blog
 
 为什么 React 现在要推行函数式组件，用 class 不好吗？：https://www.zhihu.com/question/343314784/answer/937174224?utm_source=ZHShareTargetIDMore&utm_medium=social&utm_oi=44187122663424
 >>>>>>> 38a2bb63d426448295a9b34673d329fedc66c2c4
+
+在阿里我是如何当面试官的：https://juejin.cn/post/6844904093425598471#heading-14
+
+深入理解JSCore：https://tech.meituan.com/2018/08/23/deep-understanding-of-jscore.html
+

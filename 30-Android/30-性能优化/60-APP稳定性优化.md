@@ -8,3 +8,5 @@
 
 > [深入探索Android稳定性优化](https://juejin.cn/post/6844903972587716621#heading-135)
 
+[Android性能优化杂谈-如何监控和解决ANR问题？](https://blog.csdn.net/ljcitworld/article/details/104420422)
+
