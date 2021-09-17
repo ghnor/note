@@ -6,7 +6,14 @@
 
 [看完感觉我RecyclerView白学了！](https://mp.weixin.qq.com/s/Qey-3JDdKYG04mo9WeBZ2g)
 
+[RecyclerView 必知必会](https://zhuanlan.zhihu.com/p/24807254)
+
+[【腾讯Bugly干货分享】Android ListView 与 RecyclerView 对比浅析—缓存机制](https://zhuanlan.zhihu.com/p/23339185)
+
+[RecyclerView回收复用机制总结](https://juejin.cn/post/6854573221702795277)
+
 ## 对 RecycleView 的了解
+
 ## Recycleview 和 ListView 的区别
 
 * 动画区别：
@@ -26,3 +33,4 @@
 [Android开发：ListView、AdapterView、RecyclerView全面解析](https://www.jianshu.com/p/4e8e4fd13cf7)
 
 ## RecycleView 实现原理
+

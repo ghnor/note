@@ -39,3 +39,4 @@ https://github.com/mqyqingfeng/Blog
 
 深入理解JSCore：https://tech.meituan.com/2018/08/23/deep-understanding-of-jscore.html
 
+[钉钉前端面试题~TypeScript相关问题的部分解答](https://juejin.cn/post/6988763249982308382)

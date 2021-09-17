@@ -6,6 +6,8 @@
 
 [如何分析ANR](https://www.jianshu.com/p/cfa9ed42e379)
 
+[Android ANR排查手册](https://blog.csdn.net/zhonglunshun/article/details/89680993)
+
 在Android上，如果你的应用程序有一段时间响应不够灵敏，系统会向用户显示一个对话框，这个对话框称作应 用程序无响应（ANR：Application NotResponding）对话框。 用户可以选择让程序继续运行，但是，他们在使用你的 应用程序时，并不希望每次都要处理这个对话框。因此 ，在程序里对响应性能的设计很重要这样，这样系统就不会显 示ANR给用户。
 
 不同的组件发生ANR的时间不一样，Activity是5秒，BroadCastReceiver是10秒，Service是20秒（均为前台）。

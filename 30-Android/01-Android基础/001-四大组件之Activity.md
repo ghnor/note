@@ -78,3 +78,6 @@ Activity的堆栈管理以ActivityRecord为单位,所有的ActivityRecord都放�
 [Android进阶——Android四大组件启动机制之Activity启动过程](https://blog.csdn.net/qq_30379689/article/details/79611217)
 
 ## resume时activity是否完成了渲染
+
+## token来自哪里
+

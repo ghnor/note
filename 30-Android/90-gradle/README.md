@@ -61,3 +61,6 @@
 连载 | 深入理解Gradle框架之一：Plugin, Extension, buildSrc：https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247485042&idx=1&sn=fe32711dbcb483f7a47dfa0e304087c4&chksm=e9d0cd90dea74486da18430f2a4ee839d9e440c42951872393ba1c61c4cee1e75f5f132d1268&mpshare=1&scene=1&srcid=&sharer_sharetime=1583409274986&sharer_shareid=83f150d5009bfe961d0e122033ad7186#rd
 
 玩转 Gradle，Plugin本质是什么？剖析个知名插件：https://mp.weixin.qq.com/s/XNJVXNZk_aMIVQsn16Dynw
+
+[Gradle进阶计划（二）Gradle Plugin原理分析](https://bbs.huaweicloud.com/blogs/240520)
+
